@@ -10,9 +10,8 @@ import '@fontsource/raleway/variable-italic.css';
 import '@fontsource/cabin/400.css';
 import '@fontsource/cabin/500.css';
 import '@fontsource/cabin/700.css';
-import '@fontsource/cabin/900.css';
+import '@fontsource/raleway/300.css';
 import '@fontsource/raleway/400.css';
-import '@fontsource/raleway/500.css';
 import '@fontsource/raleway/700.css';
 import '@fontsource/raleway/900.css';
 
@@ -104,11 +103,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: "CabinVariable", sans-serif;
+    font-family: "CabinVariable", sans-serif; // weights axis 400 - 700
     font-weight: ${WEIGHTS.normal};
   }
   h1,h2,h3,h4 {
-    font-family: "RalewayVariable", sans-serif;
+    font-family: "RalewayVariable", sans-serif; // weights axis 100 - 900
     font-weight: ${WEIGHTS.bold};
   }
 
