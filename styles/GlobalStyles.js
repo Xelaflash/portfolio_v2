@@ -1,6 +1,21 @@
 import { createGlobalStyle } from 'styled-components';
 import { COLORS, WEIGHTS } from './constants';
 
+import '@fontsource/cabin/variable.css';
+import '@fontsource/cabin/variable-italic.css';
+import '@fontsource/raleway/variable.css';
+import '@fontsource/raleway/variable-italic.css';
+
+// fallback for non browser not supporting variable fonts
+import '@fontsource/cabin/400.css';
+import '@fontsource/cabin/500.css';
+import '@fontsource/cabin/700.css';
+import '@fontsource/cabin/900.css';
+import '@fontsource/raleway/400.css';
+import '@fontsource/raleway/500.css';
+import '@fontsource/raleway/700.css';
+import '@fontsource/raleway/900.css';
+
 const GlobalStyle = createGlobalStyle`
   /*
     Josh's Custom CSS Reset
@@ -89,8 +104,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    font-family: "CabinVariable", sans-serif;
     font-weight: ${WEIGHTS.normal};
   }
+  h1,h2,h3,h4 {
+    font-family: "RalewayVariable", sans-serif;
+    font-weight: ${WEIGHTS.bold};
+  }
+
 `;
 
 export default GlobalStyle;

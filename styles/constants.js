@@ -33,8 +33,8 @@ export const COLORS = {
 };
 
 export const WEIGHTS = {
-  light: 400,
-  normal: 500,
+  light: 300,
+  normal: 400,
   medium: 700,
   bold: 900,
 };
