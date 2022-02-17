@@ -28,7 +28,6 @@ const GlobalStyle = createGlobalStyle`
   }
   html, body {
     height: 100%;
-    margin:0;
   }
   body {
     line-height: 1.5;
@@ -47,6 +46,30 @@ const GlobalStyle = createGlobalStyle`
   #root, #__next {
     isolation: isolate;
   }
+
+  /*
+  Remove default button styles. We'll provide our own at the
+  component level
+*/
+  button {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+    font: inherit;
+    color: inherit;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+
+  /* END RESET */
   /* upsizing the default tap area for mobile device */
   @media (pointer: coarse) {
     html {
@@ -124,9 +147,21 @@ const GlobalStyle = createGlobalStyle`
     font-family: "CabinVariable", sans-serif; // weights axis 400 - 700
     font-weight: ${WEIGHTS.normal};
   }
+
+
   h1,h2,h3,h4 {
     font-family: "RalewayVariable", sans-serif; // weights axis 100 - 900
     font-weight: ${WEIGHTS.bold};
+  }
+
+  .section-title {
+    font-size: 3.5rem;
+    color: var(--color-gradient);
+    background: var(--color-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: max-content;
   }
 
 `;
