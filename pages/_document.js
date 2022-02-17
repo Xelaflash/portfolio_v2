@@ -5,7 +5,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta charset="utf-8" />
+          <meta charSet="utf-8" />
           <meta name="theme-color" content="#0E141B" />
           <meta
             name="description"
