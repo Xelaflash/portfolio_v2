@@ -17,6 +17,10 @@ const ButtonStyles = styled.button`
   font-family: var(--font-family);
   min-height: var(--min-tap-height);
   border-radius: 6000px;
+  transition: opacity 300ms ease;
+  &:hover {
+    opacity: 0.8;
+  }
 `;
 
 Button.propTypes = {
