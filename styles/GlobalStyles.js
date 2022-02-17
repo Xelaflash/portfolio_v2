@@ -70,14 +70,13 @@ const GlobalStyle = createGlobalStyle`
 
 
   /* END RESET */
-  /* upsizing the default tap area for mobile device */
-  @media (pointer: coarse) {
-    html {
-      --min-tap-height: 44px;
-    }
-  }
-
   :root {
+    --font-family: "CabinVariable", sans-serif;
+    --title-font-family: "RalewayVariable", sans-serif;
+    --light: ${WEIGHTS.light};
+    --normal: ${WEIGHTS.normal};
+    --medium: ${WEIGHTS.medium};
+    --bold: ${WEIGHTS.bold};
     --color-white: ${COLORS.white};
     --color-green: ${COLORS.green};
     --color-peach: ${COLORS.peach};
@@ -141,27 +140,30 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     scroll-behavior: smooth;
+    --min-tap-height: 32px;
+      /* upsizing the default tap area for mobile device */
+    @media (pointer: coarse) {
+      --min-tap-height: 44px;
+    }
   }
 
   body {
-    font-family: "CabinVariable", sans-serif; // weights axis 400 - 700
+    font-family: var(--font-family); // weights axis 400 - 700
     font-weight: ${WEIGHTS.normal};
   }
 
 
   h1,h2,h3,h4 {
-    font-family: "RalewayVariable", sans-serif; // weights axis 100 - 900
-    font-weight: ${WEIGHTS.bold};
+    font-family: var(--title-font-family); // weights axis 100 - 900
+    font-weight: var(--bold);
   }
 
   .section-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: var(--color-gradient);
     background: var(--color-gradient);
-    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    width: max-content;
   }
 
 `;
