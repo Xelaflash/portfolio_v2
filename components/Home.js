@@ -6,7 +6,7 @@ import Spacer from './Spacer';
 export default function Home() {
   return (
     <Background>
-      <Spacer size={92} />
+      <Spacer size={78} />
       <MaxWidthWrapper>
         <h1 className="section-title">
           Crafting responsive and beautiful websites that suit your needs.
@@ -25,9 +25,6 @@ export default function Home() {
 }
 
 const Background = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   min-height: 100vh;
   height: 100%;
@@ -47,9 +44,10 @@ const Background = styled.div`
     );
   h1 {
     padding-left: 64px;
-    max-width: 606px;
+    max-width: 610px;
     line-height: 1.1;
     margin-bottom: 32px;
+    font-weight: 750;
   }
   .cta {
     margin-left: 15rem;

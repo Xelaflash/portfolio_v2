@@ -37,7 +37,8 @@ export const COLORS = {
 export const WEIGHTS = {
   light: 300,
   normal: 400,
-  medium: 700,
+  medium: 500,
+  semiBold: 700,
   bold: 900,
 };
 
