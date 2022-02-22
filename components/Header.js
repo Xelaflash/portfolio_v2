@@ -1,5 +1,5 @@
+import dynamic from 'next/dynamic';
 import styled from 'styled-components';
-import { Sun, Moon } from 'react-feather';
 import { useMobileMenu } from '../utils/MobileMenuState';
 import { QUERIES } from '../styles/constants';
 import UnstyledButton from './UnstyledButton';
@@ -10,6 +10,10 @@ import MobileMenu from './MobileMenu';
 
 export default function Header() {
   const { isMobileMenuOpen, toggleMobileMenu } = useMobileMenu();
+
+  const ThemeToggle = dynamic(() => import('./ThemeToggle'), {
+    ssr: false,
+  });
 
   return (
     <header>
@@ -30,6 +34,7 @@ export default function Header() {
           </NavLink>
         </Nav>
         <RightSection>
+          <ThemeToggle />
           <a
             href="https://alexgwebdev.notion.site/Alexandre-Gros-e06bc5d76e604dadaee7559f07500b30"
             target="_blank"
@@ -41,12 +46,9 @@ export default function Header() {
               background="var(--color-secondary)"
             />
           </a>
-          {/* TODO: add stuff to change color scheme */}
-          <UnstyledButton>
-            <Sun size={24} className="color-scheme-icon" />
-          </UnstyledButton>
         </RightSection>
         <MobileActions>
+          <ThemeToggle />
           <UnstyledButton
             className={
               isMobileMenuOpen
@@ -109,7 +111,7 @@ const NavLink = styled.a`
   font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--color-white);
+  color: var(--color-text);
   font-weight: var(--normal);
   overflow: hidden;
 
@@ -134,13 +136,8 @@ const NavLink = styled.a`
 
 const RightSection = styled.div`
   display: flex;
+  align-items: center;
   gap: 16px;
-  .color-scheme-icon {
-    color: var(--color-gray-300);
-    &:hover {
-      color: var(--color-white);
-    }
-  }
   @media ${QUERIES.tabletAndDown} {
     display: none;
   }

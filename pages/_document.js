@@ -3,6 +3,18 @@ import { ServerStyleSheet } from 'styled-components';
 
 class MyDocument extends Document {
   render() {
+    const setInitialTheme = `
+      function getUserPreference() {
+        if(window.localStorage.getItem('theme')) {
+          return window.localStorage.getItem('theme')
+        }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches
+                  ? 'dark'
+                  : 'light'
+      }
+      document.body.dataset.theme = getUserPreference();
+    `;
+
     return (
       <Html lang="en">
         <Head>
@@ -50,6 +62,8 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>
+          {/* used to avoid dreaded color flash */}
+          <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
           <Main />
           <NextScript />
         </body>

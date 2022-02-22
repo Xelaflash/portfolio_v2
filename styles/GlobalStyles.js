@@ -67,9 +67,8 @@ const GlobalStyle = createGlobalStyle`
     color: inherit;
     text-decoration: none;
   }
-
-
   /* END RESET */
+
   :root {
     --font-family: "CabinVariable", sans-serif;
     --title-font-family: "RalewayVariable", sans-serif;
@@ -114,8 +113,54 @@ const GlobalStyle = createGlobalStyle`
       }
     }
 
+    [data-theme="dark"]{
+      --color-primary: ${COLORS.darkPrimaryViolet};
+      --color-secondary: ${COLORS.darkSecondaryBlue};
+      --color-background: ${COLORS.darkBackgroundBlue};
+      --color-background-shade2: ${COLORS.darkBackgroundBlueShade2};
+      --color-background-shade3: ${COLORS.darkBackgroundBlueShade3};
+      --color-text: ${COLORS.white};
+      --color-gradient: linear-gradient(
+        90deg,
+        hsl(185deg 100% 50%) 0%,
+        hsl(196deg 100% 70%) 23%,
+        hsl(211deg 100% 77%) 33%,
+        hsl(234deg 100% 82%) 44%,
+        hsl(259deg 100% 80%) 58%,
+        hsl(274deg 100% 75%) 99%
+      );
+      body {
+        color: var(--color-text);
+        background: var(--color-background);
+      }
+    }
+
+
     /* Light Mode variables */
     @media (prefers-color-scheme: light) {
+      --color-primary: ${COLORS.lightPrimaryBlue};
+      --color-secondary: ${COLORS.lightSecondaryVioline};
+      --color-background: ${COLORS.white};
+      --color-background-shade2: ${COLORS.lightBackgroundShade2};
+      --color-background-shade3: ${COLORS.lightBackgroundShade3};
+      --color-text: ${COLORS.gray[900]};
+      --color-gradient: linear-gradient(
+        90deg,
+        hsl(228deg 78% 52%) 0%,
+        hsl(246deg 63% 56%) 29%,
+        hsl(263deg 54% 51%) 44%,
+        hsl(280deg 53% 46%) 57%,
+        hsl(298deg 56% 41%) 72%,
+        hsl(315deg 68% 41%) 100%
+      );
+      body {
+        color: var(--color-text);
+        background: var(--color-background);
+      }
+    }
+
+    /* TODO: look if i can combine those declarations */
+    [data-theme="light"] {
       --color-primary: ${COLORS.lightPrimaryBlue};
       --color-secondary: ${COLORS.lightSecondaryVioline};
       --color-background: ${COLORS.white};

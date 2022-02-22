@@ -5,6 +5,7 @@ export default styled.button`
   margin: 0;
   padding: 0;
   border: none;
+  min-height: var(--min-tap-height);
   background: transparent;
   cursor: pointer;
   text-align: left;
