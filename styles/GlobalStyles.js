@@ -138,8 +138,8 @@ const GlobalStyle = createGlobalStyle`
 
     /* Light Mode variables */
     @media (prefers-color-scheme: light) {
-      --color-primary: ${COLORS.lightPrimaryBlue};
-      --color-secondary: ${COLORS.lightSecondaryVioline};
+      --color-primary: ${COLORS.lightPrimaryVioline};
+      --color-secondary: ${COLORS.lightSecondaryBlue};
       --color-background: ${COLORS.white};
       --color-background-shade2: ${COLORS.lightBackgroundShade2};
       --color-background-shade3: ${COLORS.lightBackgroundShade3};
@@ -161,8 +161,8 @@ const GlobalStyle = createGlobalStyle`
 
     /* TODO: look if i can combine those declarations */
     [data-theme="light"] {
-      --color-primary: ${COLORS.lightPrimaryBlue};
-      --color-secondary: ${COLORS.lightSecondaryVioline};
+      --color-primary: ${COLORS.lightPrimaryVioline};
+      --color-secondary: ${COLORS.lightSecondaryBlue};
       --color-background: ${COLORS.white};
       --color-background-shade2: ${COLORS.lightBackgroundShade2};
       --color-background-shade3: ${COLORS.lightBackgroundShade3};

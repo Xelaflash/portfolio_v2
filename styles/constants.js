@@ -16,8 +16,8 @@ export const COLORS = {
   darkBackgroundBlueShade3: 'hsl(212, 32%,20%)', // #233243
 
   // Light mode colors
-  lightPrimaryBlue: 'hsl(228, 78%, 52%)', // #264DE4
-  lightSecondaryVioline: 'hsl(315, 68%, 41%)', // #B0228C
+  lightPrimaryVioline: 'hsl(315, 68%, 41%)', // #B0228C
+  lightSecondaryBlue: 'hsl(228, 78%, 52%)', // #264DE4
   lightBackgroundShade2: 'hsl(180, 4%, 95%)', // #F2F3F3
   lightBackgroundShade3: 'hsl(190, 6%, 80%) ', // #C9CECF
 
