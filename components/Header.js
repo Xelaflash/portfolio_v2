@@ -7,6 +7,7 @@ import Logo from './Logo';
 import Button from './Button';
 import VisuallyHidden from './VisuallyHidden';
 import MobileMenu from './MobileMenu';
+import NavLink from './NavLink';
 
 export default function Header() {
   const { isMobileMenuOpen, toggleMobileMenu } = useMobileMenu();
@@ -77,7 +78,6 @@ const HeaderStyles = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 18px 32px;
-  /* border-bottom: 1px solid var(--color-gray-300); */
   overflow: auto;
 
   @media ${QUERIES.tabletAndDown} {
@@ -100,37 +100,10 @@ const LogoWrapper = styled.div`
 const Nav = styled.nav`
   display: flex;
   gap: clamp(1rem, 9.2vw - 4.5rem, 3.5rem);
-  margin: 0px 48px;
-  padding-left: 92px;
+  margin: 4px 48px 0;
+  padding-left: 140px;
   @media ${QUERIES.tabletAndDown} {
     display: none;
-  }
-`;
-
-const NavLink = styled.a`
-  font-size: 1.125rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--color-text);
-  font-weight: var(--normal);
-  overflow: hidden;
-
-  &:hover span {
-    transform: translateY(-100%);
-    color: var(--color-primary);
-  }
-
-  span {
-    position: relative;
-    display: inline-block;
-    transition: transform 150ms ease-out, color 250ms ease-out;
-  }
-
-  span::before {
-    position: absolute;
-    top: 100%;
-    content: attr(data-hover);
-    transform: translate3d(0, 0, 0);
   }
 `;
 

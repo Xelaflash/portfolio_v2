@@ -39,6 +39,7 @@ const ThemeToggle = () => {
 };
 
 const ColorTheme = styled.div`
+  margin-top: 4px;
   .color-scheme-icon:hover {
     opacity: 0.8;
   }

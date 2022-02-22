@@ -73,7 +73,7 @@ const GlobalStyle = createGlobalStyle`
     --font-family: "CabinVariable", sans-serif;
     --title-font-family: "RalewayVariable", sans-serif;
     --light: ${WEIGHTS.light};
-    --normal: ${WEIGHTS.normal};
+    --regular: ${WEIGHTS.regular};
     --medium: ${WEIGHTS.medium};
     --bold: ${WEIGHTS.bold};
     --color-white: ${COLORS.white};
@@ -119,7 +119,7 @@ const GlobalStyle = createGlobalStyle`
       --color-background: ${COLORS.darkBackgroundBlue};
       --color-background-shade2: ${COLORS.darkBackgroundBlueShade2};
       --color-background-shade3: ${COLORS.darkBackgroundBlueShade3};
-      --color-text: ${COLORS.white};
+      --color-text: var(--color-white);
       --color-gradient: linear-gradient(
         90deg,
         hsl(185deg 100% 50%) 0%,
@@ -143,7 +143,7 @@ const GlobalStyle = createGlobalStyle`
       --color-background: ${COLORS.white};
       --color-background-shade2: ${COLORS.lightBackgroundShade2};
       --color-background-shade3: ${COLORS.lightBackgroundShade3};
-      --color-text: ${COLORS.gray[900]};
+      --color-text: var(--color-gray-900);
       --color-gradient: linear-gradient(
         90deg,
         hsl(228deg 78% 52%) 0%,
@@ -166,7 +166,7 @@ const GlobalStyle = createGlobalStyle`
       --color-background: ${COLORS.white};
       --color-background-shade2: ${COLORS.lightBackgroundShade2};
       --color-background-shade3: ${COLORS.lightBackgroundShade3};
-      --color-text: ${COLORS.gray[900]};
+      --color-text: var(--color-gray-900);
       --color-gradient: linear-gradient(
         90deg,
         hsl(228deg 78% 52%) 0%,
@@ -194,7 +194,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: var(--font-family); // weights axis 400 - 700
-    font-weight: ${WEIGHTS.normal};
+    font-weight: var(--regular);
   }
 
 

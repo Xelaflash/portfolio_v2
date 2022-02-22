@@ -11,8 +11,8 @@ const Button = ({ text, background, color, className }) => (
 );
 
 const ButtonStyles = styled.button`
-  padding: 12px 36px;
-  font-weight: var(--normal);
+  padding: 10px 36px;
+  font-weight: var(--regular);
   font-size: 1rem;
   font-family: var(--font-family);
   min-height: var(--min-tap-height);
