@@ -97,7 +97,6 @@ const fadeIn = keyframes`
 `;
 
 const ContentWrapper = styled.div`
-  color: var(--color-white);
   background: var(--color-background);
   width: 300px;
   padding: 32px;
@@ -120,7 +119,7 @@ const Filler = styled.div`
 `;
 
 const NavLink = styled.a`
-  color: var(--color-white);
+  color: var(--color-text);
   font-weight: var(--medium);
   text-transform: uppercase;
   text-decoration: none;
@@ -161,7 +160,8 @@ const Footer = styled.footer`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  color: var(--color-gray-300);
+  color: var(--color-text);
+  opacity: 0.8;
   a:hover {
     opacity: 0.6;
   }

@@ -170,7 +170,7 @@ const MobileActions = styled.div`
     border: 0;
     margin: 0;
     overflow: visible;
-    height: calc(var(--min-tap-height) + 20px);
+    height: var(--min-tap-height);
     z-index: 10;
   }
   .hamburger:hover {
@@ -182,12 +182,11 @@ const MobileActions = styled.div`
   .hamburger.is-active .hamburger-inner,
   .hamburger.is-active .hamburger-inner::before,
   .hamburger.is-active .hamburger-inner::after {
-    background-color: var(--color-white);
+    background-color: var(--color-text);
   }
 
   .hamburger-box {
     width: 26px;
-    height: var(--min-tap-height);
     display: inline-block;
     position: relative;
   }
@@ -202,7 +201,7 @@ const MobileActions = styled.div`
   .hamburger-inner::after {
     width: 26px;
     height: 3px;
-    background-color: var(--color-white);
+    background-color: var(--color-text);
     border-radius: 4px;
     position: absolute;
     transition-property: transform;
