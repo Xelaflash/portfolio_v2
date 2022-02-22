@@ -3,13 +3,23 @@ import propTypes from 'prop-types';
 import styled, { css, keyframes } from 'styled-components';
 import { Facebook, GitHub, Linkedin, Twitter } from 'react-feather';
 import Link from 'next/link';
+import { useEffect } from 'react';
 import Button from './Button';
 import VisuallyHidden from './VisuallyHidden';
 import Spacer from './Spacer';
-import useLockBodyScroll from '../utils/bodyScrollLock';
 
 const MobileMenu = ({ isOpen }) => {
-  useLockBodyScroll();
+  useEffect(() => {
+    if (isOpen === true) {
+      // Get original body overflow
+      const originalStyle = window.getComputedStyle(document.body).overflow;
+      // Prevent scrolling on mount
+      document.body.style.overflow = 'hidden';
+      // Re-enable scrolling when component unmounts
+      return () => (document.body.style.overflow = originalStyle);
+    }
+  }, [isOpen]);
+
   return (
     <MobileMenuStyles isOpen={isOpen}>
       <ContentWrapper aria-label="Menu">
