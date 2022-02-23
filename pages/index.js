@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 // import Image from 'next/image';
 import Home from '../components/Home';
@@ -17,6 +18,7 @@ export default function IndexPage() {
       <main>
         <Header />
         <Home />
+        <Footer />
       </main>
     </>
   );

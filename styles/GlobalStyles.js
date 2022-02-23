@@ -91,29 +91,8 @@ const GlobalStyle = createGlobalStyle`
     --color-logo-yellow: ${COLORS.logoYellow};
     --color-logo-green: ${COLORS.logoGreen}; */
 
-    /* Dark Mode variables */
-    @media (prefers-color-scheme: dark) {
-      --color-primary: ${COLORS.darkPrimaryViolet};
-      --color-secondary: ${COLORS.darkSecondaryBlue};
-      --color-background: ${COLORS.darkBackgroundBlue};
-      --color-background-shade2: ${COLORS.darkBackgroundBlueShade2};
-      --color-background-shade3: ${COLORS.darkBackgroundBlueShade3};
-      --color-gradient: linear-gradient(
-        90deg,
-        hsl(185deg 100% 50%) 0%,
-        hsl(196deg 100% 70%) 23%,
-        hsl(211deg 100% 77%) 33%,
-        hsl(234deg 100% 82%) 44%,
-        hsl(259deg 100% 80%) 58%,
-        hsl(274deg 100% 75%) 99%
-      );
-      body {
-        color: var(--color-white);
-        background: var(--color-background);
-      }
-    }
-
-    [data-theme="dark"]{
+    /* dark Mode variables */
+    body[data-theme="dark"] {
       --color-primary: ${COLORS.darkPrimaryViolet};
       --color-secondary: ${COLORS.darkSecondaryBlue};
       --color-background: ${COLORS.darkBackgroundBlue};
@@ -129,15 +108,29 @@ const GlobalStyle = createGlobalStyle`
         hsl(259deg 100% 80%) 58%,
         hsl(274deg 100% 75%) 99%
       );
-      body {
-        color: var(--color-text);
-        background: var(--color-background);
-      }
+      --footer-background: linear-gradient(
+        180deg,
+        hsl(212deg 32% 8%) 0%,
+        hsl(212deg 30% 9%) 28%,
+        hsl(212deg 31% 10%) 39%,
+        hsl(212deg 31% 12%) 47%,
+        hsl(212deg 32% 13%) 53%,
+        hsl(211deg 32% 14%) 58%,
+        hsl(211deg 32% 15%) 64%,
+        hsl(212deg 32% 16%) 69%,
+        hsl(212deg 32% 18%) 75%,
+        hsl(212deg 32% 19%) 82%,
+        hsl(212deg 31% 20%) 100%
+      );
+      --footer-btn-shadow: 0deg, 0%, 100%;
+      --footer-text-dimmed: var(--color-gray-500);
+      color: var(--color-white);
+      background: var(--color-background);
     }
 
 
     /* Light Mode variables */
-    @media (prefers-color-scheme: light) {
+    body[data-theme="light"] {
       --color-primary: ${COLORS.lightPrimaryVioline};
       --color-secondary: ${COLORS.lightSecondaryBlue};
       --color-background: ${COLORS.white};
@@ -153,33 +146,24 @@ const GlobalStyle = createGlobalStyle`
         hsl(298deg 56% 41%) 72%,
         hsl(315deg 68% 41%) 100%
       );
-      body {
-        color: var(--color-text);
-        background: var(--color-background);
-      }
-    }
-
-    /* TODO: look if i can combine those declarations */
-    [data-theme="light"] {
-      --color-primary: ${COLORS.lightPrimaryVioline};
-      --color-secondary: ${COLORS.lightSecondaryBlue};
-      --color-background: ${COLORS.white};
-      --color-background-shade2: ${COLORS.lightBackgroundShade2};
-      --color-background-shade3: ${COLORS.lightBackgroundShade3};
-      --color-text: var(--color-gray-900);
-      --color-gradient: linear-gradient(
-        90deg,
-        hsl(228deg 78% 52%) 0%,
-        hsl(246deg 63% 56%) 29%,
-        hsl(263deg 54% 51%) 44%,
-        hsl(280deg 53% 46%) 57%,
-        hsl(298deg 56% 41%) 72%,
-        hsl(315deg 68% 41%) 100%
+      --footer-background: linear-gradient(
+        180deg,
+        hsl(0deg 0% 100%) 0%,
+        hsl(180deg 4% 99%) 17%,
+        hsl(180deg 4% 98%) 24%,
+        hsl(180deg 4% 97%) 30%,
+        hsl(180deg 4% 96%) 35%,
+        hsl(180deg 4% 95%) 40%,
+        hsl(182deg 5% 92%) 46%,
+        hsl(184deg 5% 89%) 52%,
+        hsl(186deg 5% 86%) 61%,
+        hsl(188deg 6% 83%) 72%,
+        hsl(190deg 6% 80%) 100%
       );
-      body {
-        color: var(--color-text);
-        background: var(--color-background);
-      }
+      --footer-btn-shadow: 220deg, 3%, 20%;
+      --footer-text-dimmed: var(--color-gray-700);
+      color: var(--color-text);
+      background: var(--color-background);
     }
   }
 

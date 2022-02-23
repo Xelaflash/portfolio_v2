@@ -1,0 +1,152 @@
+import Image from 'next/image';
+import styled from 'styled-components';
+import Link from 'next/link';
+import { QUERIES } from '../styles/constants';
+import VisuallyHidden from './VisuallyHidden';
+
+export default function Footer() {
+  return (
+    <FooterWrapper>
+      <FlexWrapperLeft>
+        <LogoWrapper>
+          <Image
+            src="/images/logo.png"
+            alt="AlexG WebDev"
+            width={80}
+            height={80}
+            quality={100}
+          />
+        </LogoWrapper>
+        <Copyright>
+          ©{new Date().getFullYear()} AlexGWebDev. All Rights Reserved.
+        </Copyright>
+      </FlexWrapperLeft>
+
+      <LinksWrapper>
+        <p>Sections</p>
+        <Link href="/">Home</Link>
+        <Link href="/#about">About</Link>
+        <Link href="/#projects">Projects</Link>
+        <Link href="/#contact">Contact</Link>
+      </LinksWrapper>
+
+      <FlexWrapperRight>
+        <BuyCoffeeBtnWrapper>
+          <a
+            href="https://www.buymeacoffee.com/givemethe.money"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              src="/images/bmc-button.png"
+              alt="Buy me a coffee - link to donate"
+              quality={75}
+              width={200}
+              height={56}
+            />
+            <VisuallyHidden>Support Me</VisuallyHidden>
+          </a>
+        </BuyCoffeeBtnWrapper>
+        <RegulatoryLinksWrapper>
+          <Link href="/privacy">Privacy Policy</Link>
+          <Link href="/legal">Legal</Link>
+        </RegulatoryLinksWrapper>
+      </FlexWrapperRight>
+    </FooterWrapper>
+  );
+}
+
+const FooterWrapper = styled.footer`
+  background: var(--footer-background) repeat scroll 0% 0%;
+  min-height: 250px;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 1fr minmax(350px, 1fr) 1fr;
+  @media ${QUERIES.tabletAndDown} {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 32px;
+  }
+
+  @media ${QUERIES.phoneAndDown} {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 32px;
+  }
+`;
+
+// grid elements
+const FlexWrapperLeft = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  justify-self: left;
+  gap: 32px;
+  @media ${QUERIES.phoneAndDown} {
+    text-align: center;
+    grid-row: 3;
+  }
+`;
+
+const LinksWrapper = styled.div`
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: start;
+
+  p {
+    font-size: 18px;
+    font-weight: var(--medium);
+    color: var(--footer-text-dimmed);
+    text-transform: uppercase;
+  }
+  a {
+    font-size: 18px;
+    font-weight: var(--regular);
+    color: var(--color-text);
+    text-decoration: none;
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+`;
+
+const FlexWrapperRight = styled.div`
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 32px;
+  justify-self: center;
+  @media ${QUERIES.phoneAndDown} {
+    gap: 24px;
+    justify-self: center;
+  }
+`;
+// End grid elements
+
+const LogoWrapper = styled.div`
+  @media ${QUERIES.phoneAndDown} {
+    text-align: center;
+  }
+`;
+
+const Copyright = styled.p`
+  font-size: 14px;
+  font-weight: var(--medium);
+  margin-top: 8px;
+  color: var(--footer-text-dimmed);
+`;
+
+const BuyCoffeeBtnWrapper = styled.div`
+  filter: drop-shadow(2px 2px 2px hsla(var(--footer-btn-shadow), 1));
+`;
+
+const RegulatoryLinksWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  color: var(--footer-text-dimmed);
+  a:hover {
+    opacity: 0.8;
+  }
+`;
