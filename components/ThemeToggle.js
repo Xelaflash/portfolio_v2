@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { useEffect, useState } from 'react';
 import { Sun, Moon } from 'react-feather';
 import UnstyledButton from './UnstyledButton';
@@ -22,27 +22,39 @@ const ThemeToggle = () => {
         onClick={() => setActiveTheme(inactiveTheme)}
       >
         {activeTheme === 'dark' ? (
-          <Sun
-            size={28}
-            className="color-scheme-icon"
-            color="var(--color-text)"
-          />
+          <Sun size={28} className="sun" />
         ) : (
-          <Moon
-            size={28}
-            className="color-scheme-icon"
-            color="var(--color-text)"
-          />
+          <Moon size={28} className="moon" />
         )}
       </UnstyledButton>
     </ColorTheme>
   );
 };
 
-const ColorTheme = styled.div`
-  .color-scheme-icon:hover {
-    opacity: 0.8;
+const animate = keyframes`
+  from {
+    transform: rotate(0);
   }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+const ColorTheme = styled.div`
+  color: var(--color-text);
+  transition: all 500ms;
+  &:hover {
+    animation: ${animate} 750ms both ease-out;
+    .sun {
+      stroke: var(--color-logo-yellow);
+      fill: var(--color-logo-yellow);
+    }
+    .moon {
+      stroke: var(--color-text);
+      fill: var(--color-text);
+    }
+  }
+
   @media ${QUERIES.tabletAndDown} {
     margin-top: -4px;
   }
