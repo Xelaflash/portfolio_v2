@@ -68,8 +68,9 @@ const FooterWrapper = styled.footer`
   }
 
   @media ${QUERIES.phoneAndDown} {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 32px;
+    padding: 32px 16px;
   }
 `;
 
@@ -82,7 +83,8 @@ const FlexWrapperLeft = styled.div`
   justify-self: left;
   gap: 32px;
   @media ${QUERIES.phoneAndDown} {
-    text-align: center;
+    justify-self: center;
+    gap: 16px;
     grid-row: 3;
   }
 `;
@@ -109,6 +111,9 @@ const LinksWrapper = styled.div`
       color: var(--color-primary);
     }
   }
+  @media ${QUERIES.phoneAndDown} {
+    align-items: center;
+  }
 `;
 
 const FlexWrapperRight = styled.div`
@@ -126,6 +131,7 @@ const FlexWrapperRight = styled.div`
 // End grid elements
 
 const LogoWrapper = styled.div`
+  line-height: 0;
   @media ${QUERIES.phoneAndDown} {
     text-align: center;
   }
@@ -136,6 +142,9 @@ const Copyright = styled.p`
   font-weight: var(--medium);
   margin-top: 8px;
   color: var(--footer-text-dimmed);
+  @media ${QUERIES.tabletAndDown} {
+    text-align: center;
+  }
 `;
 
 const BuyCoffeeBtnWrapper = styled.div`
@@ -148,5 +157,8 @@ const RegulatoryLinksWrapper = styled.div`
   color: var(--footer-text-dimmed);
   a:hover {
     opacity: 0.8;
+  }
+  @media ${QUERIES.phoneAndDown} {
+    display: none;
   }
 `;
