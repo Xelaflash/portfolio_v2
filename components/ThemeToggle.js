@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { useEffect, useState } from 'react';
 import { Sun, Moon } from 'react-feather';
 import UnstyledButton from './UnstyledButton';
+import { QUERIES } from '../styles/constants';
 
 const ThemeToggle = () => {
   const [activeTheme, setActiveTheme] = useState(document.body.dataset.theme);
@@ -39,9 +40,11 @@ const ThemeToggle = () => {
 };
 
 const ColorTheme = styled.div`
-  margin-top: 4px;
   .color-scheme-icon:hover {
     opacity: 0.8;
+  }
+  @media ${QUERIES.tabletAndDown} {
+    margin-top: -4px;
   }
 `;
 

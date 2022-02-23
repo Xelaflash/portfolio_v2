@@ -127,10 +127,9 @@ const MobileActions = styled.div`
   @media ${QUERIES.phoneAndDown} {
     gap: 16px;
   }
-
   /* hamburger animation css */
   .hamburger {
-    padding: 10px 10px;
+    padding: 15px 15px;
     display: inline-block;
     cursor: pointer;
     transition-property: opacity, filter;
@@ -143,7 +142,6 @@ const MobileActions = styled.div`
     border: 0;
     margin: 0;
     overflow: visible;
-    height: var(--min-tap-height);
     z-index: 10;
   }
   .hamburger:hover {
@@ -160,6 +158,7 @@ const MobileActions = styled.div`
 
   .hamburger-box {
     width: 26px;
+    height: 24px;
     display: inline-block;
     position: relative;
   }
@@ -167,13 +166,13 @@ const MobileActions = styled.div`
   .hamburger-inner {
     display: block;
     top: 50%;
-    margin-top: -2px;
+    margin-top: -8px;
   }
   .hamburger-inner,
   .hamburger-inner::before,
   .hamburger-inner::after {
     width: 26px;
-    height: 3px;
+    height: 4px;
     background-color: var(--color-text);
     border-radius: 4px;
     position: absolute;
@@ -192,6 +191,7 @@ const MobileActions = styled.div`
   .hamburger-inner::after {
     bottom: -10px;
   }
+
   .hamburger--collapse .hamburger-inner {
     top: auto;
     bottom: 0;
