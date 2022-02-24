@@ -122,8 +122,11 @@ const MobileActions = styled.div`
     justify-content: flex-end;
     gap: 32px;
   }
-  @media ${QUERIES.phoneAndDown} {
+  @media ${QUERIES.tabletAndDown} {
     gap: 16px;
+  }
+  @media ${QUERIES.phoneAndDown} {
+    gap: 8px;
   }
   /* hamburger animation css */
   .hamburger {
@@ -133,13 +136,9 @@ const MobileActions = styled.div`
     transition-property: opacity, filter;
     transition-duration: 0.15s;
     transition-timing-function: linear;
-    font: inherit;
-    color: inherit;
-    text-transform: none;
     background-color: transparent;
-    border: 0;
-    margin: 0;
     overflow: visible;
+    margin-right: -8px;
     z-index: 2;
   }
   .hamburger:hover {

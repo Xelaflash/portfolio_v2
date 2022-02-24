@@ -154,7 +154,6 @@ const MobileMenuStyles = styled.div`
       width: 100%;
       animation: 450ms ${backdropFadeIn} both ease-out 200ms;
       transform: translateX(0);
-      /* box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.45); */
     `};
   ${Content} {
     ${(props) =>

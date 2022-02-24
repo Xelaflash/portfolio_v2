@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { COLORS, WEIGHTS } from './constants';
+import { COLORS, QUERIES, WEIGHTS } from './constants';
 
 import '@fontsource/cabin/variable.css';
 import '@fontsource/cabin/variable-italic.css';
@@ -122,8 +122,8 @@ const GlobalStyle = createGlobalStyle`
         hsl(212deg 32% 19%) 82%,
         hsl(212deg 31% 20%) 100%
       );
+      --text-dimmed: var(--color-gray-500);
       --footer-btn-shadow: 0deg, 0%, 100%;
-      --footer-text-dimmed: var(--color-gray-500);
       color: var(--color-white);
       background: var(--color-background);
     }
@@ -161,7 +161,7 @@ const GlobalStyle = createGlobalStyle`
         hsl(190deg 6% 80%) 100%
       );
       --footer-btn-shadow: 220deg, 3%, 20%;
-      --footer-text-dimmed: var(--color-gray-700);
+      ---text-dimmed: var(--color-gray-700);
       color: var(--color-text);
       background: var(--color-background);
     }
@@ -193,6 +193,15 @@ const GlobalStyle = createGlobalStyle`
     background: var(--color-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  @media ${QUERIES.tabletAndDown} {
+    .section-title {
+    font-size: 2.7rem;
+  }
+  @media ${QUERIES.phoneAndDown} {
+    .section-title {
+    font-size: 2.35rem;
+  }
   }
 `;
 

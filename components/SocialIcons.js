@@ -52,13 +52,14 @@ const IconsWrapper = styled.div`
   justify-content: center;
   flex-direction: ${(props) => props.direction || 'row'};
   gap: 16px;
-  color: var(--color-white);
+  color: var(--color-text);
   a {
     width: var(--min-tap-height);
     height: var(--min-tap-height);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: color 250ms ease;
     &:hover {
       color: var(--color-primary);
     }

@@ -99,7 +99,7 @@ const LinksWrapper = styled.div`
   p {
     font-size: 18px;
     font-weight: var(--medium);
-    color: var(--footer-text-dimmed);
+    color: var(--text-dimmed);
     text-transform: uppercase;
   }
   a {
@@ -141,7 +141,7 @@ const Copyright = styled.p`
   font-size: 14px;
   font-weight: var(--medium);
   margin-top: 8px;
-  color: var(--footer-text-dimmed);
+  color: var(--text-dimmed);
   @media ${QUERIES.tabletAndDown} {
     text-align: center;
   }
@@ -154,7 +154,7 @@ const BuyCoffeeBtnWrapper = styled.div`
 const RegulatoryLinksWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  color: var(--footer-text-dimmed);
+  color: var(--text-dimmed);
   a:hover {
     opacity: 0.8;
   }

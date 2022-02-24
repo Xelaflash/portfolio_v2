@@ -15,7 +15,7 @@ const SideBarWrapper = styled.div`
   position: fixed;
   right: 0;
   top: 50%;
-  margin-top: -100px;
+  margin-top: -116px;
   height: fit-content;
   width: fit-content;
   padding: 10px 20px;
