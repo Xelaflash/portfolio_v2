@@ -17,63 +17,61 @@ export default function Header() {
   });
 
   return (
-    <header>
-      <HeaderStyles>
-        <LogoWrapper>
-          <Logo />
-        </LogoWrapper>
-        <Nav>
-          {/* TODO: add active class + color when section scroll */}
-          <NavLink href="/#about">
-            <span data-hover="About">About</span>
-          </NavLink>
-          <NavLink href="/#projects">
-            <span data-hover="Projects">Projects</span>
-          </NavLink>
-          <NavLink href="/#contact">
-            <span data-hover="Contact">Contact</span>
-          </NavLink>
-        </Nav>
-        <RightSection>
-          <ThemeToggle />
-          <a
-            href="https://alexgwebdev.notion.site/Alexandre-Gros-e06bc5d76e604dadaee7559f07500b30"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <Button
-              text="RESUME"
-              color="var(--color-background)"
-              background="var(--color-secondary)"
-            />
-          </a>
-        </RightSection>
-        <MobileActions>
-          <ThemeToggle />
-          <UnstyledButton
-            className={
-              isMobileMenuOpen
-                ? 'hamburger hamburger--collapse is-active'
-                : 'hamburger hamburger--collapse'
-            }
-            type="button"
-            aria-label="Menu"
-            aria-controls="navigation"
-            onClick={toggleMobileMenu}
-          >
-            <span className="hamburger-box">
-              <span className="hamburger-inner" />
-            </span>
-            <VisuallyHidden>Menu</VisuallyHidden>
-          </UnstyledButton>
-        </MobileActions>
-      </HeaderStyles>
+    <HeaderStyles>
+      <LogoWrapper>
+        <Logo />
+      </LogoWrapper>
+      <Nav>
+        {/* TODO: add active class + color when section scroll */}
+        <NavLink href="/#about">
+          <span data-hover="About">About</span>
+        </NavLink>
+        <NavLink href="/#projects">
+          <span data-hover="Projects">Projects</span>
+        </NavLink>
+        <NavLink href="/#contact">
+          <span data-hover="Contact">Contact</span>
+        </NavLink>
+      </Nav>
+      <RightSection>
+        <ThemeToggle />
+        <a
+          href="https://alexgwebdev.notion.site/Alexandre-Gros-e06bc5d76e604dadaee7559f07500b30"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <Button
+            text="RESUME"
+            color="var(--color-background)"
+            background="var(--color-secondary)"
+          />
+        </a>
+      </RightSection>
+      <MobileActions>
+        <ThemeToggle />
+        <UnstyledButton
+          className={
+            isMobileMenuOpen
+              ? 'hamburger hamburger--collapse is-active'
+              : 'hamburger hamburger--collapse'
+          }
+          type="button"
+          aria-label="Menu"
+          aria-controls="navigation"
+          onClick={toggleMobileMenu}
+        >
+          <span className="hamburger-box">
+            <span className="hamburger-inner" />
+          </span>
+          <VisuallyHidden>Menu</VisuallyHidden>
+        </UnstyledButton>
+      </MobileActions>
       <MobileMenu isOpen={isMobileMenuOpen} />
-    </header>
+    </HeaderStyles>
   );
 }
 
-const HeaderStyles = styled.div`
+const HeaderStyles = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -142,7 +140,7 @@ const MobileActions = styled.div`
     border: 0;
     margin: 0;
     overflow: visible;
-    z-index: 10;
+    z-index: 2;
   }
   .hamburger:hover {
     opacity: 0.7;

@@ -1,12 +1,13 @@
 /* eslint-disable no-unused-vars */
 import propTypes from 'prop-types';
 import styled, { css, keyframes } from 'styled-components';
-import { Facebook, GitHub, Linkedin, Twitter } from 'react-feather';
+
 import Link from 'next/link';
 import { useEffect } from 'react';
 import Button from './Button';
 import VisuallyHidden from './VisuallyHidden';
 import Spacer from './Spacer';
+import SocialIcons from './SocialIcons';
 
 const MobileMenu = ({ isOpen }) => {
   useEffect(() => {
@@ -45,38 +46,7 @@ const MobileMenu = ({ isOpen }) => {
             </a>
           </ButtonWrapper>
           <SocialWrapper>
-            <a
-              href="https://www.facebook.com/alexgwebdev"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <Facebook size={24} className="social-icons" />
-              <VisuallyHidden>Facebook</VisuallyHidden>
-            </a>
-            <a
-              href="https://github.com/Xelaflash"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <GitHub size={24} className="social-icons" />
-              <VisuallyHidden>Github</VisuallyHidden>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/alexgwebdev/"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <Linkedin size={24} className="social-icons" />
-              <VisuallyHidden>Linkedin</VisuallyHidden>
-            </a>
-            <a
-              href="https://twitter.com/GhostXela"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <Twitter size={24} className="social-icons" />
-              <VisuallyHidden>Linkedin</VisuallyHidden>
-            </a>
+            <SocialIcons />
           </SocialWrapper>
           <Footer>
             <Link href="/privacy">Privacy Policy</Link>
@@ -151,18 +121,7 @@ const MobileResumeButton = styled(Button)`
 
 const SocialWrapper = styled.div`
   margin: auto;
-  display: flex;
-  align-items: center;
-  gap: 16px;
   margin-top: 32px;
-  /*  TODO: check if 44px on mobile */
-  a {
-    width: var(--min-tap-height);
-    height: var(--min-tap-height);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 `;
 
 const Footer = styled.footer`
@@ -182,7 +141,7 @@ const MobileMenuStyles = styled.div`
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 5;
+  z-index: 1;
   display: flex;
   justify-content: flex-end;
   /* background: hsl(212deg 8% 38% / 0.9); */

@@ -194,14 +194,6 @@ const GlobalStyle = createGlobalStyle`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
-    .social-icons {
-      color: var(--color-white);
-      &:hover {
-      color: var(--color-primary);
-    }
-  }
-
 `;
 
 export default GlobalStyle;
