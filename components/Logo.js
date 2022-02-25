@@ -11,6 +11,7 @@ export default function Logo() {
           width="64"
           height="64"
           className="logo-img"
+          placeHolder="blur"
         />
       </a>
     </Link>

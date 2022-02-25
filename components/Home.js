@@ -44,6 +44,7 @@ export default function Home() {
               alt="Illustration of a laptop with a coffee cup"
               quality={100}
               layout="fill"
+              placeHolder="blur"
             />
           </ImageWrapper>
         </LaptopSvgWrapper>

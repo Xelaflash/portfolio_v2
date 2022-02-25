@@ -15,6 +15,7 @@ export default function Footer() {
             width={80}
             height={80}
             quality={100}
+            placeHolder="blur"
           />
         </LogoWrapper>
         <Copyright>
@@ -43,6 +44,7 @@ export default function Footer() {
               quality={75}
               width={200}
               height={56}
+              placeHolder="blur"
             />
             <VisuallyHidden>Support Me</VisuallyHidden>
           </a>
