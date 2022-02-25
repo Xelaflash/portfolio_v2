@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 // import Image from 'next/image';
 import Home from '../components/Home';
+import About from '../components/About';
 import SideBar from '../components/Sidebar';
 
 export default function IndexPage() {
@@ -16,12 +17,13 @@ export default function IndexPage() {
           key="title"
         />
       </Head>
+      <Header />
+      <SideBar />
       <main>
-        <SideBar />
-        <Header />
         <Home />
-        <Footer />
+        <About />
       </main>
+      <Footer />
     </>
   );
 }
