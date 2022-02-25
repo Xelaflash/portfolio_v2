@@ -63,7 +63,7 @@ export default function Home() {
   );
 }
 
-const Background = styled.div`
+const Background = styled.section`
   width: 100%;
   min-height: 41rem;
   background: linear-gradient(
