@@ -75,6 +75,7 @@ const GlobalStyle = createGlobalStyle`
     --light: ${WEIGHTS.light};
     --regular: ${WEIGHTS.regular};
     --medium: ${WEIGHTS.medium};
+    --semiBold: ${WEIGHTS.semiBold};
     --bold: ${WEIGHTS.bold};
     --color-white: ${COLORS.white};
     --color-green: ${COLORS.green};
@@ -184,7 +185,6 @@ const GlobalStyle = createGlobalStyle`
 
   h1,h2,h3,h4 {
     font-family: var(--title-font-family); // weights axis 100 - 900
-    font-weight: var(--bold);
   }
 
   .section-title {
