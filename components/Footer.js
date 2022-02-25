@@ -4,13 +4,16 @@ import Link from 'next/link';
 import { QUERIES } from '../styles/constants';
 import VisuallyHidden from './VisuallyHidden';
 
+import logo from '../public/logo.png';
+import buyMeCoffeeImg from '../public/bmc-button.png';
+
 export default function Footer() {
   return (
     <FooterWrapper>
       <FlexWrapperLeft>
         <LogoWrapper>
           <Image
-            src="/images/logo.png"
+            src={logo}
             alt="AlexG WebDev"
             width={80}
             height={80}
@@ -39,12 +42,12 @@ export default function Footer() {
             rel="noreferrer"
           >
             <Image
-              src="/images/bmc-button.png"
+              src={buyMeCoffeeImg}
               alt="Buy me a coffee - link to donate"
               quality={75}
               width={200}
               height={56}
-              placeHolder="blur"
+              placeholder="blur"
             />
             <VisuallyHidden>Support Me</VisuallyHidden>
           </a>

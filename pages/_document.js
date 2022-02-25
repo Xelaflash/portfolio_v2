@@ -32,7 +32,7 @@ class MyDocument extends Document {
           />
           <meta
             itemProp="image"
-            content="https://www.alexgwebdev.com/images/meta_image.png"
+            content="https://www.alexgwebdev.com/meta_image.png"
           />
 
           {/* <!-- Facebook Meta Tags --> */}
@@ -43,7 +43,7 @@ class MyDocument extends Document {
           />
           <meta
             property="og:image"
-            content="https://www.alexgwebdev.com/images/meta_image.png"
+            content="https://www.alexgwebdev.com/meta_image.png"
           />
           <meta property="og:url" content="https://www.alexgwebdev.com" />
           <meta property="og:type" content="website" />
@@ -56,7 +56,7 @@ class MyDocument extends Document {
           />
           <meta
             name="twitter:image"
-            content="https://www.alexgwebdev.com/images/meta_image.png"
+            content="https://www.alexgwebdev.com/meta_image.png"
           />
           <meta name="twitter:card" content="summary_large_image" />
           <link rel="icon" href="/favicon.ico" />

@@ -7,6 +7,8 @@ import MaxWidthWrapper from './MaxWidthWrapper';
 import Spacer from './Spacer';
 import { useWindowSize } from '../utils/useWindowSize';
 
+import laptopImg from '../public/laptop.png';
+
 export default function Home() {
   const size = useWindowSize();
 
@@ -40,11 +42,11 @@ export default function Home() {
         <LaptopSvgWrapper>
           <ImageWrapper>
             <Image
-              src="/images/laptop.svg"
+              src={laptopImg}
               alt="Illustration of a laptop with a coffee cup"
               quality={100}
               layout="fill"
-              placeHolder="blur"
+              placeholder="blur"
             />
           </ImageWrapper>
         </LaptopSvgWrapper>
