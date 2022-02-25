@@ -2,15 +2,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 import { QUERIES } from '../styles/constants';
+import { useWindowSize } from '../utils/useWindowSize';
+import { useColorTheme } from '../utils/themeState';
 import Button from './Button';
 import MaxWidthWrapper from './MaxWidthWrapper';
 import Spacer from './Spacer';
-import { useWindowSize } from '../utils/useWindowSize';
-
-import laptopImg from '../public/laptop.png';
+import laptopDarkImg from '../public/laptop_dark.png';
+import laptopLightImg from '../public/laptop_light.png';
 
 export default function Home() {
   const size = useWindowSize();
+  const { activeTheme } = useColorTheme();
 
   return (
     <Background>
@@ -41,13 +43,19 @@ export default function Home() {
         </TaglineWrapper>
         <LaptopSvgWrapper>
           <ImageWrapper>
-            <Image
-              src={laptopImg}
-              alt="Illustration of a laptop with a coffee cup"
-              quality={100}
-              layout="fill"
-              placeholder="blur"
-            />
+            {activeTheme === 'dark' ? (
+              <Image
+                src={laptopDarkImg}
+                alt="Illustration of a laptop with a coffee cup"
+                layout="fill"
+              />
+            ) : (
+              <Image
+                src={laptopLightImg}
+                alt="Illustration of a laptop with a coffee cup"
+                layout="fill"
+              />
+            )}
           </ImageWrapper>
         </LaptopSvgWrapper>
       </MaxWidthWrapper>
@@ -57,7 +65,6 @@ export default function Home() {
 
 const Background = styled.div`
   width: 100%;
-  /* min-height: calc(100vh - 80px); */
   min-height: 41rem;
   background: linear-gradient(
       calc(180deg - 20deg),

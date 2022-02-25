@@ -3,15 +3,10 @@ import { useEffect, useState } from 'react';
 import { Sun, Moon } from 'react-feather';
 import UnstyledButton from './UnstyledButton';
 import { QUERIES } from '../styles/constants';
+import { useColorTheme } from '../utils/themeState';
 
 const ThemeToggle = () => {
-  const [activeTheme, setActiveTheme] = useState(document.body.dataset.theme);
-  const inactiveTheme = activeTheme === 'dark' ? 'light' : 'dark';
-
-  useEffect(() => {
-    document.body.dataset.theme = activeTheme;
-    window.localStorage.setItem('theme', activeTheme);
-  }, [activeTheme]);
+  const { activeTheme, toggleTheme, inactiveTheme } = useColorTheme();
 
   return (
     <ColorTheme>
@@ -19,7 +14,7 @@ const ThemeToggle = () => {
         type="button"
         aria-label={`Change to ${inactiveTheme} mode`}
         title={`Change to ${inactiveTheme} mode`}
-        onClick={() => setActiveTheme(inactiveTheme)}
+        onClick={toggleTheme}
       >
         {activeTheme === 'dark' ? (
           <Sun size={28} className="sun" />
