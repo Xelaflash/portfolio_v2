@@ -1,7 +1,10 @@
+import Image from 'next/image';
 import styled from 'styled-components';
+import propTypes from 'prop-types';
+import { Fragment } from 'react';
 import Spacer from './Spacer';
 
-export default function About() {
+export default function About({ data }) {
   return (
     <AboutSection id="about">
       <CurveWrapper />
@@ -20,7 +23,6 @@ export default function About() {
           </p>
           <h3>Alex G,</h3>
         </Greetings>
-
         <p>
           A freelance <span>Web Developer</span> with 4 years of experience in
           the industry.
@@ -42,6 +44,24 @@ export default function About() {
           to jump on a call, discuss your project and help your business grow.
         </p>
       </DescriptionTextWrapper>
+      <StackGridWrapper>
+        {data?.results?.map((item) => (
+          <SingleStack key={item.id}>
+            {item.properties?.Name?.title?.map((titleObject) => (
+              <Fragment key={titleObject?.plain_text}>
+                <StackImageWrapper>
+                  <Image
+                    src={item.icon?.file?.url}
+                    alt={`Logo of ${titleObject?.plain_text}`}
+                    layout="fill"
+                  />
+                </StackImageWrapper>
+                <p>{titleObject?.plain_text}</p>
+              </Fragment>
+            ))}
+          </SingleStack>
+        ))}
+      </StackGridWrapper>
     </AboutSection>
   );
 }
@@ -113,9 +133,28 @@ const Greetings = styled.div`
   }
 `;
 
-// A freelance Web Developer with 4 years of experience in the industry.
+const StackGridWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+`;
 
-// After 7 years spent working in the banking and IT banking business, I decided to switch to a more passion-related career in the web/tech ecosystem.
-// While I've started my journey as a full-stack developer working with Ruby on Rails,I've lately been focusing on Front-End development through React, the JAMSTACK and its associated framework like Gatsby or NextJs.
+const SingleStack = styled.div`
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+`;
 
-// Autonomous, proactive and problem-solving, I'll be happy to jump on a call and discuss your project.
+const StackImageWrapper = styled.div`
+  position: relative;
+  width: 120px;
+  height: 120px;
+  img {
+    /* aspect-ratio: 4 / 3; */
+    object-fit: contain;
+  }
+`;
+
+About.propTypes = {
+  data: propTypes.object.isRequired,
+};
