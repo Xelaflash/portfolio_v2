@@ -10,6 +10,8 @@
   "dependencies": {
     "@fontsource/cabin": "^4.5.2",
     "@fontsource/raleway": "^4.5.3",
+    "@notionhq/client": "^1.0.0",
+    "axios": "^0.26.0",
     "next": "^12.1.0",
     "prop-types": "^15.8.1",
     "react": "17.0.2",
