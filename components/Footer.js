@@ -67,6 +67,8 @@ const FooterWrapper = styled.footer`
   padding: 32px;
   display: grid;
   grid-template-columns: 1fr minmax(350px, 1fr) 1fr;
+  /*  TODO: REMOVE WHEN ALL SECTIONS ARE DONE */
+  border-top: 1px solid white;
   @media ${QUERIES.tabletAndDown} {
     grid-template-columns: repeat(3, 1fr);
     padding: 32px;
