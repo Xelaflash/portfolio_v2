@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import propTypes from 'prop-types';
+import propTypes, { oneOfType } from 'prop-types';
 import Error from './_error';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -78,6 +78,5 @@ export default function IndexPage({ stackData, errorCode }) {
 
 IndexPage.propTypes = {
   stackData: propTypes.object.isRequired,
-  errorCode: propTypes.number,
-  errorCode: propTypes.bool,
+  errorCode: oneOfType([propTypes.number, propTypes.bool]),
 };
