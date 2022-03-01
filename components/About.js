@@ -4,6 +4,9 @@ import propTypes from 'prop-types';
 import { Fragment } from 'react';
 import Spacer from './Spacer';
 import MaxWidthWrapper from './MaxWidthWrapper';
+import Button from './Button';
+import VisuallyHidden from './VisuallyHidden';
+import { QUERIES } from '../styles/constants';
 
 export default function About({ data }) {
   return (
@@ -64,6 +67,19 @@ export default function About({ data }) {
             </SingleStack>
           ))}
         </StackGridWrapper>
+        <ButtonWrapper>
+          <a
+            href="https://alexgwebdev.notion.site/ccd78484faf74078a6cba18f37880225?v=55880afa00284854b98d35610210ccda"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <MoreButton
+              text="View more"
+              color="var(--color-background)"
+              background="var(--color-secondary)"
+            />
+          </a>
+        </ButtonWrapper>
       </MaxWidthWrapper>
     </AboutSection>
   );
@@ -110,7 +126,7 @@ const DescriptionTextWrapper = styled.div`
   color: var(--color-text);
   max-width: 800px;
   text-align: center;
-  margin: 16px auto;
+  margin: 32px auto 64px auto;
   font-size: 1.05rem;
   p {
     margin-bottom: 8px;
@@ -119,16 +135,22 @@ const DescriptionTextWrapper = styled.div`
     color: var(--color-secondary);
     font-weight: var(--semiBold);
   }
+  @media ${QUERIES.phoneAndDown} {
+    font-size: 1rem;
+    margin: 16px auto;
+    padding: 16px;
+  }
 `;
 
 const Greetings = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 8px;
-  font-size: 1.7rem;
-  margin-bottom: 16px;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
   h3 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: var(--color-secondary);
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -138,7 +160,6 @@ const Greetings = styled.div`
 const StackGridWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  /* grid-template-columns: repeat(auto-fill, 120px); */
   gap: 16px 24px;
   max-width: 46rem;
   margin: auto;
@@ -184,6 +205,19 @@ const StackImageWrapper = styled.div`
   img {
     object-fit: contain;
   }
+  @media ${QUERIES.phoneAndDown} {
+    width: 90px;
+    height: 90px;
+  }
+`;
+
+const ButtonWrapper = styled.div`
+  margin: 64px auto;
+  width: fit-content;
+`;
+
+const MoreButton = styled(Button)`
+  padding: 14px 40px;
 `;
 
 About.propTypes = {
