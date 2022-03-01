@@ -1,39 +1,15 @@
 import Head from 'next/head';
 import propTypes from 'prop-types';
+import Error from './_error';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-// import Image from 'next/image';
 import Home from '../components/Home';
 import About from '../components/About';
 import SideBar from '../components/Sidebar';
 
-export default function IndexPage({ stackData }) {
-  return (
-    <>
-      <Head>
-        <title>Alex G | Web Developer</title>
-        <meta
-          property="og:title"
-          content="Alex G | Web Developer"
-          key="title"
-        />
-      </Head>
-      <Header />
-      <SideBar />
-      <main>
-        <Home />
-        <About data={stackData} />
-      </main>
-      <Footer />
-    </>
-  );
-}
-
-// This gets called on every request
-// TODO: check if we can optimise this
-export async function getServerSideProps() {
+// TODO: check if better for performance than server side
+export async function getStaticProps({ res }) {
   // Fetch data from Notion API
-
   const StackRequestBody = {
     filter: {
       property: 'Wesbite Display',
@@ -62,17 +38,46 @@ export async function getServerSideProps() {
 
   // Fecth Notion API for Stack
   const stackDatabaseId = `${process.env.NEXT_PUBLIC_STACK_NOTION_DB_ID}`;
+
   const stackRes = await fetch(
     `https://api.notion.com/v1/databases/${stackDatabaseId}/query`,
     stackOptions
   );
+  const errorCode = stackRes.ok ? false : stackRes.statusCode;
   const stackData = await stackRes.json();
-  // console.log(res);
-
   // Pass data to the page via props
-  return { props: { stackData } };
+  return {
+    props: { errorCode, stackData },
+  };
+}
+
+export default function IndexPage({ stackData, errorCode }) {
+  if (errorCode) {
+    return <Error statusCode={errorCode} />;
+  }
+  return (
+    <>
+      <Head>
+        <title>Alex G | Web Developer</title>
+        <meta
+          property="og:title"
+          content="Alex G | Web Developer"
+          key="title"
+        />
+      </Head>
+      <Header />
+      <SideBar />
+      <main>
+        <Home />
+        <About data={stackData} />
+      </main>
+      <Footer />
+    </>
+  );
 }
 
 IndexPage.propTypes = {
   stackData: propTypes.object.isRequired,
+  errorCode: propTypes.number,
+  errorCode: propTypes.bool,
 };
