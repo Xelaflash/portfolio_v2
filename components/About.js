@@ -1,8 +1,9 @@
 import Image from 'next/image';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import propTypes from 'prop-types';
 import { Fragment } from 'react';
 import Spacer from './Spacer';
+import MaxWidthWrapper from './MaxWidthWrapper';
 
 export default function About({ data }) {
   return (
@@ -44,29 +45,33 @@ export default function About({ data }) {
           to jump on a call, discuss your project and help your business grow.
         </p>
       </DescriptionTextWrapper>
-      <StackGridWrapper>
-        {data?.results?.map((item) => (
-          <SingleStack key={item.id}>
-            {item.properties?.Name?.title?.map((titleObject) => (
-              <Fragment key={titleObject?.plain_text}>
-                <StackImageWrapper>
-                  <Image
-                    src={item.icon?.file?.url}
-                    alt={`Logo of ${titleObject?.plain_text}`}
-                    layout="fill"
-                  />
-                </StackImageWrapper>
-                <p>{titleObject?.plain_text}</p>
-              </Fragment>
-            ))}
-          </SingleStack>
-        ))}
-      </StackGridWrapper>
+      <MaxWidthWrapper>
+        <StackGridWrapper>
+          {data?.results?.map((item) => (
+            <SingleStack key={item.id}>
+              {item.properties?.Name?.title?.map((titleObject) => (
+                <Fragment key={titleObject?.plain_text}>
+                  <StackImageWrapper>
+                    <Image
+                      src={item.icon?.file?.url}
+                      alt={`Logo of ${titleObject?.plain_text}`}
+                      layout="fill"
+                    />
+                  </StackImageWrapper>
+                  <p>{titleObject?.plain_text}</p>
+                </Fragment>
+              ))}
+            </SingleStack>
+          ))}
+        </StackGridWrapper>
+      </MaxWidthWrapper>
     </AboutSection>
   );
 }
 
-const AboutSection = styled.section``;
+const AboutSection = styled.section`
+  margin-bottom: 64px;
+`;
 
 const TitleWrapper = styled.div`
   margin: -140px auto 0 auto;
@@ -125,32 +130,58 @@ const Greetings = styled.div`
   h3 {
     font-size: 2rem;
     color: var(--color-secondary);
-    /* background: var(--color-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
     text-transform: uppercase;
     letter-spacing: 1.5px;
   }
 `;
 
 const StackGridWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  /* grid-template-columns: repeat(auto-fill, 120px); */
+  gap: 16px 24px;
+  max-width: 46rem;
+  margin: auto;
+  justify-content: center;
+`;
+
+const rainbow = keyframes`
+  0%{background-position:left}
+  50%{background-position:right}
+  100%{background-position:left}
 `;
 
 const SingleStack = styled.div`
-  border: 1px solid green;
   display: flex;
   flex-direction: column;
-  width: 350px;
+  max-width: 130px;
+  padding: 8px;
+  p {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    font-family: var(--title-font-family);
+    font-weight: var(--semiBold);
+    letter-spacing: 1px;
+    color: var(--text-dimmed);
+  }
+  &:hover {
+    p {
+      background: var(--color-gradient);
+      background-size: 200% 200%;
+      animation: ${rainbow} 2.5s ease-in-out infinite;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
 `;
 
 const StackImageWrapper = styled.div`
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   img {
-    /* aspect-ratio: 4 / 3; */
     object-fit: contain;
   }
 `;

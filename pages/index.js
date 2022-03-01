@@ -30,6 +30,7 @@ export default function IndexPage({ stackData }) {
 }
 
 // This gets called on every request
+// TODO: check if we can optimise this
 export async function getServerSideProps() {
   // Fetch data from Notion API
 
@@ -40,6 +41,12 @@ export async function getServerSideProps() {
         equals: 'Yes',
       },
     },
+    sorts: [
+      {
+        property: 'Website order',
+        direction: 'ascending',
+      },
+    ],
   };
 
   const stackOptions = {
@@ -53,7 +60,7 @@ export async function getServerSideProps() {
     body: JSON.stringify(StackRequestBody),
   };
 
-  // Fecth for Stack
+  // Fecth Notion API for Stack
   const stackDatabaseId = `${process.env.NEXT_PUBLIC_STACK_NOTION_DB_ID}`;
   const stackRes = await fetch(
     `https://api.notion.com/v1/databases/${stackDatabaseId}/query`,
