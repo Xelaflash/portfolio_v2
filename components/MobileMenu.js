@@ -26,7 +26,7 @@ const MobileMenu = ({ isOpen }) => {
       <ContentWrapper aria-label="Menu">
         <Content>
           <Filler />
-          <Nav>
+          <Nav aria-labelledby="hamburger">
             <NavLink href="/#about">About</NavLink>
             <NavLink href="/#projects">Projects</NavLink>
             <NavLink href="/contact">Contact</NavLink>

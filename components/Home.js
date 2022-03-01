@@ -23,7 +23,7 @@ export default function Home() {
         </h1>
         <Button
           text="Get Started"
-          color="var(--color-white)"
+          color="#000000"
           background="var(--color-primary)"
           className="cta"
         >

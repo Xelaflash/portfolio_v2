@@ -56,11 +56,10 @@ export default function Header() {
               : 'hamburger hamburger--collapse'
           }
           type="button"
-          aria-label="Menu"
-          aria-controls="navigation"
+          aria-label="Show Navigation Menu"
           onClick={toggleMobileMenu}
         >
-          <span className="hamburger-box">
+          <span className="hamburger-box" aria-hidden="true">
             <span className="hamburger-inner" />
           </span>
           <VisuallyHidden>Menu</VisuallyHidden>
