@@ -1,21 +1,18 @@
 import Image from 'next/image';
-import styled, { keyframes } from 'styled-components';
-import propTypes from 'prop-types';
 import { Fragment } from 'react';
+import propTypes from 'prop-types';
+import styled, { keyframes } from 'styled-components';
+import { QUERIES } from '../styles/constants';
 import Spacer from './Spacer';
 import MaxWidthWrapper from './MaxWidthWrapper';
 import Button from './Button';
-import VisuallyHidden from './VisuallyHidden';
-import { QUERIES } from '../styles/constants';
+import SectionTitle from './SectionTitle';
 
 export default function About({ data }) {
   return (
     <AboutSection id="about">
       <CurveWrapper />
-      <TitleWrapper>
-        <h2 className="section-title">About Me</h2>
-        <div className="under" />
-      </TitleWrapper>
+      <SectionTitle title="About Me" margin="-140px auto 0 auto;" />
       <Spacer size={32} />
       <DescriptionTextWrapper>
         <Greetings>
@@ -87,27 +84,6 @@ export default function About({ data }) {
 
 const AboutSection = styled.section`
   margin-bottom: 64px;
-`;
-
-const TitleWrapper = styled.div`
-  margin: -140px auto 0 auto;
-  width: fit-content;
-  h2 {
-    margin: 8px auto;
-    width: fit-content;
-    text-align: center;
-    font-weight: var(--semiBold);
-    border: none;
-  }
-  .under {
-    background: var(--color-primary);
-    height: 8px;
-    width: 40%;
-    border-radius: 13px;
-    border: none;
-    text-align: center;
-    margin: auto;
-  }
 `;
 
 const CurveWrapper = styled.div`
