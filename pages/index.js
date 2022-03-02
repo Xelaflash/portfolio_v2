@@ -8,6 +8,7 @@ import About from '../components/About';
 import SideBar from '../components/Sidebar';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
+import TriangleSeparator from '../components/TriangleSeparator';
 
 // TODO: check if better for performance than server side
 export async function getStaticProps({ res }) {
@@ -72,6 +73,7 @@ export default function IndexPage({ stackData, errorCode }) {
       <main>
         <Home />
         <About data={stackData} />
+        <TriangleSeparator />
         <Projects />
         <Contact />
       </main>
