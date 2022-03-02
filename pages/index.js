@@ -6,6 +6,8 @@ import Header from '../components/Header';
 import Home from '../components/Home';
 import About from '../components/About';
 import SideBar from '../components/Sidebar';
+import Projects from '../components/Projects';
+import Contact from '../components/Contact';
 
 // TODO: check if better for performance than server side
 export async function getStaticProps({ res }) {
@@ -70,6 +72,8 @@ export default function IndexPage({ stackData, errorCode }) {
       <main>
         <Home />
         <About data={stackData} />
+        <Projects />
+        <Contact />
       </main>
       <Footer />
     </>
