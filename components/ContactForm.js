@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import { Formik, Field } from 'formik';
+import emailjs from '@emailjs/browser';
 import * as Yup from 'yup';
+import { ThumbsUp, AlertTriangle } from 'react-feather';
 import Button from './Button';
 import FormAlert from './FormAlert';
 
@@ -20,6 +23,32 @@ export default function ContactForm() {
       .required('A message is required'),
   });
 
+  const [isEmailSent, setIsEmailSent] = useState(null);
+  const [mailSendingErrors, setMailSendingErrors] = useState(null);
+
+  const sendEmail = (formValues) => {
+    emailjs
+      .send(
+        `${process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID}`,
+        `${process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID}`,
+        formValues,
+        `${process.env.NEXT_PUBLIC_EMAILJS_USER_ID}`
+      )
+      .then(
+        (result) => {
+          if (result.status === 200) {
+            setIsEmailSent(true);
+          } else {
+            setIsEmailSent(false);
+          }
+        },
+        (error) => {
+          setIsEmailSent(false);
+          setMailSendingErrors(error.text);
+        }
+      );
+  };
+
   return (
     <Formik
       initialValues={{
@@ -29,15 +58,56 @@ export default function ContactForm() {
         message: '',
       }}
       validationSchema={formSchema}
-      onSubmit={(values, { setSubmitting }) => {
+      onSubmit={(values, { setSubmitting, resetForm, initialValues }) => {
+        sendEmail(values);
+        setSubmitting(false);
         setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);
+          resetForm(initialValues);
+        }, 1000);
       }}
     >
       {({ errors, touched, isSubmitting, isValid, handleSubmit }) => (
         <Form onSubmit={handleSubmit}>
+          {isEmailSent && (
+            <p
+              style={{
+                color: 'var(--color-logo-green)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <ThumbsUp
+                color="var(--color-logo-green)"
+                size={18}
+                style={{ marginRight: '8px', marginTop: '-2px' }}
+              />
+              Email sent successfully
+            </p>
+          )}
+          {isEmailSent === false && (
+            <p
+              style={{
+                color: 'var(--color-logo-red)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <AlertTriangle
+                color="var(--color-logo-red)"
+                size={18}
+                style={{ marginRight: '8px', marginTop: '-2px' }}
+              />
+              Ooops....That's embarrassing an error occured.
+            </p>
+          )}
+          {mailSendingErrors !== null && (
+            <p style={{ color: 'var(--color-logo-red)', textAlign: 'center' }}>
+              Error :{mailSendingErrors}
+            </p>
+          )}
+
           <FieldWrapper>
             <label htmlFor="name" className="label">
               Name

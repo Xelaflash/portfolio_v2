@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.4.0",
     "@fontsource/cabin": "^4.5.2",
     "@fontsource/raleway": "^4.5.3",
     "formik": "^2.2.9",
