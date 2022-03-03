@@ -155,7 +155,7 @@ const Copyright = styled.p`
 `;
 
 const BuyCoffeeBtnWrapper = styled.div`
-  filter: drop-shadow(2px 2px 2px hsla(var(--footer-btn-shadow), 1));
+  filter: drop-shadow(2px 2px 2px hsla(var(--shadow), 1));
 `;
 
 const RegulatoryLinksWrapper = styled.div`

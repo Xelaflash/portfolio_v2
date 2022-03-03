@@ -3,7 +3,13 @@ import styled from 'styled-components';
 export default function TrianglesSeparator() {
   return (
     <TrianglesSeparatorWrapper>
-      <svg width="100%" height="100%" viewBox="0 0 1441 342" version="1.1">
+      <svg
+        width="100%"
+        height="100%"
+        viewBox="0 0 1441 342"
+        version="1.1"
+        preserveAspectRatio="xMidYMax slice"
+      >
         <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
           <g
             id="Desktop-HD"
@@ -31,5 +37,5 @@ export default function TrianglesSeparator() {
 }
 
 const TrianglesSeparatorWrapper = styled.div`
-  margin-top: -10rem;
+  /* margin-top: -10rem; */
 `;

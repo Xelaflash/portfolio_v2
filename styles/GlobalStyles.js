@@ -86,11 +86,11 @@ const GlobalStyle = createGlobalStyle`
     --color-gray-700: ${COLORS.gray[700]};
     --color-gray-900: ${COLORS.gray[900]};
     --color-logo-yellow: ${COLORS.logoYellow};
-    /* --color-logo-blue: ${COLORS.logoBlue};
-    --color-logo-Violet: ${COLORS.logoViolet};
+     /* --color-logo-blue: ${COLORS.logoBlue}; */
+   /* --color-logo-Violet: ${COLORS.logoViolet}; */
     --color-logo-red: ${COLORS.logoRed};
-    --color-logo-orange: ${COLORS.logoOrange};
-    --color-logo-green: ${COLORS.logoGreen}; */
+    /* --color-logo-orange: ${COLORS.logoOrange}; */
+    --color-logo-green: ${COLORS.logoGreen};
 
     /* dark Mode variables */
     body[data-theme="dark"] {
@@ -98,6 +98,7 @@ const GlobalStyle = createGlobalStyle`
       --color-secondary: ${COLORS.darkSecondaryBlue};
       --color-background: ${COLORS.darkBackgroundBlue};
       --color-background-shade2: ${COLORS.darkBackgroundBlueShade2};
+      --color-background-shade2-unitless: 212deg,32%,14%;
       --color-background-shade3: ${COLORS.darkBackgroundBlueShade3};
       --color-text: var(--color-white);
       --color-gradient: linear-gradient(
@@ -124,7 +125,7 @@ const GlobalStyle = createGlobalStyle`
         hsl(212deg 31% 20%) 100%
       );
       --text-dimmed: var(--color-gray-500);
-      --footer-btn-shadow: 0deg, 0%, 100%;
+      --shadow: 0deg, 0%, 100%;
       color: var(--color-white);
       background: var(--color-background);
     }
@@ -136,6 +137,7 @@ const GlobalStyle = createGlobalStyle`
       --color-secondary: ${COLORS.lightSecondaryBlue};
       --color-background: ${COLORS.white};
       --color-background-shade2: ${COLORS.lightBackgroundShade2};
+      --color-background-shade2-unitless: 180deg,4%,95%;
       --color-background-shade3: ${COLORS.lightBackgroundShade3};
       --color-text: var(--color-gray-900);
       --color-gradient: linear-gradient(
@@ -161,8 +163,8 @@ const GlobalStyle = createGlobalStyle`
         hsl(188deg 6% 83%) 72%,
         hsl(190deg 6% 80%) 100%
       );
-      --footer-btn-shadow: 220deg, 3%, 20%;
-      ---text-dimmed: var(--color-gray-700);
+      --shadow: 220deg, 3%, 20%;
+      --text-dimmed: var(--color-gray-700);
       color: var(--color-text);
       background: var(--color-background);
     }
@@ -191,17 +193,19 @@ const GlobalStyle = createGlobalStyle`
     font-size: 3rem;
     color: var(--color-gradient);
     background: var(--color-gradient);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   @media ${QUERIES.tabletAndDown} {
     .section-title {
-    font-size: 2.7rem;
+      font-size: 2.7rem;
+    }
   }
   @media ${QUERIES.phoneAndDown} {
     .section-title {
-    font-size: 2.35rem;
-  }
+      font-size: 2.35rem;
+    }
   }
 `;
 

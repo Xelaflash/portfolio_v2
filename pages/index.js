@@ -10,6 +10,7 @@ import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 import TriangleSeparator from '../components/TriangleSeparator';
 import TrianglesSeparator from '../components/TrianglesSeparator';
+import Spacer from '../components/Spacer';
 
 // TODO: check if better for performance than server side
 export async function getStaticProps({ res }) {
@@ -78,6 +79,7 @@ export default function IndexPage({ stackData, errorCode }) {
         <Projects />
         <TrianglesSeparator />
         <Contact />
+        <Spacer size={48} />
       </main>
       <Footer />
     </>
