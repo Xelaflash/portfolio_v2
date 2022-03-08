@@ -1,5 +1,4 @@
 export async function loadStack() {
-  // Fetch data from Notion API
   const StackRequestBody = {
     filter: {
       property: 'Wesbite Display',

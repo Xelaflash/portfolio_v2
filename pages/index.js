@@ -13,20 +13,28 @@ import TrianglesSeparator from '../components/TrianglesSeparator';
 import Spacer from '../components/Spacer';
 
 import { loadStack } from '../utils/fetch-stack.js';
+import { loadWorkProjets } from '../utils/fetch-workProjects.js';
+import { loadPersoProjets } from '../utils/fetch-persoProjects.js';
 
-// Static Site Generation
+// Static Site Generation => fetch Data from Notion API
 export async function getStaticProps() {
   const stack = await loadStack();
+  const workProjects = await loadWorkProjets();
+  const persoProjects = await loadPersoProjets();
   return {
-    props: { stack },
+    props: { stack, workProjects, persoProjects },
   };
 }
+export default function IndexPage({ stack, workProjects, persoProjects }) {
+  // const stackObj = stack.stackData;
 
-export default function IndexPage({ stack }) {
-  const stackObj = stack.stackData;
-  if (stackObj.object === 'error') {
-    return <Error statusCode={stackObj.code} />;
-  }
+  const allProjects = Object.assign(workProjects, persoProjects);
+  console.log(allProjects);
+
+  // TODO: Handle error
+  // if (stackObj.object === 'error' || workProjectsObj.object === 'error') {
+  //   return <Error statusCode={stackObj.code} />;
+  // }
   return (
     <>
       <Head>
@@ -43,7 +51,7 @@ export default function IndexPage({ stack }) {
         <Home />
         <About data={stack} />
         <TriangleSeparator />
-        <Projects />
+        <Projects data={allProjects} />
         <TrianglesSeparator />
         <Contact />
         <Spacer size={48} />
@@ -55,4 +63,6 @@ export default function IndexPage({ stack }) {
 
 IndexPage.propTypes = {
   stack: propTypes.object.isRequired,
+  workProjects: propTypes.object.isRequired,
+  persoProjects: propTypes.object.isRequired,
 };
