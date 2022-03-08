@@ -1,10 +1,12 @@
 import propTypes from 'prop-types';
 import styled from 'styled-components';
 
-const Button = ({ text, background, color, className }) => (
+const Button = ({ text, background, color, className, type, disabled }) => (
   <ButtonStyles
     style={{ color: `${color}`, background: `${background}` }}
     className={className}
+    type={type}
+    disabled={disabled}
   >
     {text}
   </ButtonStyles>
@@ -27,6 +29,8 @@ Button.propTypes = {
   text: propTypes.string,
   background: propTypes.string,
   color: propTypes.string,
+  type: propTypes.string,
+  disabled: propTypes.bool,
   className: propTypes.string,
 };
 
