@@ -21,14 +21,9 @@ export default function Home() {
         <h1 className="section-title">
           Crafting responsive and beautiful websites that suit your needs.
         </h1>
-        <Button
-          text="Get Started"
-          color="#000000"
-          background="var(--color-primary)"
-          className="cta"
-        >
-          Get Started
-        </Button>
+        <Link href="/#about">
+          <a className="cta">Get Started</a>
+        </Link>
         {size.width < 950 && size.width >= 600 ? (
           <Spacer size={116} />
         ) : (
@@ -90,6 +85,18 @@ const Background = styled.section`
   }
   .cta {
     margin-left: 15rem;
+    color: #000000;
+    background: var(--color-primary);
+    padding: 12px 36px;
+    font-weight: var(--regular);
+    font-size: 1rem;
+    font-family: var(--font-family);
+    min-height: var(--min-tap-height);
+    border-radius: 6000px;
+    transition: opacity 300ms ease;
+    &:hover {
+      opacity: 0.8;
+    }
   }
   @media ${QUERIES.tabletAndDown} {
     h1 {
