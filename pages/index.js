@@ -12,53 +12,20 @@ import TriangleSeparator from '../components/TriangleSeparator';
 import TrianglesSeparator from '../components/TrianglesSeparator';
 import Spacer from '../components/Spacer';
 
-// TODO: check if better for performance than server side
-export async function getStaticProps({ res }) {
-  // Fetch data from Notion API
-  const StackRequestBody = {
-    filter: {
-      property: 'Wesbite Display',
-      select: {
-        equals: 'Yes',
-      },
-    },
-    sorts: [
-      {
-        property: 'Website order',
-        direction: 'ascending',
-      },
-    ],
-  };
+import { loadStack } from '../utils/fetch-stack.js';
 
-  const stackOptions = {
-    method: 'post',
-    headers: {
-      Accept: 'application/json',
-      'Notion-Version': '2022-02-22',
-      Authorization: `Bearer ${process.env.NOTION_API_KEY}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(StackRequestBody),
-  };
-
-  // Fecth Notion API for Stack
-  const stackDatabaseId = `${process.env.NEXT_PUBLIC_STACK_NOTION_DB_ID}`;
-
-  const stackRes = await fetch(
-    `https://api.notion.com/v1/databases/${stackDatabaseId}/query`,
-    stackOptions
-  );
-  const errorCode = stackRes.ok ? false : stackRes.statusCode;
-  const stackData = await stackRes.json();
-  // Pass data to the page via props
+// Static Site Generation
+export async function getStaticProps() {
+  const stack = await loadStack();
   return {
-    props: { errorCode, stackData },
+    props: { stack },
   };
 }
 
-export default function IndexPage({ stackData, errorCode }) {
-  if (errorCode) {
-    return <Error statusCode={errorCode} />;
+export default function IndexPage({ stack }) {
+  const stackObj = stack.stackData;
+  if (stackObj.object === 'error') {
+    return <Error statusCode={stackObj.code} />;
   }
   return (
     <>
@@ -74,7 +41,7 @@ export default function IndexPage({ stackData, errorCode }) {
       <SideBar />
       <main>
         <Home />
-        <About data={stackData} />
+        <About data={stack} />
         <TriangleSeparator />
         <Projects />
         <TrianglesSeparator />
@@ -87,6 +54,5 @@ export default function IndexPage({ stackData, errorCode }) {
 }
 
 IndexPage.propTypes = {
-  stackData: propTypes.object.isRequired,
-  errorCode: oneOfType([propTypes.number, propTypes.bool]),
+  stack: propTypes.object.isRequired,
 };

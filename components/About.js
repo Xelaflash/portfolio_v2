@@ -47,7 +47,7 @@ export default function About({ data }) {
       </DescriptionTextWrapper>
       <MaxWidthWrapper>
         <StackGridWrapper>
-          {data?.results?.map((item) => (
+          {data?.stackData?.results?.map((item) => (
             <SingleStack key={item.id}>
               {item.properties?.Name?.title?.map((titleObject) => (
                 <Fragment key={titleObject?.plain_text}>
