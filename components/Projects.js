@@ -60,7 +60,7 @@ const ProjectsSection = styled.section`
 const ProjectTypeWrapper = styled.div`
   display: flex;
   gap: 32px;
-  margin: 2rem 0;
+  margin: 0 0 1rem;
 `;
 
 const ProjectTypeBtn = styled.button`
@@ -73,8 +73,10 @@ const ProjectTypeBtn = styled.button`
 `;
 
 const ProjectWrapper = styled.div`
-  /*  TODO: project flex *2, x1 on mobile */
-  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 16px;
 `;
 
 Projects.propTypes = {

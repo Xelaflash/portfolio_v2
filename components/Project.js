@@ -2,11 +2,9 @@ import styled, { css } from 'styled-components';
 import propTypes from 'prop-types';
 import Image from 'next/image';
 import { GitHub, ExternalLink } from 'react-feather';
-import Link from 'next/link';
 import VisuallyHidden from './VisuallyHidden';
 
 export default function Project({ project }) {
-  console.log(project.properties.Github_Url.url);
   return (
     <SingleProjectWrapper>
       <BorderWrapper>
@@ -20,6 +18,16 @@ export default function Project({ project }) {
           {/* Date */}
           <p>{project?.properties?.Date?.number}</p>
         </ProjectDetailsWrapper>
+        <ImageWrapper>
+          {/* Image */}
+          {project?.properties?.Image?.files.map((imgFile) => (
+            <Image
+              src={imgFile?.name}
+              key={project?.properties?.Image?.id}
+              layout="fill"
+            />
+          ))}
+        </ImageWrapper>
         <ProjectTagsWrapper>
           {/* TAGS (front end/ fullstack) */}
           {project?.properties?.Tags?.multi_select?.map((tag) => (
@@ -54,6 +62,9 @@ export default function Project({ project }) {
             href={`${project?.properties?.Project_Url?.url}`}
             target="_blank"
             rel="noreferrer noopener"
+            className={
+              project?.properties?.Project_Url?.url === 'N/A' ? 'disabled' : ''
+            }
           >
             <ExternalLink size={24} />
             <VisuallyHidden>
@@ -65,6 +76,9 @@ export default function Project({ project }) {
             href={`${project?.properties?.Github_Url?.url}`}
             target="_blank"
             rel="noreferrer noopener"
+            className={
+              project?.properties?.Github_Url?.url === 'N/A' ? 'disabled' : ''
+            }
           >
             <GitHub size={24} />
             <VisuallyHidden>
@@ -72,42 +86,37 @@ export default function Project({ project }) {
             </VisuallyHidden>
           </a>
         </ProjectLinkWrapper>
-
-        {/* Image */}
-        {project?.properties?.Image?.files.map((imgFile) => (
-          <Image
-            src={imgFile?.name}
-            width={250}
-            height={120}
-            key={project?.properties?.Image?.id}
-          />
-        ))}
       </BorderWrapper>
     </SingleProjectWrapper>
   );
 }
 
 const SingleProjectWrapper = styled.div`
-  position: relative;
-  max-width: 600px;
+  width: 550px;
   border-radius: 5px;
-  padding: 2px;
+  /* padding: 2px; */
   background: var(--color-gradient);
+  box-shadow: hsla(var(--shadow), 0.4) 0px 2px 4px,
+    hsla(var(--shadow), 0.3) 0px 7px 13px -3px,
+    hsla(var(--shadow), 0.2) 0px -3px 0px inset;
 `;
 
 const BorderWrapper = styled.div`
   background: var(--color-background);
-  padding: 2rem;
+  padding: 0 1rem 0.5rem;
+  border-radius: 5px;
+  height: 99%;
 `;
 
 const ProjectName = styled.div`
-  margin: 8px auto 0;
-  text-transform: uppercase;
+  margin: 0.3rem auto 0;
   width: fit-content;
   text-align: center;
-  font-weight: var(--semiBold);
   font-size: 2rem;
-  color: var(--color-gradient);
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: var(--semiBold);
+  /* color: var(--color-secondary); */
   background: var(--color-gradient);
   background-clip: text;
   -webkit-background-clip: text;
@@ -117,11 +126,20 @@ const ProjectName = styled.div`
 const ProjectDetailsWrapper = styled.div`
   display: flex;
   gap: 8px;
-  margin: -4px auto 16px;
+  margin: -4px auto 0.5rem;
   width: fit-content;
   text-align: center;
   font-size: 1.2rem;
   color: var(--text-dimmed);
+`;
+
+const ImageWrapper = styled.div`
+  position: relative;
+  height: 250px;
+  line-height: 0;
+  img {
+    object-fit: contain;
+  }
 `;
 
 const ProjectTagsWrapper = styled.div`
@@ -129,7 +147,7 @@ const ProjectTagsWrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin: -4px auto 16px;
+  margin: 1rem auto 0;
 `;
 
 const Tag = styled.div`
@@ -157,24 +175,29 @@ const StatusTag = styled(Tag)`
 const ProjectDescriptionWrapper = styled.div`
   font-size: 0.9rem;
   text-align: left;
-  margin: 32px auto;
-  width: 80%;
+  margin: 1rem auto 0;
+  padding: 0 1rem;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 const ProjectStackWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 80%;
   gap: 8px;
-  margin: -4px auto 16px;
+  margin: 1rem auto 0;
+  height: 75px;
 `;
 const ProjectLinkWrapper = styled.div`
-  margin: 32px auto;
+  margin: 1rem auto 0;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
+  height: 32px;
   a {
     width: var(--min-tap-height);
     height: var(--min-tap-height);
@@ -186,6 +209,9 @@ const ProjectLinkWrapper = styled.div`
   }
   a:hover {
     color: var(--color-primary);
+  }
+  .disabled {
+    display: none;
   }
 `;
 
