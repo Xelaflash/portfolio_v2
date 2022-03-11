@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import Image from 'next/image';
 import propTypes from 'prop-types';
 import styled from 'styled-components';
 import MaxWidthWrapper from './MaxWidthWrapper';
 import SectionTitle from './SectionTitle';
+import Project from './Project';
 
 export default function Projects({ data }) {
   const [isWorkProjectsActive, setIsWorkProjectsActive] = useState(true);
@@ -40,52 +40,11 @@ export default function Projects({ data }) {
             Personal Projects
           </ProjectTypeBtn>
         </ProjectTypeWrapper>
-
-        {/*  TODO: Create a single project component */}
-        <div>
-          {projectsData?.map((item) => (
-            <div key={item.id}>
-              <p>--------START PROJECT-----------</p>
-              {/* Project title */}
-              {item.properties.Name.title.map((title) => (
-                <p key={title.text.content}>{title.text.content}</p>
-              ))}
-              {/* Date */}
-              <p>{item.properties.Date.number}</p>
-              {/*  companie */}
-              {item.properties.Company.rich_text.map((companyName) => (
-                <p key={companyName.plain_text}>{companyName.plain_text}</p>
-              ))}
-              {/* description */}
-              {item.properties.Description.rich_text.map(
-                (description, index) => (
-                  <p key={index}>{description.plain_text}</p>
-                )
-              )}
-              {/* TAGS (offline/online) */}
-              {item.properties.Tags.multi_select.map((tag) => (
-                <p key={tag.id}>{tag.name}</p>
-              ))}
-              {/* Type freelance/probono */}
-              <p>{item.properties.Type.select.name}</p>
-              {/* Status */}
-              <p>{item.properties.Status.select.name}</p>
-              {/* stack */}
-              {item.properties.Stack.multi_select.map((stack) => (
-                <p key={stack.id}>{stack.name}</p>
-              ))}
-              {/* Project url */}
-              <p>{item.properties.Project_Url.url}</p>
-              {/* Github url */}
-              <p>{item.properties.Github_Url.url}</p>
-              {/* Image */}
-              {item.properties.Image.files.map((imgFile) => (
-                <Image src={imgFile.name} width={250} height={120} />
-              ))}
-              <p>---------END---------</p>
-            </div>
+        <ProjectWrapper>
+          {projectsData?.map((project) => (
+            <Project project={project} key={project.id} />
           ))}
-        </div>
+        </ProjectWrapper>
       </MaxWidthWrapper>
     </ProjectsSection>
   );
@@ -111,6 +70,11 @@ const ProjectTypeBtn = styled.button`
   font-family: var(--title-font-family);
   transition: opacity 350ms ease, color 250ms ease-out;
   ${(props) => props.active && `color: var(--color-primary)`};
+`;
+
+const ProjectWrapper = styled.div`
+  /*  TODO: project flex *2, x1 on mobile */
+  /* border: 1px solid red; */
 `;
 
 Projects.propTypes = {
