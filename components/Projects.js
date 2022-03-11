@@ -1,17 +1,21 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import propTypes from 'prop-types';
 import styled from 'styled-components';
 import MaxWidthWrapper from './MaxWidthWrapper';
 import SectionTitle from './SectionTitle';
 import Project from './Project';
+import Pagination from './Pagination';
 
+const PageSize = 2;
 export default function Projects({ data }) {
   const [isWorkProjectsActive, setIsWorkProjectsActive] = useState(true);
   const [isPersoProjectsActive, setIsPersoProjectsActive] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const handleClick = () => {
     setIsWorkProjectsActive(!isWorkProjectsActive);
     setIsPersoProjectsActive(!isPersoProjectsActive);
+    setCurrentPage(1);
   };
 
   const workProjectsData = data?.workProjectsData?.results;
@@ -19,6 +23,14 @@ export default function Projects({ data }) {
   const projectsData = isWorkProjectsActive
     ? workProjectsData
     : persoProjectsData;
+
+  const projectsDataArray = useMemo(() => [...projectsData], [projectsData]);
+
+  const currentData = useMemo(() => {
+    const firstPageIndex = (currentPage - 1) * PageSize;
+    const lastPageIndex = firstPageIndex + PageSize;
+    return projectsDataArray.slice(firstPageIndex, lastPageIndex);
+  }, [currentPage, projectsDataArray]);
 
   return (
     <ProjectsSection id="projects">
@@ -41,9 +53,16 @@ export default function Projects({ data }) {
           </ProjectTypeBtn>
         </ProjectTypeWrapper>
         <ProjectWrapper>
-          {projectsData?.map((project) => (
+          {currentData?.map((project) => (
             <Project project={project} key={project.id} />
           ))}
+          <Pagination
+            className="pagination-bar"
+            currentPage={currentPage}
+            totalCount={projectsDataArray.length}
+            pageSize={PageSize}
+            onPageChange={(page) => setCurrentPage(page)}
+          />
         </ProjectWrapper>
       </MaxWidthWrapper>
     </ProjectsSection>
@@ -77,6 +96,11 @@ const ProjectWrapper = styled.div`
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 16px;
+  .pagination-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 Projects.propTypes = {

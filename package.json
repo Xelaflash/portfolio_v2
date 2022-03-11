@@ -11,6 +11,7 @@
     "@emailjs/browser": "^3.4.0",
     "@fontsource/cabin": "^4.5.2",
     "@fontsource/raleway": "^4.5.3",
+    "classnames": "^2.3.1",
     "formik": "^2.2.9",
     "next": "^12.1.0",
     "nprogress": "^0.2.0",
