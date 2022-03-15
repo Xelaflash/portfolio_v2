@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components';
-import { useEffect, useState } from 'react';
 import { Sun, Moon } from 'react-feather';
 import UnstyledButton from './UnstyledButton';
 import { QUERIES } from '../styles/constants';

@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import propTypes, { oneOfType } from 'prop-types';
-import Error from './_error';
+import propTypes from 'prop-types';
+// import Error from './_error';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Home from '../components/Home';

@@ -6,12 +6,15 @@ import SectionTitle from './SectionTitle';
 import Project from './Project';
 import Pagination from './Pagination';
 import { QUERIES } from '../styles/constants';
+import { useColorTheme } from '../utils/themeState';
 
 const PageSize = 2;
 export default function Projects({ data }) {
   const [isWorkProjectsActive, setIsWorkProjectsActive] = useState(true);
   const [isPersoProjectsActive, setIsPersoProjectsActive] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+
+  const { activeTheme } = useColorTheme();
 
   const handleClick = () => {
     setIsWorkProjectsActive(!isWorkProjectsActive);
@@ -63,6 +66,7 @@ export default function Projects({ data }) {
             totalCount={projectsDataArray.length}
             pageSize={PageSize}
             onPageChange={(page) => setCurrentPage(page)}
+            theme={activeTheme}
           />
         </ProjectWrapper>
       </MaxWidthWrapper>

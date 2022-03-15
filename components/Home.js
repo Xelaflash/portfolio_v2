@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { QUERIES } from '../styles/constants';
 import { useWindowSize } from '../utils/useWindowSize';
 import { useColorTheme } from '../utils/themeState';
-import Button from './Button';
 import MaxWidthWrapper from './MaxWidthWrapper';
 import Spacer from './Spacer';
 import laptopDarkImg from '../public/laptop_dark.png';

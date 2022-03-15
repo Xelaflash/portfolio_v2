@@ -1,15 +1,14 @@
-/* eslint-disable no-unused-vars */
 import propTypes from 'prop-types';
 import styled, { css, keyframes } from 'styled-components';
-
 import Link from 'next/link';
 import { useEffect } from 'react';
 import Button from './Button';
-import VisuallyHidden from './VisuallyHidden';
 import Spacer from './Spacer';
 import SocialIcons from './SocialIcons';
+import { useMobileMenu } from '../utils/MobileMenuState';
 
 const MobileMenu = ({ isOpen }) => {
+  const { closeMobileMenu } = useMobileMenu();
   useEffect(() => {
     if (isOpen === true) {
       // Get original body overflow
@@ -27,9 +26,15 @@ const MobileMenu = ({ isOpen }) => {
         <Content>
           <Filler />
           <Nav aria-labelledby="hamburger">
-            <NavLink href="/#about">About</NavLink>
-            <NavLink href="/#projects">Projects</NavLink>
-            <NavLink href="/contact">Contact</NavLink>
+            <NavLink href="/#about" onClick={closeMobileMenu}>
+              About
+            </NavLink>
+            <NavLink href="/#projects" onClick={closeMobileMenu}>
+              Projects
+            </NavLink>
+            <NavLink href="/#contact" onClick={closeMobileMenu}>
+              Contact
+            </NavLink>
           </Nav>
           <Spacer size={96} />
           <ButtonWrapper>
@@ -66,6 +71,14 @@ const backdropFadeIn = keyframes`
     background: hsl(212deg 8% 38% / 0.9);
   }
 `;
+const backdropFadeOut = keyframes`
+  0% {
+    background: hsl(212deg 8% 38% / 0.9);
+  }
+  100% {
+    background: hsl(212deg 8% 38% / 0.0);
+  }
+`;
 
 const fadeIn = keyframes`
   0% {
@@ -73,6 +86,14 @@ const fadeIn = keyframes`
   }
   100% {
     opacity: 1;
+  }
+`;
+const fadeOut = keyframes`
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 `;
 
@@ -144,7 +165,6 @@ const MobileMenuStyles = styled.div`
   z-index: 1;
   display: flex;
   justify-content: flex-end;
-  /* background: hsl(212deg 8% 38% / 0.9); */
   transform: translateX(100%);
   transition: all 0.3s;
   transform: translateX(100%);
