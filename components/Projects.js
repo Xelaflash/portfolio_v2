@@ -5,6 +5,7 @@ import MaxWidthWrapper from './MaxWidthWrapper';
 import SectionTitle from './SectionTitle';
 import Project from './Project';
 import Pagination from './Pagination';
+import { QUERIES } from '../styles/constants';
 
 const PageSize = 2;
 export default function Projects({ data }) {
@@ -74,12 +75,21 @@ const ProjectsSection = styled.section`
   border: 1px solid red;
   min-height: 50vh;
   margin-top: -4rem;
+  @media ${QUERIES.tabletAndDown} {
+    margin-top: -1.75rem;
+  }
+  @media ${QUERIES.phoneAndDown} {
+    margin-top: -1rem;
+  }
 `;
 
 const ProjectTypeWrapper = styled.div`
   display: flex;
   gap: 32px;
   margin: 0 0 1rem;
+  @media ${QUERIES.tabletAndDown} {
+    margin: 2rem auto 1.5rem auto;
+  }
 `;
 
 const ProjectTypeBtn = styled.button`
@@ -89,6 +99,9 @@ const ProjectTypeBtn = styled.button`
   font-family: var(--title-font-family);
   transition: opacity 350ms ease, color 250ms ease-out;
   ${(props) => props.active && `color: var(--color-primary)`};
+  @media ${QUERIES.phoneAndDown} {
+    font-size: 1.1rem;
+  }
 `;
 
 const ProjectWrapper = styled.div`
@@ -96,6 +109,9 @@ const ProjectWrapper = styled.div`
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 16px;
+  @media ${QUERIES.tabletAndDown} {
+    gap: 32px;
+  }
   .pagination-bar {
     width: 100%;
     display: flex;

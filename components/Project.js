@@ -3,6 +3,8 @@ import propTypes from 'prop-types';
 import Image from 'next/image';
 import { GitHub, ExternalLink } from 'react-feather';
 import VisuallyHidden from './VisuallyHidden';
+import { QUERIES } from '../styles/constants';
+import BorderWrapper from './BorderWrapper';
 
 export default function Project({ project }) {
   return (
@@ -101,13 +103,6 @@ const SingleProjectWrapper = styled.div`
     hsla(var(--shadow), 0.2) 0px -3px 0px inset;
 `;
 
-const BorderWrapper = styled.div`
-  background: var(--color-background);
-  padding: 0 1rem 0.5rem;
-  border-radius: 5px;
-  height: 99%;
-`;
-
 const ProjectName = styled.div`
   margin: 0.3rem auto 0;
   width: fit-content;
@@ -121,6 +116,10 @@ const ProjectName = styled.div`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media ${QUERIES.phoneAndDown} {
+    font-size: 1.5rem;
+    padding-top: 8px;
+  }
 `;
 
 const ProjectDetailsWrapper = styled.div`
@@ -139,6 +138,9 @@ const ImageWrapper = styled.div`
   line-height: 0;
   img {
     object-fit: contain;
+  }
+  @media ${QUERIES.phoneAndDown} {
+    height: 200px;
   }
 `;
 
@@ -177,7 +179,7 @@ const ProjectDescriptionWrapper = styled.div`
   text-align: left;
   margin: 1rem auto 0;
   padding: 0 1rem;
-  height: 100px;
+  min-height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -189,7 +191,7 @@ const ProjectStackWrapper = styled.div`
   flex-wrap: wrap;
   gap: 8px;
   margin: 1rem auto 0;
-  height: 75px;
+  min-height: 75px;
 `;
 const ProjectLinkWrapper = styled.div`
   margin: 1rem auto 0;

@@ -3,6 +3,7 @@ import propTypes from 'prop-types';
 import styled from 'styled-components';
 import { ChevronLeft, ChevronRight } from 'react-feather';
 import { usePagination, DOTS } from '../utils/usePagination';
+import { QUERIES } from '../styles/constants';
 
 const Pagination = (props) => {
   const {
@@ -91,21 +92,19 @@ export default Pagination;
 
 const PaginationWrapper = styled.div`
   display: flex;
+  align-items: center;
   .pagination-item {
-    padding: 0 12px;
-    height: 32px;
-    text-align: center;
     margin: 1rem 4px;
-    color: var(--color-text);
+    /* padding: 0 12px; */
+    height: 32px;
+    width: 32px;
     display: flex;
-    box-sizing: border-box;
     align-items: center;
-    letter-spacing: 0.01071em;
-    border-radius: 16px;
-    line-height: 1.43;
+    justify-content: center;
+    border-radius: 5000px;
     font-size: 1.2rem;
     font-weight: var(--bold);
-    min-width: 32px;
+    color: var(--color-text);
 
     &.dots:hover {
       background-color: transparent;
@@ -129,6 +128,10 @@ const PaginationWrapper = styled.div`
         background-color: transparent;
         cursor: default;
       }
+    }
+  }
+  @media ${QUERIES.phoneAndDown} {
+    .pagination-item {
     }
   }
 `;

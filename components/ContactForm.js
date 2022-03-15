@@ -6,6 +6,8 @@ import * as Yup from 'yup';
 import { ThumbsUp, AlertTriangle } from 'react-feather';
 import Button from './Button';
 import FormAlert from './FormAlert';
+import BorderWrapper from './BorderWrapper';
+import { QUERIES } from '../styles/constants';
 
 export default function ContactForm() {
   const formSchema = Yup.object().shape({
@@ -68,116 +70,125 @@ export default function ContactForm() {
     >
       {({ errors, touched, isSubmitting, isValid, handleSubmit }) => (
         <Form onSubmit={handleSubmit}>
-          {isEmailSent && (
-            <p
-              style={{
-                color: 'var(--color-logo-green)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              <ThumbsUp
-                color="var(--color-logo-green)"
-                size={18}
-                style={{ marginRight: '8px', marginTop: '-2px' }}
+          <BorderWrapper>
+            <FormContent>
+              {isEmailSent && (
+                <p
+                  style={{
+                    color: 'var(--color-logo-green)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <ThumbsUp
+                    color="var(--color-logo-green)"
+                    size={18}
+                    style={{ marginRight: '8px', marginTop: '-2px' }}
+                  />
+                  Email sent successfully
+                </p>
+              )}
+              {isEmailSent === false && (
+                <p
+                  style={{
+                    color: 'var(--color-logo-red)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <AlertTriangle
+                    color="var(--color-logo-red)"
+                    size={18}
+                    style={{ marginRight: '8px', marginTop: '-2px' }}
+                  />
+                  Ooops....That's embarrassing an error occured.
+                </p>
+              )}
+              {mailSendingErrors !== null && (
+                <p
+                  style={{
+                    color: 'var(--color-logo-red)',
+                    textAlign: 'center',
+                  }}
+                >
+                  Error :{mailSendingErrors}
+                </p>
+              )}
+
+              <FieldWrapper>
+                <label htmlFor="name" className="label">
+                  Name
+                </label>
+                <Field
+                  id="name"
+                  type="text"
+                  name="name"
+                  placeholder="Jon Doe"
+                  className="input"
+                />
+                {errors.name && touched.name ? (
+                  <FormAlert message={errors.name} />
+                ) : null}
+              </FieldWrapper>
+              <FieldWrapper>
+                <label htmlFor="email" className="label">
+                  Email
+                </label>
+                <Field
+                  id="email"
+                  type="text"
+                  name="email"
+                  placeholder="jondoe@gmail.com"
+                  className="input"
+                />
+                {errors.email && touched.email ? (
+                  <FormAlert message={errors.email} />
+                ) : null}
+              </FieldWrapper>
+
+              <FieldWrapper>
+                <label htmlFor="subject" className="label">
+                  Subject
+                </label>
+                <Field
+                  id="subject"
+                  type="text"
+                  name="subject"
+                  placeholder="Request for proposal"
+                  className="input"
+                />
+                {errors.subject && touched.subject ? (
+                  <FormAlert message={errors.subject} />
+                ) : null}
+              </FieldWrapper>
+
+              <FieldWrapper>
+                <label htmlFor="message" className="label">
+                  Message
+                </label>
+                <Field
+                  id="message"
+                  name="message"
+                  placeholder="Your message body..."
+                  className="textarea"
+                  component="textarea"
+                />
+                {errors.message && touched.message ? (
+                  <FormAlert message={errors.message} />
+                ) : null}
+              </FieldWrapper>
+
+              <SubmitButton
+                text="Send Email"
+                color="var(--color-background)"
+                background="var(--color-secondary)"
+                type="submit"
+                disabled={isSubmitting || !isValid}
               />
-              Email sent successfully
-            </p>
-          )}
-          {isEmailSent === false && (
-            <p
-              style={{
-                color: 'var(--color-logo-red)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              <AlertTriangle
-                color="var(--color-logo-red)"
-                size={18}
-                style={{ marginRight: '8px', marginTop: '-2px' }}
-              />
-              Ooops....That's embarrassing an error occured.
-            </p>
-          )}
-          {mailSendingErrors !== null && (
-            <p style={{ color: 'var(--color-logo-red)', textAlign: 'center' }}>
-              Error :{mailSendingErrors}
-            </p>
-          )}
-
-          <FieldWrapper>
-            <label htmlFor="name" className="label">
-              Name
-            </label>
-            <Field
-              id="name"
-              type="text"
-              name="name"
-              placeholder="Jon Doe"
-              className="input"
-            />
-            {errors.name && touched.name ? (
-              <FormAlert message={errors.name} />
-            ) : null}
-          </FieldWrapper>
-          <FieldWrapper>
-            <label htmlFor="email" className="label">
-              Email
-            </label>
-            <Field
-              id="email"
-              type="text"
-              name="email"
-              placeholder="jondoe@gmail.com"
-              className="input"
-            />
-            {errors.email && touched.email ? (
-              <FormAlert message={errors.email} />
-            ) : null}
-          </FieldWrapper>
-
-          <FieldWrapper>
-            <label htmlFor="subject" className="label">
-              Subject
-            </label>
-            <Field
-              id="subject"
-              type="text"
-              name="subject"
-              placeholder="Request for proposal"
-              className="input"
-            />
-            {errors.subject && touched.subject ? (
-              <FormAlert message={errors.subject} />
-            ) : null}
-          </FieldWrapper>
-
-          <FieldWrapper>
-            <label htmlFor="message" className="label">
-              Message
-            </label>
-            <Field
-              id="message"
-              name="message"
-              placeholder="Your message body..."
-              className="textarea"
-              component="textarea"
-            />
-            {errors.message && touched.message ? (
-              <FormAlert message={errors.message} />
-            ) : null}
-          </FieldWrapper>
-
-          <SubmitButton
-            text="Send Email"
-            color="var(--color-background)"
-            background="var(--color-secondary)"
-            type="submit"
-            disabled={isSubmitting || !isValid}
-          />
+            </FormContent>
+          </BorderWrapper>
         </Form>
       )}
     </Formik>
@@ -187,12 +198,12 @@ export default function ContactForm() {
 const Form = styled.form`
   max-width: 550px;
   margin: 2rem auto;
-  padding: 1rem 2rem;
-  box-shadow: 0.3px 0.5px 0.7px hsla(var(--shadow), 0.36),
-    0.8px 1.6px 2px -0.8px hsla(var(--shadow), 0.36),
-    2.1px 4.1px 5.2px -1.7px hsla(var(--shadow), 0.36),
-    5px 10px 12.6px -2.5px hsla(var(--shadow), 0.36);
+  padding: 5px 0 2px 0;
+  box-shadow: hsla(var(--shadow), 0.4) 0px 2px 4px,
+    hsla(var(--shadow), 0.3) 0px 7px 13px -3px,
+    hsla(var(--shadow), 0.2) 0px -3px 0px inset;
   border-radius: 5px;
+  background: var(--color-gradient);
   .label {
     padding: 0.4rem 0;
     margin: 0;
@@ -233,6 +244,13 @@ const Form = styled.form`
   .textarea {
     resize: vertical;
     min-height: 152px;
+  }
+`;
+
+const FormContent = styled.div`
+  padding: 1rem 2rem;
+  @media ${QUERIES.phoneAndDown} {
+    padding: 1rem 0.5rem;
   }
 `;
 

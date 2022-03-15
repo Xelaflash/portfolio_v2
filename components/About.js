@@ -140,6 +140,10 @@ const StackGridWrapper = styled.div`
   max-width: 46rem;
   margin: auto;
   justify-content: center;
+  align-items: center;
+  @media ${QUERIES.phoneAndDown} {
+    max-width: 18rem;
+  }
 `;
 
 const rainbow = keyframes`
@@ -151,6 +155,8 @@ const rainbow = keyframes`
 const SingleStack = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   max-width: 130px;
   padding: 8px;
   p {
@@ -176,14 +182,14 @@ const SingleStack = styled.div`
 
 const StackImageWrapper = styled.div`
   position: relative;
-  width: 110px;
-  height: 110px;
+  width: 90px;
+  height: 90px;
   img {
     object-fit: contain;
   }
   @media ${QUERIES.phoneAndDown} {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
   }
 `;
 
