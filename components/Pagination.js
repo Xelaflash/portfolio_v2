@@ -1,11 +1,13 @@
 import classnames from 'classnames';
 import propTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { ChevronLeft, ChevronRight } from 'react-feather';
 import { usePagination, DOTS } from '../utils/usePagination';
 import { QUERIES } from '../styles/constants';
+import { useColorTheme } from '../utils/themeState';
 
 const Pagination = (props) => {
+  const { activeTheme } = useColorTheme();
   const {
     onPageChange,
     totalCount,
@@ -13,6 +15,7 @@ const Pagination = (props) => {
     currentPage,
     pageSize,
     className,
+    theme,
   } = props;
 
   const paginationRange = usePagination({
@@ -39,6 +42,7 @@ const Pagination = (props) => {
   return (
     <PaginationWrapper
       className={classnames('pagination-container', { [className]: className })}
+      theme={activeTheme}
     >
       <button
         className={classnames('pagination-item', {
@@ -116,7 +120,16 @@ const PaginationWrapper = styled.div`
     }
 
     &.selected {
-      color: var(--color-text);
+      ${(props) =>
+        props.theme === 'light' &&
+        css`
+          color: var(--color-white);
+        `};
+      ${(props) =>
+        props.theme === 'dark' &&
+        css`
+          color: var(--color-background);
+        `};
       background-color: var(--color-primary);
     }
 
