@@ -26,10 +26,7 @@ export const COLORS = {
   peach: 'hsl(0, 90%, 70%)', // #F76C6C
 
   // Logo colors
-  // logoBlue: "hsl(197, 100%, 43%)", // #009DDB
-  // logoViolet: "hsl(299, 42%, 42%)", // #963D97
   logoRed: 'hsl(359, 72%, 55%)', // #DF3A3E
-  // logoOrange: "hsl(28, 91%, 54%)", // #F5831E
   logoYellow: 'hsl(41, 98%, 57%)', // #FDB827
   logoGreen: 'hsl(106, 46%, 50%)', // #61BB46
 };

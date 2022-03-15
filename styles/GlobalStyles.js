@@ -86,10 +86,7 @@ const GlobalStyle = createGlobalStyle`
     --color-gray-700: ${COLORS.gray[700]};
     --color-gray-900: ${COLORS.gray[900]};
     --color-logo-yellow: ${COLORS.logoYellow};
-     /* --color-logo-blue: ${COLORS.logoBlue}; */
-   /* --color-logo-Violet: ${COLORS.logoViolet}; */
     --color-logo-red: ${COLORS.logoRed};
-    /* --color-logo-orange: ${COLORS.logoOrange}; */
     --color-logo-green: ${COLORS.logoGreen};
 
     /* dark Mode variables */
