@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { QUERIES } from '../styles/constants';
 
 export default function TrianglesSeparator() {
   return (
@@ -37,5 +38,11 @@ export default function TrianglesSeparator() {
 }
 
 const TrianglesSeparatorWrapper = styled.div`
-  /* margin-top: -10rem; */
+  margin-top: -7rem;
+  @media ${QUERIES.tabletAndDown} {
+    margin-top: -4rem;
+  }
+  @media ${QUERIES.phoneAndDown} {
+    margin-top: -2rem;
+  }
 `;

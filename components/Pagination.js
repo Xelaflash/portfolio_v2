@@ -93,9 +93,9 @@ export default Pagination;
 const PaginationWrapper = styled.div`
   display: flex;
   align-items: center;
+  margin-top: 1rem;
   .pagination-item {
     margin: 1rem 4px;
-    /* padding: 0 12px; */
     height: 32px;
     width: 32px;
     display: flex;
@@ -131,8 +131,7 @@ const PaginationWrapper = styled.div`
     }
   }
   @media ${QUERIES.phoneAndDown} {
-    .pagination-item {
-    }
+    margin-top: 0;
   }
 `;
 

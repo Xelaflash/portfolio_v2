@@ -19,8 +19,13 @@ export default function Contact() {
 }
 
 const ContactSection = styled.section`
-  /*  TODO: Kill that  */
-  border: 1px solid green;
+  margin-top: -6rem;
+  @media ${QUERIES.tabletAndDown} {
+    margin-top: -4rem;
+  }
+  @media ${QUERIES.phoneAndDown} {
+    margin-top: -1.5rem;
+  }
 `;
 
 const SubTitleText = styled.div`
