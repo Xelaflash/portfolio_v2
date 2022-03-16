@@ -15,6 +15,7 @@ import Spacer from '../components/Spacer';
 import { loadStack } from '../utils/fetch-stack.js';
 import { loadWorkProjets } from '../utils/fetch-workProjects.js';
 import { loadPersoProjets } from '../utils/fetch-persoProjects.js';
+import ScrollToTop from '../components/ScrollToTop';
 
 // Static Site Generation => fetch Data from Notion API
 export async function getStaticProps() {
@@ -55,6 +56,7 @@ export default function IndexPage({ stack, workProjects, persoProjects }) {
         <Contact />
         <Spacer size={48} />
       </main>
+      <ScrollToTop />
       <Footer />
     </>
   );
