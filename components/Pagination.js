@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import { ChevronLeft, ChevronRight } from 'react-feather';
 import { usePagination, DOTS } from '../utils/usePagination';
 import { QUERIES } from '../styles/constants';
+import VisuallyHidden from './VisuallyHidden';
 
 const Pagination = ({
   onPageChange,
@@ -48,6 +49,7 @@ const Pagination = ({
         type="button"
       >
         <ChevronLeft size={24} className="arrow left" />
+        <VisuallyHidden>Previous</VisuallyHidden>
       </button>
       {paginationRange.map((pageNumber) => {
         if (pageNumber === DOTS) {
@@ -83,6 +85,7 @@ const Pagination = ({
         type="button"
       >
         <ChevronRight size={24} className="arrow right" />
+        <VisuallyHidden>Next</VisuallyHidden>
       </button>
     </PaginationWrapper>
   );

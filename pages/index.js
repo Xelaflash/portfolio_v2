@@ -30,6 +30,7 @@ export default function IndexPage({ stack, workProjects, persoProjects }) {
   // const stackObj = stack.stackData;
 
   const allProjects = Object.assign(workProjects, persoProjects);
+  // console.log(allProjects);
 
   // TODO: Handle error
   // if (stackObj.object === 'error' || workProjectsObj.object === 'error') {

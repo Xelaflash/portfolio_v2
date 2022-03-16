@@ -7,15 +7,15 @@ import { QUERIES } from '../styles/constants';
 import BorderWrapper from './BorderWrapper';
 
 export default function Project({ project }) {
+  const projectName = project?.properties?.Name?.title?.map(
+    (title) => title?.text?.content
+  );
+
   return (
     <SingleProjectWrapper>
       <BorderWrapper>
         {/* Project title */}
-        {project?.properties?.Name?.title?.map((title) => (
-          <ProjectName key={title?.text?.content}>
-            {title?.text?.content}
-          </ProjectName>
-        ))}
+        <ProjectName>{projectName}</ProjectName>
         <ProjectDetailsWrapper>
           {/* Date */}
           <p>{project?.properties?.Date?.number}</p>
@@ -27,6 +27,7 @@ export default function Project({ project }) {
               src={imgFile?.name}
               key={project?.properties?.Image?.id}
               layout="fill"
+              alt={`screen shot of website ${projectName}`}
             />
           ))}
         </ImageWrapper>
@@ -166,6 +167,8 @@ const StatusTag = styled(Tag)`
     css`
       background: #45a29e;
       border: 1px solid #45a29e;
+      /* using this color for contrast ratio in both theme */
+      color: #0e141b;
     `}
   ${({ online }) =>
     !online &&
