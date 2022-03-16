@@ -111,6 +111,9 @@ const DescriptionTextWrapper = styled.div`
     color: var(--color-secondary);
     font-weight: var(--semiBold);
   }
+  @media ${QUERIES.tabletAndDown} {
+    max-width: 700px;
+  }
   @media ${QUERIES.phoneAndDown} {
     font-size: 1rem;
     margin: 16px auto;
