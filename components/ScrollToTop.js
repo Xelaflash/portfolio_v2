@@ -2,17 +2,22 @@ import styled from 'styled-components';
 import { ArrowUpCircle } from 'react-feather';
 import { useState, useEffect } from 'react';
 import VisuallyHidden from './VisuallyHidden';
+import { QUERIES } from '../styles/constants';
 
 const ScrollToTop = () => {
   const [showTopBtn, setShowTopBtn] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 400) {
+      setShowTopBtn(true);
+    } else {
+      setShowTopBtn(false);
+    }
+  };
+
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 400) {
-        setShowTopBtn(true);
-      } else {
-        setShowTopBtn(false);
-      }
-    });
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const goToTop = () => {
@@ -46,13 +51,17 @@ const ScrollTopStyled = styled.div`
     bottom: 40px;
     right: 25px;
     z-index: 20;
+    @media ${QUERIES.phoneAndDown} {
+      right: 5px;
+    }
   }
   .icon-style {
     background: transparent;
     border-radius: 50%;
     color: var(--color-text);
-    width: 44px;
-    height: 44px;
+    opacity: 0.8;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
   }
