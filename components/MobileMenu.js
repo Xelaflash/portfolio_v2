@@ -71,14 +71,6 @@ const backdropFadeIn = keyframes`
     background: hsl(212deg 8% 38% / 0.9);
   }
 `;
-const backdropFadeOut = keyframes`
-  0% {
-    background: hsl(212deg 8% 38% / 0.9);
-  }
-  100% {
-    background: hsl(212deg 8% 38% / 0.0);
-  }
-`;
 
 const fadeIn = keyframes`
   0% {
@@ -91,6 +83,12 @@ const fadeIn = keyframes`
 const fadeOut = keyframes`
   0% {
     opacity: 1;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0;
   }
   100% {
     opacity: 0;
@@ -107,6 +105,7 @@ const Content = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  animation: 250ms ${fadeOut} ease-in;
 `;
 
 const Nav = styled.nav`
@@ -165,7 +164,6 @@ const MobileMenuStyles = styled.div`
   z-index: 1;
   display: flex;
   justify-content: flex-end;
-  transform: translateX(100%);
   transition: all 0.3s;
   transform: translateX(100%);
   ${(props) =>

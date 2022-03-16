@@ -22,7 +22,6 @@ export default function Header() {
         <Logo />
       </LogoWrapper>
       <Nav>
-        {/* TODO: add active class + color when section scroll */}
         <NavLink href="/#about">
           <span data-hover="About">About</span>
         </NavLink>
