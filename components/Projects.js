@@ -40,26 +40,23 @@ export default function Projects({ data }) {
     <ProjectsSection id="projects">
       <SectionTitle title="Projects" margin="0 auto" />
       <MaxWidthWrapper>
-        <ProjectTypeWrapper>
-          <ProjectTypeBtn
-            active={isWorkProjectsActive}
-            onClick={handleClick}
-            type="button"
-          >
-            Work Projects
-          </ProjectTypeBtn>
-          <ProjectTypeBtn
-            active={isPersoProjectsActive}
-            onClick={handleClick}
-            type="button"
-          >
-            Personal Projects
-          </ProjectTypeBtn>
-        </ProjectTypeWrapper>
-        <ProjectWrapper>
-          {currentData?.map((project) => (
-            <Project project={project} key={project.id} />
-          ))}
+        <ProjectsNav>
+          <ProjectTypeWrapper>
+            <ProjectTypeBtn
+              active={isWorkProjectsActive}
+              onClick={handleClick}
+              type="button"
+            >
+              Work Projects
+            </ProjectTypeBtn>
+            <ProjectTypeBtn
+              active={isPersoProjectsActive}
+              onClick={handleClick}
+              type="button"
+            >
+              Personal Projects
+            </ProjectTypeBtn>
+          </ProjectTypeWrapper>
           <Pagination
             className="pagination-bar"
             currentPage={currentPage}
@@ -68,6 +65,11 @@ export default function Projects({ data }) {
             onPageChange={(page) => setCurrentPage(page)}
             theme={activeTheme}
           />
+        </ProjectsNav>
+        <ProjectWrapper>
+          {currentData?.map((project) => (
+            <Project project={project} key={project.id} />
+          ))}
         </ProjectWrapper>
       </MaxWidthWrapper>
     </ProjectsSection>
@@ -77,11 +79,32 @@ export default function Projects({ data }) {
 const ProjectsSection = styled.section`
   min-height: 50vh;
   margin-top: -4rem;
+  margin-bottom: 6rem;
   @media ${QUERIES.tabletAndDown} {
     margin-top: -1.75rem;
   }
+
   @media ${QUERIES.phoneAndDown} {
     margin-top: -1rem;
+    margin-bottom: 4rem;
+  }
+`;
+
+const ProjectsNav = styled.div`
+  margin: 0.5rem auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  max-width: 1160px;
+  margin: auto;
+  @media (max-width: 1180px) {
+    justify-content: space-evenly;
+  }
+  @media ${QUERIES.tabletAndDown} {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -90,7 +113,10 @@ const ProjectTypeWrapper = styled.div`
   gap: 32px;
   margin: 0 0 1rem;
   @media ${QUERIES.tabletAndDown} {
-    margin: 2rem auto 1.5rem auto;
+    margin: 2rem auto 1rem auto;
+  }
+  @media ${QUERIES.phoneAndDown} {
+    margin: 1rem auto;
   }
 `;
 

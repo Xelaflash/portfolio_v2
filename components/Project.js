@@ -97,7 +97,6 @@ export default function Project({ project }) {
 const SingleProjectWrapper = styled.div`
   width: 550px;
   border-radius: 5px;
-  /* padding: 2px; */
   background: var(--color-gradient);
   box-shadow: hsla(var(--shadow), 0.4) 0px 2px 4px,
     hsla(var(--shadow), 0.3) 0px 7px 13px -3px,
@@ -112,7 +111,6 @@ const ProjectName = styled.div`
   text-transform: uppercase;
   font-style: italic;
   font-weight: var(--semiBold);
-  /* color: var(--color-secondary); */
   background: var(--color-gradient);
   background-clip: text;
   -webkit-background-clip: text;
@@ -135,13 +133,13 @@ const ProjectDetailsWrapper = styled.div`
 
 const ImageWrapper = styled.div`
   position: relative;
-  height: 250px;
+  height: 200px;
   line-height: 0;
   img {
     object-fit: contain;
   }
   @media ${QUERIES.phoneAndDown} {
-    height: 200px;
+    height: 150px;
   }
 `;
 
@@ -180,7 +178,7 @@ const StatusTag = styled(Tag)`
 const ProjectDescriptionWrapper = styled.div`
   font-size: 0.9rem;
   text-align: left;
-  margin: 1rem auto 0;
+  margin: 0.5rem auto 0;
   padding: 0 1rem;
   min-height: 100px;
   display: flex;
@@ -193,11 +191,11 @@ const ProjectStackWrapper = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 1rem auto 0;
+  margin: 0.5rem auto 0;
   min-height: 75px;
 `;
 const ProjectLinkWrapper = styled.div`
-  margin: 1rem auto 0;
+  margin: 0.5rem auto 0;
   display: flex;
   align-items: center;
   justify-content: center;

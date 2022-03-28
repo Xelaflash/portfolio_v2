@@ -98,7 +98,7 @@ const PaginationWrapper = styled.div`
   align-items: center;
   margin-top: 1rem;
   .pagination-item {
-    margin: 1rem 4px;
+    margin: 0.5rem 4px 1rem;
     height: 32px;
     width: 32px;
     display: flex;
