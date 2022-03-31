@@ -49,7 +49,8 @@ const ScrollTopStyled = styled.div`
   .icon-position {
     position: fixed;
     bottom: 40px;
-    right: 25px;
+    right: 0;
+    margin-right: 20px;
     z-index: 20;
     @media ${QUERIES.phoneAndDown} {
       right: 5px;
@@ -60,8 +61,10 @@ const ScrollTopStyled = styled.div`
     border-radius: 50%;
     color: var(--color-text);
     opacity: 0.8;
-    width: 40px;
-    height: 40px;
+    width: var(--min-tap-height);
+    height: var(--min-tap-height);
+    /* width: 32px;
+    height: 32px; */
     cursor: pointer;
     transition: all 0.5s ease-in-out;
   }
