@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 
-export const DOTS = '...';
+export const DOTS = 'DOTS';
+export const DOTS2 = 'DOTS2';
 
 const range = (start, end) => {
   const length = end - start + 1;
@@ -19,10 +20,8 @@ export const usePagination = ({
     // Pages count is determined as siblingCount + firstPage + lastPage + currentPage + 2*DOTS
     const totalPageNumbers = siblingCount + 5;
 
-    /*
-      If the number of pages is less than the page numbers we want to show in our
-      paginationComponent, we return the range [1..totalPageCount]
-    */
+    /* If the number of pages is less than the page numbers we want to show in our paginationComponent, we return the range [1..totalPageCount]
+     */
     if (totalPageNumbers >= totalPageCount) {
       return range(1, totalPageCount);
     }
@@ -62,7 +61,8 @@ export const usePagination = ({
 
     if (shouldShowLeftDots && shouldShowRightDots) {
       const middleRange = range(leftSiblingIndex, rightSiblingIndex);
-      return [firstPageIndex, DOTS, ...middleRange, DOTS, lastPageIndex];
+      //  TODO: Hack to fix the issue with the dots rendered twice and react complaining about the key in Pagination.js => element not unique. Need to find a better solution later.
+      return [firstPageIndex, DOTS, ...middleRange, DOTS2, lastPageIndex];
     }
   }, [totalCount, pageSize, siblingCount, currentPage]);
 

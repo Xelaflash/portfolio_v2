@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import propTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { ChevronLeft, ChevronRight } from 'react-feather';
-import { usePagination, DOTS } from '../utils/usePagination';
+import { usePagination, DOTS, DOTS2 } from '../utils/usePagination';
 import { QUERIES } from '../styles/constants';
 import VisuallyHidden from './VisuallyHidden';
 
@@ -54,11 +54,15 @@ const Pagination = ({
       {paginationRange.map((pageNumber) => {
         if (pageNumber === DOTS) {
           return (
-            <button
-              key={pageNumber}
-              className="pagination-item dots"
-              type="button"
-            >
+            <button className="pagination-item dots" type="button" key="dot-1">
+              &#8230;
+            </button>
+          );
+        }
+        //  TODO: Hack to fix the issue with the dots rendered twice and react complaining about the key => element not unique. Need to find a better solution later.
+        if (pageNumber === DOTS2) {
+          return (
+            <button className="pagination-item dots" type="button" key="dot-2">
               &#8230;
             </button>
           );

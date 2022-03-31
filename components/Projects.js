@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import propTypes from 'prop-types';
 import styled from 'styled-components';
+import { useWindowSize } from '../utils/useWindowSize';
 import MaxWidthWrapper from './MaxWidthWrapper';
 import SectionTitle from './SectionTitle';
 import Project from './Project';
@@ -8,7 +9,6 @@ import Pagination from './Pagination';
 import { QUERIES } from '../styles/constants';
 import { useColorTheme } from '../utils/themeState';
 
-const PageSize = 2;
 export default function Projects({ data }) {
   const [isWorkProjectsActive, setIsWorkProjectsActive] = useState(true);
   const [isPersoProjectsActive, setIsPersoProjectsActive] = useState(false);
@@ -30,11 +30,20 @@ export default function Projects({ data }) {
 
   const projectsDataArray = useMemo(() => [...projectsData], [projectsData]);
 
+  const { width } = useWindowSize();
+  let pageSize;
+
+  if (width < 1180) {
+    pageSize = 1;
+  } else {
+    pageSize = 2;
+  }
+
   const currentData = useMemo(() => {
-    const firstPageIndex = (currentPage - 1) * PageSize;
-    const lastPageIndex = firstPageIndex + PageSize;
+    const firstPageIndex = (currentPage - 1) * pageSize;
+    const lastPageIndex = firstPageIndex + pageSize;
     return projectsDataArray.slice(firstPageIndex, lastPageIndex);
-  }, [currentPage, projectsDataArray]);
+  }, [currentPage, projectsDataArray, pageSize]);
 
   return (
     <ProjectsSection id="projects">
@@ -61,7 +70,7 @@ export default function Projects({ data }) {
             className="pagination-bar"
             currentPage={currentPage}
             totalCount={projectsDataArray.length}
-            pageSize={PageSize}
+            pageSize={pageSize}
             onPageChange={(page) => setCurrentPage(page)}
             theme={activeTheme}
           />
