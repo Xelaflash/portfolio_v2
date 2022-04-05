@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import propTypes from 'prop-types';
-// import Error from './_error';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Home from '../components/Home';
@@ -16,6 +15,7 @@ import { loadStack } from '../utils/fetch-stack.js';
 import { loadWorkProjets } from '../utils/fetch-workProjects.js';
 import { loadPersoProjets } from '../utils/fetch-persoProjects.js';
 import ScrollToTop from '../components/ScrollToTop';
+import Error from './_error';
 
 // Static Site Generation => fetch Data from Notion API
 export async function getStaticProps() {
@@ -27,15 +27,13 @@ export async function getStaticProps() {
   };
 }
 export default function IndexPage({ stack, workProjects, persoProjects }) {
-  // const stackObj = stack.stackData;
+  const stackObj = stack.stackData;
 
   const allProjects = Object.assign(workProjects, persoProjects);
-  // console.log(allProjects);
 
-  // TODO: Handle error
-  // if (stackObj.object === 'error' || workProjectsObj.object === 'error') {
-  //   return <Error statusCode={stackObj.code} />;
-  // }
+  if (stackObj.object === 'error' || allProjects.object === 'error') {
+    return <Error statusCode={stackObj.code} />;
+  }
   return (
     <>
       <Head>
