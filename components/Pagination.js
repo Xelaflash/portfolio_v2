@@ -6,7 +6,7 @@ import { usePagination, DOTS, DOTS2 } from '../utils/usePagination';
 import { QUERIES } from '../styles/constants';
 import VisuallyHidden from './VisuallyHidden';
 
-const Pagination = ({
+function Pagination({
   onPageChange,
   totalCount,
   siblingCount = 1,
@@ -14,7 +14,7 @@ const Pagination = ({
   pageSize,
   className,
   theme,
-}) => {
+}) {
   const paginationRange = usePagination({
     currentPage,
     totalCount,
@@ -93,7 +93,7 @@ const Pagination = ({
       </button>
     </PaginationWrapper>
   );
-};
+}
 
 export default Pagination;
 

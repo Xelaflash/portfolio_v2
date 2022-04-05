@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import propTypes from 'prop-types';
 import styled from 'styled-components';
+import { useSwipeable } from 'react-swipeable';
 import { useWindowSize } from '../utils/useWindowSize';
 import MaxWidthWrapper from './MaxWidthWrapper';
 import SectionTitle from './SectionTitle';
@@ -13,7 +14,6 @@ export default function Projects({ data }) {
   const [isWorkProjectsActive, setIsWorkProjectsActive] = useState(true);
   const [isPersoProjectsActive, setIsPersoProjectsActive] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-
   const { activeTheme } = useColorTheme();
 
   const handleClick = () => {
@@ -45,6 +45,28 @@ export default function Projects({ data }) {
     return projectsDataArray.slice(firstPageIndex, lastPageIndex);
   }, [currentPage, projectsDataArray, pageSize]);
 
+  const handleSwipeLeft = () => {
+    // stop swipe if currentPage = lastPage
+    if (currentPage === Math.ceil(projectsDataArray.length / pageSize)) {
+      return null;
+    }
+    setCurrentPage(currentPage + 1);
+  };
+
+  const handleSwipeRight = () => {
+    if (currentPage === 1) {
+      return null;
+    }
+    setCurrentPage(currentPage - 1);
+  };
+
+  const handlers = useSwipeable({
+    onSwipedLeft: handleSwipeLeft,
+    onSwipedRight: handleSwipeRight,
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: false,
+  });
+
   return (
     <ProjectsSection id="projects">
       <SectionTitle title="Projects" margin="0 auto" />
@@ -75,7 +97,7 @@ export default function Projects({ data }) {
             theme={activeTheme}
           />
         </ProjectsNav>
-        <ProjectWrapper>
+        <ProjectWrapper {...handlers}>
           {currentData?.map((project) => (
             <Project project={project} key={project.id} />
           ))}
