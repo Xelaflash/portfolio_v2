@@ -31,12 +31,18 @@ export default function Projects({ data }) {
   const projectsDataArray = useMemo(() => [...projectsData], [projectsData]);
 
   const { width } = useWindowSize();
+
   let pageSize;
 
   if (width < 1180) {
     pageSize = 1;
   } else {
     pageSize = 2;
+  }
+
+  // To fix hedge case where currentPage == lastpage and onResize pageSize becomes 2 items. Therefore, lastPage nbr doesn't exist anymore => no projects displayed.
+  if (width > 1180 && currentPage === projectsDataArray.length) {
+    setCurrentPage(Math.ceil(projectsDataArray.length / pageSize));
   }
 
   const currentData = useMemo(() => {
@@ -46,7 +52,7 @@ export default function Projects({ data }) {
   }, [currentPage, projectsDataArray, pageSize]);
 
   const handleSwipeLeft = () => {
-    // stop swipe if currentPage = lastPage
+    // stop swipe if currentPage === lastPage
     if (currentPage === Math.ceil(projectsDataArray.length / pageSize)) {
       return null;
     }

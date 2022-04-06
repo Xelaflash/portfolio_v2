@@ -26,6 +26,8 @@ function Pagination({
     return null;
   }
 
+  const lastPage = paginationRange[paginationRange.length - 1];
+
   const onNext = () => {
     onPageChange(currentPage + 1);
   };
@@ -33,8 +35,6 @@ function Pagination({
   const onPrevious = () => {
     onPageChange(currentPage - 1);
   };
-
-  const lastPage = paginationRange[paginationRange.length - 1];
 
   return (
     <PaginationWrapper
