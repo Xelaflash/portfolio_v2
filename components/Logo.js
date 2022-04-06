@@ -14,6 +14,8 @@ export default function Logo() {
           quality={100}
           placeholder="blur"
           blurDataURL={rgbDataURL(35, 50, 67)}
+          // attr added for lighthouse audit unjustified error => I want my 100 score
+          layout="fixed"
         />
       </a>
     </Link>
