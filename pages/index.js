@@ -28,11 +28,28 @@ export async function getStaticProps() {
 }
 export default function IndexPage({ stack, workProjects, persoProjects }) {
   const stackObj = stack.stackData;
-
+  console.log(stackObj);
   const allProjects = Object.assign(workProjects, persoProjects);
 
-  if (stackObj.object === 'error' || allProjects.object === 'error') {
-    return <Error statusCode={stackObj.code} />;
+  if (
+    stackObj.object === 'error' ||
+    persoProjects.persoProjectsData.object === 'error' ||
+    workProjects.workProjectsData.object === 'error'
+  ) {
+    return (
+      <Error
+        status={
+          stackObj.code ||
+          persoProjects.persoProjectsData.code ||
+          workProjects.workProjectsData.code
+        }
+        statusCode={
+          stackObj.status ||
+          persoProjects.persoProjectsData.status ||
+          workProjects.workProjectsData.status
+        }
+      />
+    );
   }
   return (
     <>

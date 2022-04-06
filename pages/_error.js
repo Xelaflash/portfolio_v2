@@ -15,7 +15,7 @@ import {
 } from '../styles/error';
 import Logo from '../components/Logo';
 
-function Error({ statusCode }) {
+function Error({ statusCode, status }) {
   return (
     <>
       <Head>
@@ -34,7 +34,7 @@ function Error({ statusCode }) {
             <ErrorWrapper>
               <p>
                 {statusCode
-                  ? `Error : ${statusCode}`
+                  ? `Error ${statusCode}: ${status}`
                   : 'Error on client side. Please try again later.'}
               </p>
             </ErrorWrapper>
@@ -98,7 +98,8 @@ Error.getInitialProps = ({ res, err }) => {
 };
 
 Error.propTypes = {
-  statusCode: propTypes.string.isRequired,
+  statusCode: propTypes.number.isRequired,
+  status: propTypes.string.isRequired,
 };
 
 export default Error;
