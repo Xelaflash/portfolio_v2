@@ -28,7 +28,6 @@ export async function getStaticProps() {
 }
 export default function IndexPage({ stack, workProjects, persoProjects }) {
   const stackObj = stack.stackData;
-  console.log(stackObj);
   const allProjects = Object.assign(workProjects, persoProjects);
 
   if (
