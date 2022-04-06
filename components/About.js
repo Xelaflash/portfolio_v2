@@ -53,7 +53,7 @@ export default function About({ data }) {
                 <Fragment key={titleObject?.plain_text}>
                   <StackImageWrapper>
                     <Image
-                      src={item.icon?.file?.url}
+                      src={item.properties?.Logo?.url}
                       alt={`Logo of ${titleObject?.plain_text}`}
                       layout="fill"
                     />
