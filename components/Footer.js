@@ -18,6 +18,8 @@ export default function Footer() {
             width={80}
             height={80}
             quality={100}
+            // attr added for lighthouse audit unjustified error => I want my 100 score
+            layout="fixed"
             placeholder="blur"
             blurDataURL={rgbDataURL(35, 50, 67)}
           />
