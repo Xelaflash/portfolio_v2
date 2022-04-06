@@ -265,4 +265,8 @@ const FieldWrapper = styled.div`
 const SubmitButton = styled(Button)`
   margin: 32px auto 0;
   padding: 0.8rem 3.5rem;
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
 `;
