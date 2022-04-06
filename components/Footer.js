@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import { QUERIES } from '../styles/constants';
 import VisuallyHidden from './VisuallyHidden';
+import { rgbDataURL } from '../utils/blur';
 
-import logo from '../public/logo.png';
 import buyMeCoffeeImg from '../public/bmc-button.png';
 
 export default function Footer() {
@@ -13,12 +13,13 @@ export default function Footer() {
       <FlexWrapperLeft>
         <LogoWrapper>
           <Image
-            src={logo}
+            src="https://res.cloudinary.com/dcf4y5ngp/image/upload/v1631038369/alexwebdevcolor.png"
             alt="AlexG WebDev"
             width={80}
             height={80}
             quality={100}
             placeholder="blur"
+            blurDataURL={rgbDataURL(35, 50, 67)}
           />
         </LogoWrapper>
         <Copyright>
@@ -67,7 +68,6 @@ const FooterWrapper = styled.footer`
   padding: 32px;
   display: grid;
   grid-template-columns: 1fr minmax(350px, 1fr) 1fr;
-  /*  TODO: REMOVE WHEN ALL SECTIONS ARE DONE */
   border-top: 1px solid var(--color-background-shade3);
   @media ${QUERIES.tabletAndDown} {
     grid-template-columns: repeat(3, 1fr);
