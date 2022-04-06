@@ -9,8 +9,8 @@ export default function Logo() {
         <Image
           src={logo}
           alt="Alex G Logo - Home"
-          width="64"
-          height="64"
+          width={64}
+          height={64}
           quality={100}
           className="logo-img"
           placeholder="blur"
