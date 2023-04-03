@@ -1,7 +1,7 @@
 export async function loadStack() {
   const StackRequestBody = {
     filter: {
-      property: 'Wesbite Display',
+      property: 'Website Display',
       select: {
         equals: 'Yes',
       },
@@ -18,7 +18,7 @@ export async function loadStack() {
     method: 'post',
     headers: {
       Accept: 'application/json',
-      'Notion-Version': '2022-02-22',
+      'Notion-Version': '2022-06-28',
       Authorization: `Bearer ${process.env.NOTION_API_KEY}`,
       'Content-Type': 'application/json',
     },

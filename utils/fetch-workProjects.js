@@ -12,7 +12,7 @@ export async function loadWorkProjets() {
     method: 'post',
     headers: {
       Accept: 'application/json',
-      'Notion-Version': '2022-02-22',
+      'Notion-Version': '2022-06-28',
       Authorization: `Bearer ${process.env.NOTION_API_KEY}`,
       'Content-Type': 'application/json',
     },
