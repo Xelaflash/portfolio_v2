@@ -865,12 +865,12 @@ export default function Privacy() {
               Gros – alex.gros.pro@gmail.com
               <br />
             </p>
-            <div ng-bind-html="linkHTML">
+            <div>
               <p>
                 Ces mentions légales RGPD sont issues du{' '}
                 <a
                   href="https://fr.orson.io/1371/generateur-mentions-legales"
-                  title="générateur de mentions légales RGPD d"
+                  title="générateur de mentions légales RGPD d'Orson.io"
                 >
                   générateur de mentions légales RGPD d'Orson.io
                 </a>
@@ -1353,7 +1353,6 @@ export default function Privacy() {
               </a>{' '}
               sont principalement les agents de notre service client.
             </p>
-            <div ng-bind-html="rgpdHTML" />
           </SubSection>
           <SubSection>
             <SubSectionTitle className="sub-title">
