@@ -25,7 +25,7 @@ export default function About({ data }) {
           <h3>Alex G,</h3>
         </Greetings>
         <p>
-          A freelance <span>Web Developer</span> with 4 years of experience in
+          A frontend <span>Web Developer</span> with 5 years of experience in
           the industry.
         </p>
         <p>
@@ -36,7 +36,7 @@ export default function About({ data }) {
         <p>
           While I've started my journey as a full-stack developer working with{' '}
           <span>Ruby on Rails</span>, I've lately been focusing on{' '}
-          <span>Front-End development</span> through <span>React</span>, the{' '}
+          <span>Frontend development</span> through <span>React</span>, the{' '}
           <span>JAMSTACK</span> and its associated framework like{' '}
           <span>Gatsby</span> or <span>NextJs</span>.
         </p>

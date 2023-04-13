@@ -22,13 +22,13 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#0E141B" />
           <meta
             name="description"
-            content="Front End Web Developer (React/NextJs/Gatsby/JAMSTACK) with 4 years of experienced in the industry, I can help you craft a fast, intuitive and responsive website adapted to your project needs and budget. From Figma (design) to SEO I'm here to provide value for your business."
+            content="Frontend Web Developer (React/NextJs/Gatsby/JAMSTACK) with 5 years of experienced in the industry, I can help you craft a fast, intuitive and responsive website adapted to your project needs and budget. From Figma (design) to SEO I'm here to provide value for your business."
           />
           {/* <!-- Google / Search Engine Tags --> */}
           <meta itemProp="name" content="Alex G | Web Developer" />
           <meta
             itemProp="description"
-            content="Front End Web Developer (React/NextJs/Gatsby/JAMSTACK) with 4 years of experienced in the industry, I can help you craft a fast, intuitive and responsive website adapted to your project needs and budget. From Figma (design) to SEO I'm here to provide value for your business."
+            content="Frontend Web Developer (React/NextJs/Gatsby/JAMSTACK) with 5 years of experienced in the industry, I can help you craft a fast, intuitive and responsive website adapted to your project needs and budget. From Figma (design) to SEO I'm here to provide value for your business."
           />
           <meta
             itemProp="image"
@@ -39,7 +39,7 @@ class MyDocument extends Document {
           <meta property="og:title" content="Alex G | Web Developer" />
           <meta
             property="og:description"
-            content="Front End Web Developer (React/NextJs/Gatsby/JAMSTACK) with 4 years of experienced in the industry, I can help you craft a fast, intuitive and responsive website adapted to your project needs and budget. From Figma (design) to SEO I'm here to provide value for your business."
+            content="Frontend Web Developer (React/NextJs/Gatsby/JAMSTACK) with 5 years of experienced in the industry, I can help you craft a fast, intuitive and responsive website adapted to your project needs and budget. From Figma (design) to SEO I'm here to provide value for your business."
           />
           <meta
             property="og:image"
@@ -52,7 +52,7 @@ class MyDocument extends Document {
           <meta name="twitter:site" content="@GhostXela" />
           <meta
             name="twitter:description"
-            content="Front End Web Developer (React/NextJs/Gatsby/JAMSTACK) with 4 years of experienced in the industry, I can help you craft a fast, intuitive and responsive website adapted to your project needs and budget. From Figma (design) to SEO I'm here to provide value for your business."
+            content="Frontend Web Developer (React/NextJs/Gatsby/JAMSTACK) with 5 years of experienced in the industry, I can help you craft a fast, intuitive and responsive website adapted to your project needs and budget. From Figma (design) to SEO I'm here to provide value for your business."
           />
           <meta
             name="twitter:image"
