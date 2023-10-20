@@ -25,24 +25,25 @@ export default function About({ data }) {
           <h3>Alex G,</h3>
         </Greetings>
         <p>
-          A frontend <span>Web Developer</span> with 5 years of experience in
-          the industry.
+          A seasoned <span>Frontend Developer</span> with 5 years of experience
+          in the tech industry.
         </p>
         <p>
-          After 7 years spent working in the banking and IT banking business, I
-          decided to switch to a more passion-related career in the web/tech
-          ecosystem.
+          After 7 years in banking and IT, I transitioned to my true passion in
+          the web/tech world.
         </p>
         <p>
-          While I've started my journey as a full-stack developer working with{' '}
-          <span>Ruby on Rails</span>, I've lately been focusing on{' '}
-          <span>Frontend development</span> through <span>React</span>, the{' '}
-          <span>JAMSTACK</span> and its associated framework like{' '}
-          <span>Gatsby</span> or <span>NextJs</span>.
+          My expertise lies in <span>Frontend development</span>, specializing
+          in <span>TypeScript</span>, <span>React</span>, and{' '}
+          <span>NextJs</span> .I started as a <span>Full Stack developer</span>{' '}
+          with <span>Ruby on Rails</span> but have since honed my skills in
+          these technologies.
         </p>
         <p>
-          <span>Autonomous, proactive and problem-solving</span>, I'll be happy
-          to jump on a call, discuss your project and help your business grow.
+          In addition to my technical skills, I bring{' '}
+          <span>autonomy, proactivity and strong problem-solving</span>{' '}
+          abilities to the table. I'll be happy to jump on a call, discuss your
+          project and help your business grow.
         </p>
       </DescriptionTextWrapper>
       <MaxWidthWrapper>

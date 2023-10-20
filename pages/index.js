@@ -53,10 +53,10 @@ export default function IndexPage({ stack, workProjects, persoProjects }) {
   return (
     <>
       <Head>
-        <title>Alex G | Web Developer</title>
+        <title>Alex G | Frontend Developer</title>
         <meta
           property="og:title"
-          content="Alex G | Web Developer"
+          content="Alex G | Frontend Developer"
           key="title"
         />
       </Head>
