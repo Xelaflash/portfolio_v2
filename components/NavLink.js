@@ -16,7 +16,7 @@ const Wrapper = styled.a`
   position: relative;
   display: block;
   color: var(--color-text);
-  font-weight: var(--medium);
+  font-weight: var(--semiBold);
   overflow: hidden;
 `;
 

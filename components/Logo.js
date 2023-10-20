@@ -4,7 +4,7 @@ import { rgbDataURL } from '../utils/blur';
 
 export default function Logo() {
   return (
-    <Link href="/" passHref>
+    <Link href="/" passHref legacyBehavior>
       <a>
         <Image
           src="https://res.cloudinary.com/dcf4y5ngp/image/upload/v1631038369/alexwebdevcolor.png"

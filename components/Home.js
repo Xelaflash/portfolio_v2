@@ -20,7 +20,7 @@ export default function Home() {
         <h1 className="section-title">
           Crafting responsive and beautiful websites that suit your needs.
         </h1>
-        <Link href="/#about">
+        <Link href="/#about" legacyBehavior>
           <a
             className="cta"
             style={

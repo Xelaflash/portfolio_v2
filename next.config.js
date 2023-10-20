@@ -1,6 +1,8 @@
 module.exports = {
   reactStrictMode: true,
-  // styledComponents: true,
+  compiler: {
+    styledComponents: true,
+  },
   // below is to specify external sources to next image
   images: {
     domains: ['s3.us-west-2.amazonaws.com', 'res.cloudinary.com'],

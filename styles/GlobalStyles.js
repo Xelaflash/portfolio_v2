@@ -1,10 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 import { COLORS, QUERIES, WEIGHTS } from './constants';
 
-import '@fontsource/cabin/variable.css';
-import '@fontsource/cabin/variable-italic.css';
-import '@fontsource/raleway/variable.css';
-import '@fontsource/raleway/variable-italic.css';
+import '@fontsource-variable/cabin';
+import '@fontsource-variable/raleway';
 
 // fallback for non browser not supporting variable fonts
 import '@fontsource/cabin/400.css';
