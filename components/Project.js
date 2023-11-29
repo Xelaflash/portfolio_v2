@@ -105,6 +105,7 @@ const SingleProjectWrapper = styled.div`
 
 const ProjectName = styled.div`
   margin: 0.3rem auto 0;
+  padding: 0 5px;
   width: fit-content;
   text-align: center;
   font-size: 2rem;
