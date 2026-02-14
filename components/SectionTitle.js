@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import propTypes from 'prop-types';
+import styled from "styled-components";
+import propTypes from "prop-types";
 
 export default function SectionTitle({ title, margin }) {
   return (

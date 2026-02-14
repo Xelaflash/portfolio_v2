@@ -1,9 +1,8 @@
-import propTypes from 'prop-types';
-import Head from 'next/head';
-import Link from 'next/link';
-import Image from 'next/image';
-import styled from 'styled-components';
-import { QUERIES } from '../styles/constants';
+import propTypes from "prop-types";
+import Head from "next/head";
+import Image from "next/image";
+import styled from "styled-components";
+import { QUERIES } from "../styles/constants";
 import {
   PageWrapper,
   PageContentWrapper,
@@ -12,8 +11,8 @@ import {
   ImageWrapper,
   LinkWrapper,
   LinkToHome,
-} from '../styles/error';
-import Logo from '../components/Logo';
+} from "../styles/error";
+import Logo from "../components/Logo";
 
 function Error({ statusCode, status }) {
   return (
@@ -28,14 +27,16 @@ function Error({ statusCode, status }) {
         <PageWrapper>
           <PageContentWrapper>
             <TitleWrapperError>
-              <h1 className="section-title">Oops! That's embarrassing...</h1>
+              <h1 className="section-title">
+                Oops! That&apos;s embarrassing...
+              </h1>
               <h2 className="section-title">Error with the API</h2>
             </TitleWrapperError>
             <ErrorWrapper>
               <p>
                 {statusCode
                   ? `Error ${statusCode}: ${status}`
-                  : 'Error on client side. Please try again later.'}
+                  : "Error on client side. Please try again later."}
               </p>
             </ErrorWrapper>
 
@@ -43,9 +44,7 @@ function Error({ statusCode, status }) {
               <Image src="/404.svg" alt="Error" width={500} height={376} />
             </ImageWrapper>
             <LinkWrapper>
-              <Link href="/" passHref>
-                <LinkToHome>Go back home</LinkToHome>
-              </Link>
+              <LinkToHome href="/">Go back home</LinkToHome>
             </LinkWrapper>
           </PageContentWrapper>
         </PageWrapper>

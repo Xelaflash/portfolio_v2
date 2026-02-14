@@ -1,21 +1,21 @@
-import Head from 'next/head';
-import propTypes from 'prop-types';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import Home from '../components/Home';
-import About from '../components/About';
-import SideBar from '../components/Sidebar';
-import Projects from '../components/Projects';
-import Contact from '../components/Contact';
-import TriangleSeparator from '../components/TriangleSeparator';
-import TrianglesSeparator from '../components/TrianglesSeparator';
-import Spacer from '../components/Spacer';
+import Head from "next/head";
+import propTypes from "prop-types";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import Home from "../components/Home";
+import About from "../components/About";
+import SideBar from "../components/Sidebar";
+import Projects from "../components/Projects";
+import Contact from "../components/Contact";
+import TriangleSeparator from "../components/TriangleSeparator";
+import TrianglesSeparator from "../components/TrianglesSeparator";
+import Spacer from "../components/Spacer";
 
-import { loadStack } from '../utils/fetch-stack.js';
-import { loadWorkProjets } from '../utils/fetch-workProjects.js';
-import { loadPersoProjets } from '../utils/fetch-persoProjects.js';
-import ScrollToTop from '../components/ScrollToTop';
-import Error from './_error';
+import { loadStack } from "../utils/fetch-stack.js";
+import { loadWorkProjets } from "../utils/fetch-workProjects.js";
+import { loadPersoProjets } from "../utils/fetch-persoProjects.js";
+import ScrollToTop from "../components/ScrollToTop";
+import Error from "./_error";
 
 // Static Site Generation => fetch Data from Notion API
 export async function getStaticProps() {
@@ -31,9 +31,9 @@ export default function IndexPage({ stack, workProjects, persoProjects }) {
   const allProjects = Object.assign(workProjects, persoProjects);
 
   if (
-    stackObj.object === 'error' ||
-    persoProjects.persoProjectsData.object === 'error' ||
-    workProjects.workProjectsData.object === 'error'
+    stackObj.object === "error" ||
+    persoProjects.persoProjectsData.object === "error" ||
+    workProjects.workProjectsData.object === "error"
   ) {
     return (
       <Error

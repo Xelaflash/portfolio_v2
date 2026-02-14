@@ -1,14 +1,14 @@
-import styled from 'styled-components';
-import Head from 'next/head';
-import { QUERIES } from '../styles/constants';
-import Logo from '../components/Logo';
-import SectionTitle from '../components/SectionTitle';
+import styled from "styled-components";
+import Head from "next/head";
+import { QUERIES } from "../styles/constants";
+import Logo from "../components/Logo";
+import SectionTitle from "../components/SectionTitle";
 import {
   LogoWrapper,
   LegalWrapper,
   SubSectionWrapper,
   Subtitle,
-} from '../styles/regulatory';
+} from "../styles/regulatory";
 
 export default function Legal() {
   return (
@@ -36,8 +36,8 @@ export default function Legal() {
         </SubSectionWrapper>
         <SubSectionWrapper>
           <Subtitle>
-            {' '}
-            Publication director/ Responsable de publication{' '}
+            {" "}
+            Publication director/ Responsable de publication{" "}
           </Subtitle>
           <p>
             Alexandre Gros <br />

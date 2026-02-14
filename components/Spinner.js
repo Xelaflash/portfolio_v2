@@ -1,5 +1,5 @@
-import styled, { keyframes } from 'styled-components';
-import VisuallyHidden from './VisuallyHidden';
+import styled, { keyframes } from "styled-components";
+import VisuallyHidden from "./VisuallyHidden";
 
 const Spinner = () => (
   <SpinnerWrapper>
@@ -53,7 +53,7 @@ const Dots = styled.div`
   top: 0;
   animation: ${skChaseDot} 2s infinite ease-in-out both;
   &:before {
-    content: '';
+    content: "";
     display: block;
     width: 25%;
     height: 25%;

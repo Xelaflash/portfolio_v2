@@ -1,8 +1,8 @@
-import styled, { keyframes } from 'styled-components';
-import { Sun, Moon } from 'react-feather';
-import UnstyledButton from './UnstyledButton';
-import { QUERIES } from '../styles/constants';
-import { useColorTheme } from '../utils/themeState';
+import styled, { keyframes } from "styled-components";
+import { Sun, Moon } from "react-feather";
+import UnstyledButton from "./UnstyledButton";
+import { QUERIES } from "../styles/constants";
+import { useColorTheme } from "../utils/themeState";
 
 const ThemeToggle = () => {
   const { activeTheme, toggleTheme, inactiveTheme } = useColorTheme();
@@ -15,7 +15,7 @@ const ThemeToggle = () => {
         title={`Change to ${inactiveTheme} mode`}
         onClick={toggleTheme}
       >
-        {activeTheme === 'dark' ? (
+        {activeTheme === "dark" ? (
           <Sun size={28} className="sun" />
         ) : (
           <Moon size={28} className="moon" />

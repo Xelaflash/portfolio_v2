@@ -1,5 +1,5 @@
-import { PropTypes } from 'prop-types';
-import { useState, useContext, createContext, useEffect } from 'react';
+import { PropTypes } from "prop-types";
+import { useState, useContext, createContext, useEffect } from "react";
 
 const LocalStateContext = createContext();
 const LocalStateProvider = LocalStateContext.Provider;
@@ -8,10 +8,10 @@ function ThemeStateProvider({ children }) {
   // This is our own custom provider. It will store data (state) and functionality (updaters).
   // It can be accessed from other levels via the consumer.
   const [activeTheme, setActiveTheme] = useState(document.body.dataset.theme);
-  const inactiveTheme = activeTheme === 'dark' ? 'light' : 'dark';
+  const inactiveTheme = activeTheme === "dark" ? "light" : "dark";
   useEffect(() => {
     document.body.dataset.theme = activeTheme;
-    window.localStorage.setItem('theme', activeTheme);
+    window.localStorage.setItem("theme", activeTheme);
   }, [activeTheme]);
 
   function toggleTheme() {

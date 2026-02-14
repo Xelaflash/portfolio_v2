@@ -1,6 +1,6 @@
-import propTypes from 'prop-types';
-import React from 'react';
-import styled from 'styled-components';
+import propTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
 
 const NavLink = ({ children, ...delegated }) => (
   <Wrapper {...delegated}>

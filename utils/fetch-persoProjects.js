@@ -2,19 +2,19 @@ export async function loadPersoProjets() {
   const persoProjetsRequestBody = {
     sorts: [
       {
-        property: 'Date',
-        direction: 'descending',
+        property: "Date",
+        direction: "descending",
       },
     ],
   };
 
   const persoProjetsOptions = {
-    method: 'post',
+    method: "post",
     headers: {
-      Accept: 'application/json',
-      'Notion-Version': '2022-06-28',
+      Accept: "application/json",
+      "Notion-Version": "2022-06-28",
       Authorization: `Bearer ${process.env.NOTION_API_KEY}`,
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(persoProjetsRequestBody),
   };

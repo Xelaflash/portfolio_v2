@@ -1,14 +1,14 @@
-import propTypes from 'prop-types';
-import { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import propTypes from "prop-types";
+import { useEffect, useState } from "react";
+import styled from "styled-components";
 
 const VisuallyHidden = ({ children, ...delegated }) => {
   const [forceShow, setForceShow] = useState(false);
 
   useEffect(() => {
-    if (process.env.NODE_ENV !== 'production') {
+    if (process.env.NODE_ENV !== "production") {
       const handleKeyDown = (ev) => {
-        if (ev.key === 'Alt') {
+        if (ev.key === "Alt") {
           setForceShow(true);
         }
       };
@@ -17,12 +17,12 @@ const VisuallyHidden = ({ children, ...delegated }) => {
         setForceShow(false);
       };
 
-      window.addEventListener('keydown', handleKeyDown);
-      window.addEventListener('keyup', handleKeyUp);
+      window.addEventListener("keydown", handleKeyDown);
+      window.addEventListener("keyup", handleKeyUp);
 
       return () => {
-        window.removeEventListener('keydown', handleKeyDown);
-        window.removeEventListener('keydown', handleKeyUp);
+        window.removeEventListener("keydown", handleKeyDown);
+        window.removeEventListener("keydown", handleKeyUp);
       };
     }
   }, []);

@@ -1,7 +1,7 @@
-import propTypes from 'prop-types';
-import styled from 'styled-components';
-import { Facebook, GitHub, Linkedin, Twitter } from 'react-feather';
-import VisuallyHidden from './VisuallyHidden';
+import propTypes from "prop-types";
+import styled from "styled-components";
+import { Facebook, GitHub, Linkedin, Twitter } from "react-feather";
+import VisuallyHidden from "./VisuallyHidden";
 
 export default function SocialIcons({ direction }) {
   return (
@@ -50,7 +50,7 @@ const IconsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: ${(props) => props.direction || 'row'};
+  flex-direction: ${(props) => props.direction || "row"};
   gap: 16px;
   color: var(--color-text);
   a {

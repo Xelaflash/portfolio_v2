@@ -1,13 +1,13 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import styled from 'styled-components';
-import { QUERIES } from '../styles/constants';
-import { useWindowSize } from '../utils/useWindowSize';
-import { useColorTheme } from '../utils/themeState';
-import MaxWidthWrapper from './MaxWidthWrapper';
-import Spacer from './Spacer';
-import laptopDarkImg from '../public/laptop_dark.png';
-import laptopLightImg from '../public/laptop_light.png';
+import Image from "next/image";
+import Link from "next/link";
+import styled from "styled-components";
+import { QUERIES } from "../styles/constants";
+import { useWindowSize } from "../utils/useWindowSize";
+import { useColorTheme } from "../utils/themeState";
+import MaxWidthWrapper from "./MaxWidthWrapper";
+import Spacer from "./Spacer";
+import laptopDarkImg from "../public/laptop_dark.png";
+import laptopLightImg from "../public/laptop_light.png";
 
 export default function Home() {
   const size = useWindowSize();
@@ -20,17 +20,16 @@ export default function Home() {
         <h1 className="section-title">
           Crafting responsive and beautiful websites that suit your needs.
         </h1>
-        <Link href="/#about" legacyBehavior>
-          <a
-            className="cta"
-            style={
-              activeTheme === 'dark'
-                ? { color: '#000000' }
-                : { color: 'var(--color-white)' }
-            }
-          >
-            Get Started
-          </a>
+        <Link
+          href="/#about"
+          className="cta"
+          style={
+            activeTheme === "dark"
+              ? { color: "#000000" }
+              : { color: "var(--color-white)" }
+          }
+        >
+          Get Started
         </Link>
         {size.width < 950 && size.width >= 600 ? (
           <Spacer size={116} />
@@ -42,21 +41,23 @@ export default function Home() {
             Need a custom website? <br />
             Got a project?
           </p>
-          <Link href="/#contact">Let's Talk</Link>
+          <Link href="/#contact">Let&apos;s Talk</Link>
         </TaglineWrapper>
         <LaptopSvgWrapper>
           <ImageWrapper>
-            {activeTheme === 'dark' ? (
+            {activeTheme === "dark" ? (
               <Image
                 src={laptopDarkImg}
                 alt="Illustration of a laptop with a coffee cup"
-                layout="fill"
+                fill
+                sizes="(max-width: 600px) 355px, (max-width: 950px) 375px, 425px"
               />
             ) : (
               <Image
                 src={laptopLightImg}
                 alt="Illustration of a laptop with a coffee cup"
-                layout="fill"
+                fill
+                sizes="(max-width: 600px) 355px, (max-width: 950px) 375px, 425px"
               />
             )}
           </ImageWrapper>

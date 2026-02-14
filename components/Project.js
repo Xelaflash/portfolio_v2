@@ -1,10 +1,10 @@
-import styled, { css } from 'styled-components';
-import propTypes from 'prop-types';
-import Image from 'next/image';
-import { GitHub, ExternalLink } from 'react-feather';
-import VisuallyHidden from './VisuallyHidden';
-import { QUERIES } from '../styles/constants';
-import BorderWrapper from './BorderWrapper';
+import styled, { css } from "styled-components";
+import propTypes from "prop-types";
+import Image from "next/image";
+import { GitHub, ExternalLink } from "react-feather";
+import VisuallyHidden from "./VisuallyHidden";
+import { QUERIES } from "../styles/constants";
+import BorderWrapper from "./BorderWrapper";
 
 export default function Project({ project }) {
   const projectName = project?.properties?.Name?.title?.map(
@@ -26,8 +26,9 @@ export default function Project({ project }) {
             <Image
               src={imgFile?.name}
               key={project?.properties?.Image?.id}
-              layout="fill"
               alt={`screen shot of website ${projectName}`}
+              fill
+              sizes="(max-width: 768px) 100vw, 550px"
             />
           ))}
         </ImageWrapper>
@@ -40,7 +41,7 @@ export default function Project({ project }) {
           <Tag>{project?.properties?.Type?.select?.name}</Tag>
           {/* Status (offline/online) */}
           <StatusTag
-            online={project?.properties?.Status?.select?.name === 'Online'}
+            online={project?.properties?.Status?.select?.name === "Online"}
           >
             {project?.properties?.Status?.select?.name}
           </StatusTag>
@@ -66,7 +67,7 @@ export default function Project({ project }) {
             target="_blank"
             rel="noreferrer noopener"
             className={
-              project?.properties?.Project_Url?.url === 'N/A' ? 'disabled' : ''
+              project?.properties?.Project_Url?.url === "N/A" ? "disabled" : ""
             }
           >
             <ExternalLink size={24} />
@@ -80,7 +81,7 @@ export default function Project({ project }) {
             target="_blank"
             rel="noreferrer noopener"
             className={
-              project?.properties?.Github_Url?.url === 'N/A' ? 'disabled' : ''
+              project?.properties?.Github_Url?.url === "N/A" ? "disabled" : ""
             }
           >
             <GitHub size={24} />

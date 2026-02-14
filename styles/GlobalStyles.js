@@ -1,17 +1,17 @@
-import { createGlobalStyle } from 'styled-components';
-import { COLORS, QUERIES, WEIGHTS } from './constants';
+import { createGlobalStyle } from "styled-components";
+import { COLORS, QUERIES, WEIGHTS } from "./constants";
 
-import '@fontsource-variable/cabin';
-import '@fontsource-variable/raleway';
+import "@fontsource-variable/cabin";
+import "@fontsource-variable/raleway";
 
 // fallback for non browser not supporting variable fonts
-import '@fontsource/cabin/400.css';
-import '@fontsource/cabin/500.css';
-import '@fontsource/cabin/700.css';
-import '@fontsource/raleway/300.css';
-import '@fontsource/raleway/400.css';
-import '@fontsource/raleway/700.css';
-import '@fontsource/raleway/900.css';
+import "@fontsource/cabin/400.css";
+import "@fontsource/cabin/500.css";
+import "@fontsource/cabin/700.css";
+import "@fontsource/raleway/300.css";
+import "@fontsource/raleway/400.css";
+import "@fontsource/raleway/700.css";
+import "@fontsource/raleway/900.css";
 
 const GlobalStyle = createGlobalStyle`
   /*

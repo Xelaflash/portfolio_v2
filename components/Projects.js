@@ -1,14 +1,14 @@
-import { useState, useMemo } from 'react';
-import propTypes from 'prop-types';
-import styled from 'styled-components';
-import { useSwipeable } from 'react-swipeable';
-import { useWindowSize } from '../utils/useWindowSize';
-import MaxWidthWrapper from './MaxWidthWrapper';
-import SectionTitle from './SectionTitle';
-import Project from './Project';
-import Pagination from './Pagination';
-import { QUERIES } from '../styles/constants';
-import { useColorTheme } from '../utils/themeState';
+import { useState, useMemo } from "react";
+import propTypes from "prop-types";
+import styled from "styled-components";
+import { useSwipeable } from "react-swipeable";
+import { useWindowSize } from "../utils/useWindowSize";
+import MaxWidthWrapper from "./MaxWidthWrapper";
+import SectionTitle from "./SectionTitle";
+import Project from "./Project";
+import Pagination from "./Pagination";
+import { QUERIES } from "../styles/constants";
+import { useColorTheme } from "../utils/themeState";
 
 export default function Projects({ data }) {
   const [isWorkProjectsActive, setIsWorkProjectsActive] = useState(true);

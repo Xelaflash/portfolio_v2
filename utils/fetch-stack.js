@@ -1,26 +1,26 @@
 export async function loadStack() {
   const StackRequestBody = {
     filter: {
-      property: 'Website Display',
+      property: "Website Display",
       select: {
-        equals: 'Yes',
+        equals: "Yes",
       },
     },
     sorts: [
       {
-        property: 'Website order',
-        direction: 'ascending',
+        property: "Website order",
+        direction: "ascending",
       },
     ],
   };
 
   const stackOptions = {
-    method: 'post',
+    method: "post",
     headers: {
-      Accept: 'application/json',
-      'Notion-Version': '2022-06-28',
+      Accept: "application/json",
+      "Notion-Version": "2022-06-28",
       Authorization: `Bearer ${process.env.NOTION_API_KEY}`,
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(StackRequestBody),
   };

@@ -1,9 +1,9 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import styled from 'styled-components';
-import Logo from '../components/Logo';
-import SectionTitle from '../components/SectionTitle';
-import { LogoWrapper, Subtitle } from '../styles/regulatory';
+import Head from "next/head";
+import Link from "next/link";
+import styled from "styled-components";
+import Logo from "../components/Logo";
+import SectionTitle from "../components/SectionTitle";
+import { LogoWrapper, Subtitle } from "../styles/regulatory";
 
 export default function Privacy() {
   return (
@@ -19,7 +19,7 @@ export default function Privacy() {
           title="Privacy Policy / Politique de confidentialité"
           margin="2rem auto 4rem auto;"
         />
-        <a href="#fr" style={{ color: 'var(--text-dimmed)' }}>
+        <a href="#fr" style={{ color: "var(--text-dimmed)" }}>
           🇫🇷 Voir la version Fr
         </a>
         <div id="en">
@@ -31,10 +31,10 @@ export default function Privacy() {
               sense the 1123 and following of the Civil Code or legal person,
               who visits the Site object of these terms.
               <br />
-              <b>Benefits and Services&nbsp;:</b>{' '}
+              <b>Benefits and Services&nbsp;:</b>{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               provides reviews:&nbsp;
             </p>
 
@@ -45,11 +45,11 @@ export default function Privacy() {
 
             <p>
               <b>Customer Information&nbsp;:</b> Hereinafter referred to as
-              "information (s)" that correspond to all the personal data that
-              can be held by{' '}
+              `&quot;information (s)`&quot; that correspond to all the personal
+              data that can be held by{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               to manage your account, the customer relationship management and
               for analysis and statistics.
             </p>
@@ -60,13 +60,14 @@ export default function Privacy() {
             <p>
               <b>Personal information:</b> « information that helps in any form
               whatsoever, directly or indirectly, the identification of
-              individuals to which they apply" (Article 4 of Law No. 78-17 of 6
+              individuals to which they apply (Article 4 of Law No. 78-17 of 6
               January 1978).
             </p>
             <p>
-              The terms "personal data", "data subject", "subcontractor" and
-              "sensitive data" have the meanings defined by the General
-              Regulation on Data Protection (RGPD: No. 2016-679)
+              The terms `&quot;personal data`&quot;, `&quot;data subject`&quot;,
+              `&quot;subcontractor`&quot; and `&quot;sensitive data`&quot; have
+              the meanings defined by the General Regulation on Data Protection
+              (RGPD: No. 2016-679)
             </p>
           </SubSection>
           <SubSection>
@@ -91,37 +92,37 @@ export default function Privacy() {
               Site.
             </p>
             <p>
-              Use of the site{' '}
+              Use of the site{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               implies full acceptance of the general conditions described below
               using. These terms of use may be modified at any time, users of
-              the site{' '}
+              the site{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               are advised to consult them regularly.
             </p>
             <p>
               This web site is normally accessible at all times to users.
               Interruption due to technical maintenance can be however decided
-              by{' '}
+              by{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               , who will then endeavor to communicate to users before the date
               and time of the intervention.
             </p>
             <p>
-              The website{' '}
+              The website{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
-              is updated regularly by{' '}
+              </a>{" "}
+              is updated regularly by{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               responsible. Similarly, the disclaimer may be modified at any
               time: they are needed, however the user is encouraged to refer to
               it as often as possible to see it.
@@ -132,33 +133,33 @@ export default function Privacy() {
               3. Description of services provided.
             </SubSectionTitle>
             <p>
-              The website{' '}
+              The website{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
-              is to provide information on all the company's activities.{' '}
+              </a>{" "}
+              is to provide information on all the company&apos;s activities.{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
-              strives to provide the site{' '}
+              </a>{" "}
+              strives to provide the site{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               as accurate information as possible. However, it can not be held
               responsible for omissions, inaccuracies and deficiencies in the
               update, whether by him or due to third party partners that provide
               this information.
             </p>
             <p>
-              All information listed on the site{' '}
+              All information listed on the site{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               are indicative only and are subject to change. Furthermore, the
-              information on the site{' '}
+              information on the site{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               are not exhaustive. They are given subject to changes being made
               since they are online.
             </p>
@@ -186,7 +187,7 @@ export default function Privacy() {
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               and the host will not be held responsible for any malfunction of
               the Internet, telephone lines or hardware and telephony related in
               particular to prevent network congestion server access.
@@ -199,13 +200,13 @@ export default function Privacy() {
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               owns the intellectual property rights and holds the rights to use
               all the items available on the website, including text, images,
               graphics, logos, videos, icons and sounds. Any reproduction,
               modification, publication, adaptation of all or some elements of
               the site, regardless of the means or process, is prohibited
-              without prior written permission of:{' '}
+              without prior written permission of:{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
               </a>
@@ -225,23 +226,23 @@ export default function Privacy() {
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
-              acts as publisher of the site.{' '}
+              </a>{" "}
+              acts as publisher of the site.{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               is responsible for the quality and veracity of the contents it
               publishes.
             </p>
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               not be held liable for direct and indirect damage to the equipment
-              user, when accessing the website{' '}
+              user, when accessing the website{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               , and resulting from the use of a material not meeting
               specifications of section 4 or the appearance of a bug or
               incompatibility.
@@ -249,28 +250,28 @@ export default function Privacy() {
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
-              can't also be held liable for consequential damages (including for
-              example a loss of market or loss of opportunity) arising from use
-              of the site{' '}
+              </a>{" "}
+              can&apos;t also be held liable for consequential damages
+              (including for example a loss of market or loss of opportunity)
+              arising from use of the site{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               .
             </p>
             <p>
               Interactive spaces (opportunity to ask questions in the space
-              contact) are available to users.{' '}
+              contact) are available to users.{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               reserves the right to remove, without prior notice, any content
               posted in this space that would violate the law applicable in
               France, particularly the provisions on data protection. If
-              necessary,{' '}
+              necessary,{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               also reserves the option to challenge the civil and / or criminal
               user, especially in cases of post racist, offensive, defamatory,
               or pornographic, whatever the medium (text, photography ...).
@@ -292,38 +293,38 @@ export default function Privacy() {
             </SubSectionSubTitle>
             <p>
               For Personal Data collected as part of contact space and browsing
-              the Site, the head of the Personal Data processing is:{' '}
+              the Site, the head of the Personal Data processing is:{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               represented by Alexandre Gros, legal representative
             </p>
             <p>
-              As controller of the data it collects,{' '}
+              As controller of the data it collects,{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               agrees to comply with the statutory provisions. In particular it
               belongs to the Customer to establish the aims of its data
               processing, to provide its customers and prospects, from
               collecting their consents, comprehensive information on the
               processing of their personal data and to maintain a register of
-              treatment consistent with reality.{' '}
+              treatment consistent with reality.{" "}
             </p>
             <p>
-              Whenever{' '}
+              Whenever{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
-              deals with personal data,{' '}
+              </a>{" "}
+              deals with personal data,{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               take all reasonable steps to ensure the accuracy and relevance of
-              personal data to the purpose for which{' '}
+              personal data to the purpose for which{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               treats.
             </p>
 
@@ -333,7 +334,7 @@ export default function Privacy() {
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               is capable of treating all or part of data:
             </p>
             <ul>
@@ -351,10 +352,10 @@ export default function Privacy() {
                 to improve the navigation of the site: login information and use
               </li>
               <li>
-                to conduct satisfaction surveys on optional{' '}
+                to conduct satisfaction surveys on optional{" "}
                 <a href="https://www.alexgwebdev.com">
                   https://www.alexgwebdev.com
-                </a>{' '}
+                </a>{" "}
                 : email address
               </li>
               <li>
@@ -365,7 +366,7 @@ export default function Privacy() {
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               does not sell your personal data are therefore used only by
               necessity or for statistical purposes and analysis.
             </p>
@@ -374,10 +375,10 @@ export default function Privacy() {
               7.3 Right of access, rectification and opposition
             </SubSectionSubTitle>
             <p>
-              In accordance with European regulations, the users{' '}
+              In accordance with European regulations, the users{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               have the following rights:
             </p>
             <ul>
@@ -402,61 +403,61 @@ export default function Privacy() {
               </li>
               <li>
                 right to determine the fate of User data after their death and
-                to choose who{' '}
+                to choose who{" "}
                 <a href="https://www.alexgwebdev.com">
                   https://www.alexgwebdev.com
-                </a>{' '}
+                </a>{" "}
                 will communicate (or not) its data to a third party that has
                 previously designated
               </li>
             </ul>
             <p>
-              Once{' '}
+              Once{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               has knowledge of the death of a User and failing instructions from
-              him,{' '}
+              him,{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               undertakes to destroy its data unless conservation is necessary
               for evidentiary purposes or to meet a legal requirement.
             </p>
             <p>
-              If the user wants to know how{' '}
+              If the user wants to know how{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               uses his personal data, ask for correct or oppose their treatment,
-              the User can contact{' '}
+              the User can contact{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               writing an email to the next address : &nbsp; Alexandre Gros – DPO
               <br />
               alex.gros.pro@gmail.com &nbsp;
             </p>
             <p>
               In this case, the user must specify the Personal Data that he
-              would like{' '}
+              would like{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               correct, update or remove, by precisely identifying with a copy of
               an identity document (ID card or passport).
             </p>
             <p>
               Personal Data Removal Requests will be subject to the obligations
-              imposed on{' '}
+              imposed on{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               by law, including conservation or archival documents. Finally,
-              users{' '}
+              users{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               can file a claim with the supervisory authorities, including the
               CNIL (https://www.cnil.fr/fr/plaintes).
             </p>
@@ -467,14 +468,14 @@ export default function Privacy() {
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               is forbidden to process, host or transfer the information
               collected on its customers to a country outside the EU or
-              recognized as "not adequate" by the European Commission without
-              informing the customer. However,{' '}
+              recognized as &quot;not adequate&quot; by the European Commission
+              without informing the customer. However,{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               is free to choose its technical and commercial contractors
               provided it have sufficient guarantees against the requirements of
               the General Regulation on Data Protection (RGPD: n 2016-679 °).
@@ -482,36 +483,36 @@ export default function Privacy() {
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               is committed to taking all necessary precautions to preserve the
               security of information, including that they are not disclosed to
               unauthorized persons. However, if an incident affecting the
               integrity or confidentiality of Customer information is brought to
-              the attention of{' '}
+              the attention of{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               , it will promptly notify the Customer and communicate the
-              corrective measures taken. Moreover{' '}
+              corrective measures taken. Moreover{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
-              does not collect any "sensitive data".
+              </a>{" "}
+              does not collect any &quot;sensitive data&quot;.
             </p>
             <p>
-              The User's Personal Data may be handled by subsidiaries of{' '}
+              The User`&quot;s Personal Data may be handled by subsidiaries of{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               and subcontractors (service providers), exclusively to achieve the
               objectives of this policy.
             </p>
             <p>
               Within the limits of their respective powers and for the purposes
-              mentioned above, the main people who may have access to users data{' '}
+              mentioned above, the main people who may have access to users data{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               are mainly agents of our customer service.
             </p>
           </subSection>
@@ -532,62 +533,63 @@ export default function Privacy() {
               obligations.
             </p>
             <p>
-              No personal information of the site user{' '}
+              No personal information of the site user{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               is published without the knowledge of the user, exchanged,
               transferred, assigned or sold to any support to others. Only the
-              assumption of redemption{' '}
+              assumption of redemption{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               and his rights would allow the transmission of such information to
               the prospective purchaser who would in turn be given the same
-              obligation to store and modify data with a screw the site user{' '}
+              obligation to store and modify data with a screw the site user{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               .
             </p>
 
             <SubSectionSubTitle>security</SubSectionSubTitle>
             <p>
               To ensure the security and confidentiality of Data and Personal
-              Data Health,{' '}
+              Data Health,{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               uses networks protected by standard devices such as firewalls,
               pseudonymisation, encryption and password past.
             </p>
             <p>
-              When processing personal data,{' '}
+              When processing personal data,{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               take all reasonable measures to protect against loss, misuse,
               unauthorized access, disclosure, alteration or destruction.
             </p>
           </subSection>
           <subSection>
             <SubSectionTitle className="sub-title">
-              9. Hyperlinks "cookies" and tags ( "tags") internet
+              9. Hyperlinks &quot;cookies&quot; and tags ( &quot;tags&quot;)
+              internet
             </SubSectionTitle>
             <p>
-              The site{' '}
+              The site{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               contains a number of hypertext links to other sites, set up with
-              permission from{' '}
+              permission from{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
-              . However,{' '}
+              </a>{" "}
+              . However,{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               has no opportunity to check the content of the sites visited, and
               accordingly assume no liability therefore.
             </p>
@@ -599,30 +601,31 @@ export default function Privacy() {
               the site.
             </p>
 
-            <SubSectionSubTitle>9.1. "COOKIES"</SubSectionSubTitle>
+            <SubSectionSubTitle>9.1. &quot;COOKIES&quot;</SubSectionSubTitle>
             <p>
-              A "cookie" is a small data file sent to the user's browser and
-              stored in the user's terminal (eg computer, smartphone),
-              (hereinafter "Cookies"). This file includes information such as
-              the user's domain name, the Internet provider of the user, the
-              operating system of the user, and the date and time of access.
-              Cookies may not in any case damage the user's terminal.
+              A &quot;cookie&quot; is a small data file sent to the user&apos;s
+              browser and stored in the user&apos;s terminal (eg computer,
+              smartphone), (hereinafter &quot;Cookies&quot;). This file includes
+              information such as the user&apos;s domain name, the Internet
+              provider of the user, the operating system of the user, and the
+              date and time of access. Cookies may not in any case damage the
+              user&apos;s terminal.
             </p>
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               may process information from the user regarding his visit to the
               Site, such as pages visited, searches performed. This information
-              allows{' '}
+              allows{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               improve the content of the Site, the User navigation.
             </p>
             <p>
               For more general information on cookies see the Wikipedia article
-              on HTTP Cookies or check{' '}
+              on HTTP Cookies or check{" "}
               <a
                 href="https://cookiesandyou.com/"
                 target="_blank"
@@ -640,16 +643,16 @@ export default function Privacy() {
               systematically or according to their transmitter. Users can
               configure their browser so that the acceptance or rejection of him
               Cookies are occasionally offered before a Cookie is likely to be
-              stored in the terminal.{' '}
+              stored in the terminal.{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               informs the User that, in this case, it is possible that the
               functionality of their browser are not all available.
             </p>
             <p>
               You can learn how to manage cookies on your web browser by
-              following the{' '}
+              following the{" "}
               <a href="https://privacypolicies.com/blog/browser-cookies-guide/">
                 Browser Cookies Guide
               </a>
@@ -659,95 +662,95 @@ export default function Privacy() {
               If the User refuses registration of cookies in the terminal or
               browser, or if the user deletes those registered there, the user
               is informed that its navigation and experience on the Site may be
-              limited. This could also be the case when{' '}
+              limited. This could also be the case when{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               or one of its contractors can not recognize, for the purpose of
               technical compatibility, browser type used by the terminal, the
               language settings and display or the country from which the
               terminal seem connected to the Internet.
             </p>
             <p>
-              If necessary,{' '}
+              If necessary,{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               not responsible for the consequences related to degraded operation
-              of the Site and services offered by possibly{' '}
+              of the Site and services offered by possibly{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
-              , resulting from (i) the refusal by Cookie User (ii) the inability{' '}
+              </a>{" "}
+              , resulting from (i) the refusal by Cookie User (ii) the inability{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               record or consult Cookies necessary for their operation because of
               the choice of the user. For managing cookies and choice of the
               user, configuring each browser is different. It is described in
-              the browser's help menu, which will know how the user can modify
-              his wishes regarding Cookies.
+              the browser&apos;s help menu, which will know how the user can
+              modify his wishes regarding Cookies.
             </p>
             <p>
               At any time, the user can choose to express and modify its wishes
-              regarding cookies.{' '}
+              regarding cookies.{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               can also call on external service providers to help collect and
               process the information in this section.
             </p>
             <p>
               Finally, by clicking on the icons dedicated to social networks
               Twitter, Facebook, Linkedin and Google Plus appearing on the
-              Website of{' '}
+              Website of{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               or mobile application and if the User has accepted the filing of
-              cookies continuing browsing the website or mobile app{' '}
+              cookies continuing browsing the website or mobile app{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               , Twitter, Facebook, Linkedin and Google Plus may also set cookies
               on your terminal (computer, tablet, mobile phone).
             </p>
             <p>
-              {' '}
+              {" "}
               These types of cookies are placed on your terminal only if you
-              consent to it, continuing browsing the website or mobile app{' '}
+              consent to it, continuing browsing the website or mobile app{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
-              . At any time, the user may still reconsider his consent to{' '}
+              </a>{" "}
+              . At any time, the user may still reconsider his consent to{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               the type of cookies.
             </p>
 
             <SubSectionSubTitle>
-              Article 9.2. BEACON ( "TAG") INTERNET
+              Article 9.2. BEACON ( &quot;TAG&quot;) INTERNET
             </SubSectionSubTitle>
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
-              may occasionally use Internet tags (also called "tags", or action
-              tags, GIF to a pixel GIFs, transparent GIFs and GIF one by one)
-              and deploy them by through a specialist partner web analytics may
-              be (and therefore store the relevant information, including the IP
-              address of the user) in a foreign country.
+              </a>{" "}
+              may occasionally use Internet tags (also called &quot;tags&quot;,
+              or action tags, GIF to a pixel GIFs, transparent GIFs and GIF one
+              by one) and deploy them by through a specialist partner web
+              analytics may be (and therefore store the relevant information,
+              including the IP address of the user) in a foreign country.
             </p>
             <p>
               These tags are placed on both online advertisements that enables
               users to access the Site and on different pages of it.
             </p>
             <p>
-              This technology allows{' '}
+              This technology allows{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               assess responses visitors face to the Site and the effectiveness
               of its actions (eg, the number of times a page is opened and
               accessed the information), and that the use of this Site by the
@@ -756,10 +759,10 @@ export default function Privacy() {
             <p>
               The external service provider will eventually gather information
               about visitors to the Site and other websites through these tags,
-              compiling reports on website activity to the attention of{' '}
+              compiling reports on website activity to the attention of{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               and provide other services relating to the use of it and the
               Internet.
             </p>
@@ -769,10 +772,10 @@ export default function Privacy() {
               10. Law and Jurisdiction.
             </SubSectionTitle>
             <p>
-              Any dispute related to site usage{' '}
+              Any dispute related to site usage{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               is subject to French law. Apart from cases where the law does not
               allow it, it is made exclusive jurisdiction of the competent
               courts of Bordeaux.
@@ -795,7 +798,7 @@ export default function Privacy() {
               <b>Prestations et Services&nbsp;:</b>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               met à disposition des Clients&nbsp;:
             </p>
             <p>
@@ -806,10 +809,10 @@ export default function Privacy() {
             <p>
               <b>Informations clients&nbsp;:</b> Ci après dénommé
               «&nbsp;Information (s)&nbsp;» qui correspondent à l’ensemble des
-              données personnelles susceptibles d’être détenues par{' '}
+              données personnelles susceptibles d’être détenues par{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               pour la gestion de votre compte, de la gestion de la relation
               client et à des fins d’analyses et de statistiques.
             </p>
@@ -820,8 +823,9 @@ export default function Privacy() {
             <p>
               <b>Informations personnelles :</b> « Les informations qui
               permettent, sous quelque forme que ce soit, directement ou non,
-              l'identification des personnes physiques auxquelles elles
-              s'appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).
+              l&apos;identification des personnes physiques auxquelles elles
+              s&apos;appliquent » (article 4 de la loi n° 78-17 du 6 janvier
+              1978).
             </p>
             <p>
               Les termes «&nbsp;données à caractère personnel&nbsp;»,
@@ -836,14 +840,14 @@ export default function Privacy() {
               1. Présentation du site internet.
             </SubSectionTitle>
             <p>
-              En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour
-              la confiance dans l'économie numérique, il est précisé aux
-              utilisateurs du site internet&nbsp;
+              En vertu de l&apos;article 6 de la loi n° 2004-575 du 21 juin 2004
+              pour la confiance dans l&apos;économie numérique, il est précisé
+              aux utilisateurs du site internet&nbsp;
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
               </a>
-              &nbsp;l'identité des différents intervenants dans le cadre de sa
-              réalisation et de son suivi:
+              &nbsp;l&apos;identité des différents intervenants dans le cadre de
+              sa réalisation et de son suivi:
             </p>
             <p>
               <strong>Propriétaire</strong> : Alexandre Gros – 8, Allée du
@@ -867,12 +871,12 @@ export default function Privacy() {
             </p>
             <div>
               <p>
-                Ces mentions légales RGPD sont issues du{' '}
+                Ces mentions légales RGPD sont issues du{" "}
                 <a
                   href="https://fr.orson.io/1371/generateur-mentions-legales"
                   title="générateur de mentions légales RGPD d'Orson.io"
                 >
-                  générateur de mentions légales RGPD d'Orson.io
+                  générateur de mentions légales RGPD d&apos;Orson.io
                 </a>
               </p>
             </div>
@@ -906,7 +910,7 @@ export default function Privacy() {
             <p>
               Ce site internet est normalement accessible à tout moment aux
               utilisateurs. Une interruption pour raison de maintenance
-              technique peut être toutefois décidée par{' '}
+              technique peut être toutefois décidée par{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
               </a>
@@ -916,10 +920,10 @@ export default function Privacy() {
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
               </a>
-              &nbsp;est mis à jour régulièrement par{' '}
+              &nbsp;est mis à jour régulièrement par{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               responsable. De la même façon, les mentions légales peuvent être
               modifiées à tout moment : elles s’imposent néanmoins à
               l’utilisateur qui est invité à s’y référer le plus souvent
@@ -939,7 +943,7 @@ export default function Privacy() {
               l’ensemble des activités de la société.
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               s’efforce de fournir sur le site&nbsp;
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
@@ -989,7 +993,7 @@ export default function Privacy() {
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               et l’hébergeur ne pourront être tenus responsables en cas de
               dysfonctionnement du réseau Internet, des lignes téléphoniques ou
               du matériel informatique et de téléphonie lié notamment à
@@ -1003,14 +1007,14 @@ export default function Privacy() {
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               est propriétaire des droits de propriété intellectuelle et détient
               les droits d’usage sur tous les éléments accessibles sur le site
               internet, notamment les textes, images, graphismes, logos, vidéos,
               icônes et sons. Toute reproduction, représentation, modification,
               publication, adaptation de tout ou partie des éléments du site,
               quel que soit le moyen ou le procédé utilisé, est interdite, sauf
-              autorisation écrite préalable de :{' '}
+              autorisation écrite préalable de :{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
               </a>
@@ -1030,21 +1034,21 @@ export default function Privacy() {
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
-              agit en tant qu’éditeur du site.{' '}
+              </a>{" "}
+              agit en tant qu’éditeur du site.{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               &nbsp;est responsable de la qualité et de la véracité du Contenu
-              qu’il publie.{' '}
+              qu’il publie.{" "}
             </p>
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               ne pourra être tenu responsable des dommages directs et indirects
               causés au matériel de l’utilisateur, lors de l’accès au site
-              internet{' '}
+              internet{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
               </a>
@@ -1055,7 +1059,7 @@ export default function Privacy() {
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               ne pourra également être tenu responsable des dommages indirects
               (tels par exemple qu’une perte de marché ou perte d’une chance)
               consécutifs à l’utilisation du site&nbsp;
@@ -1063,17 +1067,17 @@ export default function Privacy() {
                 https://www.alexgwebdev.com
               </a>
               . Des espaces interactifs (possibilité de poser des questions dans
-              l’espace contact) sont à la disposition des utilisateurs.{' '}
+              l’espace contact) sont à la disposition des utilisateurs.{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               se réserve le droit de supprimer, sans mise en demeure préalable,
               tout contenu déposé dans cet espace qui contreviendrait à la
               législation applicable en France, en particulier aux dispositions
-              relatives à la protection des données. Le cas échéant,{' '}
+              relatives à la protection des données. Le cas échéant,{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               se réserve également la possibilité de mettre en cause la
               responsabilité civile et/ou pénale de l’utilisateur, notamment en
               cas de message à caractère raciste, injurieux, diffamant, ou
@@ -1090,7 +1094,7 @@ export default function Privacy() {
               communication marketing, la loi du 21 Juin 2014 pour la confiance
               dans l’Economie Numérique, la Loi Informatique et Liberté du 06
               Août 2004 ainsi que du Règlement Général sur la Protection des
-              Données (RGPD&nbsp;: n° 2016-679).{' '}
+              Données (RGPD&nbsp;: n° 2016-679).{" "}
             </p>
             <SubSectionSubTitle>
               7.1 Responsables de la collecte des données personnelles
@@ -1098,37 +1102,37 @@ export default function Privacy() {
             <p>
               Pour les Données Personnelles collectées dans le cadre de la
               section contact et de sa navigation sur le Site, le responsable du
-              traitement des Données Personnelles est : Alexandre Gros.{' '}
+              traitement des Données Personnelles est : Alexandre Gros.{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
               </a>
               est représenté par Alexandre Gros, son représentant légal.
             </p>
             <p>
-              En tant que responsable du traitement des données qu’il collecte,{' '}
+              En tant que responsable du traitement des données qu’il collecte,{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               s’engage à respecter le cadre des dispositions légales en vigueur.
               Il lui appartient notamment au Client d’établir les finalités de
               ses traitements de données, de fournir à ses prospects et clients,
               à partir de la collecte de leurs consentements, une information
               complète sur le traitement de leurs données personnelles et de
               maintenir un registre des traitements conforme à la réalité.
-              Chaque fois que{' '}
+              Chaque fois que{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
-              traite des Données Personnelles,{' '}
+              </a>{" "}
+              traite des Données Personnelles,{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               prend toutes les mesures raisonnables pour s’assurer de
               l’exactitude et de la pertinence des Données Personnelles au
-              regard des finalités pour lesquelles{' '}
+              regard des finalités pour lesquelles{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               les traite.
             </p>
             &nbsp;
@@ -1139,34 +1143,34 @@ export default function Privacy() {
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
-              est susceptible de traiter tout ou partie des données :{' '}
+              </a>{" "}
+              est susceptible de traiter tout ou partie des données :{" "}
             </p>
             <ul>
               <li>
                 pour permettre la navigation sur le Site et la gestion et la
                 traçabilité des prestations et services commandés par
                 l’utilisateur : données de connexion et d’utilisation du Site,
-                facturation, historique des commandes, etc.{' '}
+                facturation, historique des commandes, etc.{" "}
               </li>
               &nbsp;
               <li>
                 pour prévenir et lutter contre la fraude informatique (spamming,
                 hacking…) : matériel informatique utilisé pour la navigation,
-                l’adresse IP, le mot de passe (hashé){' '}
+                l’adresse IP, le mot de passe (hashé){" "}
               </li>
               &nbsp;
               <li>
                 pour améliorer la navigation sur le Site : données de connexion
-                et d’utilisation{' '}
+                et d’utilisation{" "}
               </li>
               &nbsp;
               <li>
-                pour mener des enquêtes de satisfaction facultatives sur{' '}
+                pour mener des enquêtes de satisfaction facultatives sur{" "}
                 <a href="https://www.alexgwebdev.com">
                   https://www.alexgwebdev.com
-                </a>{' '}
-                : adresse email{' '}
+                </a>{" "}
+                : adresse email{" "}
               </li>
               &nbsp;
               <li>
@@ -1177,7 +1181,7 @@ export default function Privacy() {
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               ne commercialise pas vos données personnelles qui sont donc
               uniquement utilisées par nécessité ou à des fins statistiques et
               d’analyses.
@@ -1189,83 +1193,83 @@ export default function Privacy() {
             &nbsp;
             <p>
               Conformément à la réglementation européenne en vigueur, les
-              Utilisateurs de{' '}
+              Utilisateurs de{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
-              disposent des droits suivants :{' '}
+              </a>{" "}
+              disposent des droits suivants :{" "}
             </p>
             &nbsp;
             <ul>
               <li>
-                droit d'accès (article 15 RGPD) et de rectification (article 16
-                RGPD), de mise à jour, de complétude des données des
+                droit d&apos;accès (article 15 RGPD) et de rectification
+                (article 16 RGPD), de mise à jour, de complétude des données des
                 Utilisateurs droit de verrouillage ou d’effacement des données
                 des Utilisateurs à caractère personnel (article 17 du RGPD),
                 lorsqu’elles sont inexactes, incomplètes, équivoques, périmées,
-                ou dont la collecte, l'utilisation, la communication ou la
-                conservation est interdite{' '}
+                ou dont la collecte, l&apos;utilisation, la communication ou la
+                conservation est interdite{" "}
               </li>
               &nbsp;
               <li>
                 droit de retirer à tout moment un consentement (article 13-2c
-                RGPD){' '}
+                RGPD){" "}
               </li>
               &nbsp;
               <li>
                 droit à la limitation du traitement des données des Utilisateurs
-                (article 18 RGPD){' '}
+                (article 18 RGPD){" "}
               </li>
               &nbsp;
               <li>
-                droit d’opposition au traitement des données des Utilisateurs
-                (article 21 RGPD){' '}
+                droit d&apos;opposition au traitement des données des
+                Utilisateurs (article 21 RGPD){" "}
               </li>
               &nbsp;
               <li>
                 droit à la portabilité des données que les Utilisateurs auront
                 fournies, lorsque ces données font l’objet de traitements
                 automatisés fondés sur leur consentement ou sur un contrat
-                (article 20 RGPD){' '}
+                (article 20 RGPD){" "}
               </li>
               &nbsp;
               <li>
                 droit de définir le sort des données des Utilisateurs après leur
-                mort et de choisir à qui{' '}
+                mort et de choisir à qui{" "}
                 <a href="https://www.alexgwebdev.com">
                   https://www.alexgwebdev.com
-                </a>{' '}
+                </a>{" "}
                 devra communiquer (ou non) ses données à un tiers qu’ils aura
                 préalablement désigné
               </li>
               &nbsp;
             </ul>
             <p>
-              Dès que{' '}
+              Dès que{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               a connaissance du décès d’un Utilisateur et à défaut
-              d’instructions de sa part,{' '}
+              d’instructions de sa part,{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               s’engage à détruire ses données, sauf si leur conservation s’avère
               nécessaire à des fins probatoires ou pour répondre à une
               obligation légale.
             </p>
             &nbsp;
             <p>
-              Si l’Utilisateur souhaite savoir comment{' '}
+              Si l’Utilisateur souhaite savoir comment{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               utilise ses Données Personnelles, demander à les rectifier ou
-              s’oppose à leur traitement, l’Utilisateur peut contacter{' '}
+              s’oppose à leur traitement, l’Utilisateur peut contacter{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
-              par courriel à l’adresse suivante :{' '}
+              </a>{" "}
+              par courriel à l’adresse suivante :{" "}
             </p>
             <p>
               Alexandre Gros – DPO <br />
@@ -1273,25 +1277,25 @@ export default function Privacy() {
             </p>
             <p>
               Dans ce cas, l’Utilisateur doit indiquer les Données Personnelles
-              qu’il souhaiterait que{' '}
+              qu’il souhaiterait que{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               corrige, mette à jour ou supprime, en s’identifiant précisément
               avec une copie d’une pièce d’identité (carte d’identité ou
-              passeport).{' '}
+              passeport).{" "}
             </p>
             <p>
               Les demandes de suppression de Données Personnelles seront
-              soumises aux obligations qui sont imposées à{' '}
+              soumises aux obligations qui sont imposées à{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               par la loi, notamment en matière de conservation ou d’archivage
-              des documents. Enfin, les Utilisateurs de{' '}
+              des documents. Enfin, les Utilisateurs de{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               peuvent déposer une réclamation auprès des autorités de contrôle,
               et notamment de la CNIL (https://www.cnil.fr/fr/plaintes).
             </p>
@@ -1302,15 +1306,15 @@ export default function Privacy() {
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               s’interdit de traiter, héberger ou transférer les Informations
               collectées sur ses Clients vers un pays situé en dehors de l’Union
               européenne ou reconnu comme «&nbsp;non adéquat&nbsp;» par la
               Commission européenne sans en informer préalablement le client.
-              Pour autant,{' '}
+              Pour autant,{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               reste libre du choix de ses sous-traitants techniques et
               commerciaux à la condition qu’il présentent les garanties
               suffisantes au regard des exigences du Règlement Général sur la
@@ -1319,38 +1323,38 @@ export default function Privacy() {
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               s’engage à prendre toutes les précautions nécessaires afin de
               préserver la sécurité des Informations et notamment qu’elles ne
               soient pas communiquées à des personnes non autorisées. Cependant,
               si un incident impactant l’intégrité ou la confidentialité des
-              Informations du Client est portée à la connaissance de{' '}
+              Informations du Client est portée à la connaissance de{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
               </a>
               , celle-ci devra dans les meilleurs délais informer le Client et
-              lui communiquer les mesures de corrections prises. Par ailleurs{' '}
+              lui communiquer les mesures de corrections prises. Par ailleurs{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               ne collecte aucune «&nbsp;données sensibles&nbsp;».
             </p>
             <p>
               Les Données Personnelles de l’Utilisateur peuvent être traitées
-              par des filiales de{' '}
+              par des filiales de{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               et des sous-traitants (prestataires de services), exclusivement
               afin de réaliser les finalités de la présente politique.
             </p>
             <p>
               Dans la limite de leurs attributions respectives et pour les
               finalités rappelées ci-dessus, les principales personnes
-              susceptibles d’avoir accès aux données des Utilisateurs de{' '}
+              susceptibles d’avoir accès aux données des Utilisateurs de{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               sont principalement les agents de notre service client.
             </p>
           </SubSection>
@@ -1361,33 +1365,33 @@ export default function Privacy() {
             <p>
               Quels que soient les efforts fournis, aucune méthode de
               transmission sur Internet et aucune méthode de stockage
-              électronique n'est complètement sûre. Nous ne pouvons en
+              électronique n&apos;est complètement sûre. Nous ne pouvons en
               conséquence pas garantir une sécurité absolue. Si nous prenions
-              connaissance d'une brèche de la sécurité, nous avertirions les
-              utilisateurs concernés afin qu'ils puissent prendre les mesures
-              appropriées. Nos procédures de notification d’incident tiennent
-              compte de nos obligations légales, qu'elles se situent au niveau
-              national ou européen. Nous nous engageons à informer pleinement
-              nos clients de toutes les questions relevant de la sécurité de
-              leur compte et à leur fournir toutes les informations nécessaires
-              pour les aider à respecter leurs propres obligations
-              réglementaires en matière de reporting.
+              connaissance d&apos;une brèche de la sécurité, nous avertirions
+              les utilisateurs concernés afin qu&apos;ils puissent prendre les
+              mesures appropriées. Nos procédures de notification d’incident
+              tiennent compte de nos obligations légales, qu&apos;elles se
+              situent au niveau national ou européen. Nous nous engageons à
+              informer pleinement nos clients de toutes les questions relevant
+              de la sécurité de leur compte et à leur fournir toutes les
+              informations nécessaires pour les aider à respecter leurs propres
+              obligations réglementaires en matière de reporting.
             </p>
             <p>
-              Aucune information personnelle de l'utilisateur du site&nbsp;
+              Aucune information personnelle de l&apos;utilisateur du site&nbsp;
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
               </a>
-              &nbsp;n'est publiée à l'insu de l'utilisateur, échangée,
-              transférée, cédée ou vendue sur un support quelconque à des tiers.
-              Seule l'hypothèse du rachat de{' '}
+              &nbsp;n&apos;est publiée à l&apos;insu de l&apos;utilisateur,
+              échangée, transférée, cédée ou vendue sur un support quelconque à
+              des tiers. Seule l&apos;hypothèse du rachat de{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               et de ses droits permettrait la transmission des dites
-              informations à l'éventuel acquéreur qui serait à son tour tenu de
-              la même obligation de conservation et de modification des données
-              vis à vis de l'utilisateur du site&nbsp;
+              informations à l&apos;éventuel acquéreur qui serait à son tour
+              tenu de la même obligation de conservation et de modification des
+              données vis à vis de l&apos;utilisateur du site&nbsp;
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
               </a>
@@ -1396,17 +1400,17 @@ export default function Privacy() {
             <SubSectionSubTitle>Sécurité</SubSectionSubTitle>
             <p>
               Pour assurer la sécurité et la confidentialité des Données
-              Personnelles et des Données Personnelles de Santé,{' '}
+              Personnelles et des Données Personnelles de Santé,{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               utilise des réseaux protégés par des dispositifs standards tels
               que par pare-feu, la pseudonymisation, l’encryption et mot de
-              passe.{' '}
+              passe.{" "}
             </p>
             &nbsp;
             <p>
-              Lors du traitement des Données Personnelles,{' '}
+              Lors du traitement des Données Personnelles,{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
               </a>
@@ -1426,14 +1430,14 @@ export default function Privacy() {
                 https://www.alexgwebdev.com
               </a>
               &nbsp;contient un certain nombre de liens hypertextes vers
-              d’autres sites, mis en place avec l’autorisation de{' '}
+              d’autres sites, mis en place avec l’autorisation de{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
               </a>
-              . Cependant,{' '}
+              . Cependant,{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               n’a pas la possibilité de vérifier le contenu des sites ainsi
               visités, et n’assumera en conséquence aucune responsabilité de ce
               fait.
@@ -1461,19 +1465,19 @@ export default function Privacy() {
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               est susceptible de traiter les informations de l’Utilisateur
               concernant sa visite du Site, telles que les pages consultées, les
-              recherches effectuées. Ces informations permettent à{' '}
+              recherches effectuées. Ces informations permettent à{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               d’améliorer le contenu du Site, de la navigation de l’Utilisateur.
             </p>
             &nbsp;
             <p>
-              Pour en savoir plus sur les cookies, voir la page Wikipedia "HTTP
-              Cookies" ou voir{' '}
+              Pour en savoir plus sur les cookies, voir la page Wikipedia
+              `&quot;HTTP Cookies&quot;` ou voir{" "}
               <a
                 href="https://cookiesandyou.com/"
                 target="_blank"
@@ -1493,10 +1497,10 @@ export default function Privacy() {
               également configurer son logiciel de navigation de manière à ce
               que l’acceptation ou le refus des Cookies lui soient proposés
               ponctuellement, avant qu’un Cookie soit susceptible d’être
-              enregistré dans son terminal.{' '}
+              enregistré dans son terminal.{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               informe l’Utilisateur que, dans ce cas, il se peut que les
               fonctionnalités de son logiciel de navigation ne soient pas toutes
               disponibles.
@@ -1507,10 +1511,10 @@ export default function Privacy() {
               terminal ou son navigateur, ou si l’Utilisateur supprime ceux qui
               y sont enregistrés, l’Utilisateur est informé que sa navigation et
               son expérience sur le Site peuvent être limitées. Cela pourrait
-              également être le cas lorsque{' '}
+              également être le cas lorsque{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               ou l’un de ses prestataires ne peut pas reconnaître, à des fins de
               compatibilité technique, le type de navigateur utilisé par le
               terminal, les paramètres de langue et d’affichage ou le pays
@@ -1519,28 +1523,28 @@ export default function Privacy() {
             &nbsp;
             <p>
               Vous pouvez apprendre à gérer les cookies sur votre navigateur en
-              suivant le{' '}
+              suivant le{" "}
               <a href="https://privacypolicies.com/blog/browser-cookies-guide/">
                 Guide des cookies
               </a>
               .
             </p>
             <p>
-              Le cas échéant,{' '}
+              Le cas échéant,{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               décline toute responsabilité pour les conséquences liées au
               fonctionnement dégradé du Site et des services éventuellement
-              proposés par{' '}
+              proposés par{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
               </a>
               , résultant (i) du refus de Cookies par l’Utilisateur (ii) de
-              l’impossibilité pour{' '}
+              l’impossibilité pour{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               d’enregistrer ou de consulter les Cookies nécessaires à leur
               fonctionnement du fait du choix de l’Utilisateur. Pour la gestion
               des Cookies et des choix de l’Utilisateur, la configuration de
@@ -1551,10 +1555,10 @@ export default function Privacy() {
             &nbsp;
             <p>
               À tout moment, l’Utilisateur peut faire le choix d’exprimer et de
-              modifier ses souhaits en matière de Cookies.{' '}
+              modifier ses souhaits en matière de Cookies.{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               pourra en outre faire appel aux services de prestataires externes
               pour l’aider à recueillir et traiter les informations décrites
               dans cette section.
@@ -1562,13 +1566,13 @@ export default function Privacy() {
             &nbsp;
             <p>
               Enfin, en cliquant sur les icônes dédiées aux réseaux sociaux
-              Twitter, Facebook, Linkedin et Google Plus figurant sur le Site de{' '}
+              Twitter, Facebook, Linkedin et Google Plus figurant sur le Site de{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               ou dans son application mobile et si l’Utilisateur a accepté le
               dépôt de cookies en poursuivant sa navigation sur le Site Internet
-              ou l’application mobile de{' '}
+              ou l’application mobile de{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
               </a>
@@ -1580,15 +1584,15 @@ export default function Privacy() {
             <p>
               Ces types de cookies ne sont déposés sur vos terminaux qu’à
               condition que vous y consentiez, en continuant votre navigation
-              sur le Site Internet ou l’application mobile de{' '}
+              sur le Site Internet ou l’application mobile de{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
               </a>
               . À tout moment, l’Utilisateur peut néanmoins revenir sur son
-              consentement à ce que{' '}
+              consentement à ce que{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               dépose ce type de cookies.
             </p>
             &nbsp;
@@ -1599,7 +1603,7 @@ export default function Privacy() {
             <p>
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               peut employer occasionnellement des balises Internet (également
               appelées « tags », ou balises d’action, GIF à un pixel, GIF
               transparents, GIF invisibles et GIF un à un) et les déployer par
@@ -1615,21 +1619,21 @@ export default function Privacy() {
               différentes pages de celui-ci. &nbsp;
             </p>
             <p>
-              Cette technologie permet à{' '}
+              Cette technologie permet à{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
-              </a>{' '}
+              </a>{" "}
               d’évaluer les réponses des visiteurs face au Site et l’efficacité
               de ses actions (par exemple, le nombre de fois où une page est
               ouverte et les informations consultées), ainsi que l’utilisation
-              de ce Site par l’Utilisateur.{' '}
+              de ce Site par l’Utilisateur.{" "}
             </p>
             &nbsp;
             <p>
               Le prestataire externe pourra éventuellement recueillir des
               informations sur les visiteurs du Site et d’autres sites Internet
               grâce à ces balises, constituer des rapports sur l’activité du
-              Site à l’attention de{' '}
+              Site à l’attention de{" "}
               <a href="https://www.alexgwebdev.com">
                 https://www.alexgwebdev.com
               </a>

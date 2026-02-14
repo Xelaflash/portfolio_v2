@@ -1,6 +1,5 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import styled from 'styled-components';
+import Image from "next/image";
+import styled from "styled-components";
 import {
   PageWrapper,
   PageContentWrapper,
@@ -9,8 +8,8 @@ import {
   ImageWrapper,
   LinkWrapper,
   LinkToHome,
-} from '../styles/error';
-import Logo from '../components/Logo';
+} from "../styles/error";
+import Logo from "../components/Logo";
 
 export default function FourOhFour() {
   return (
@@ -33,9 +32,7 @@ export default function FourOhFour() {
             />
           </ImageWrapper>
           <LinkWrapper>
-            <Link href="/" passHref>
-              <LinkToHome>Go back home</LinkToHome>
-            </Link>
+            <LinkToHome href="/">Go back home</LinkToHome>
           </LinkWrapper>
         </PageContentWrapper>
       </PageWrapper>

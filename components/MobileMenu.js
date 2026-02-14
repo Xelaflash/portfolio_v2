@@ -118,7 +118,7 @@ const Filler = styled.div`
   flex: 1;
 `;
 
-const NavLink = styled.a`
+const NavLink = styled(Link)`
   color: var(--color-text);
   font-weight: var(--medium);
   text-transform: uppercase;

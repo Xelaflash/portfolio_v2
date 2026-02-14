@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { QUERIES } from '../styles/constants';
-import SocialIcons from './SocialIcons';
+import styled from "styled-components";
+import { QUERIES } from "../styles/constants";
+import SocialIcons from "./SocialIcons";
 
 export default function SideBar() {
   return (

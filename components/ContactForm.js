@@ -1,28 +1,28 @@
-import { useState } from 'react';
-import styled from 'styled-components';
-import { Formik, Field } from 'formik';
-import emailjs from '@emailjs/browser';
-import * as Yup from 'yup';
-import { ThumbsUp, AlertTriangle } from 'react-feather';
-import Button from './Button';
-import FormAlert from './FormAlert';
-import BorderWrapper from './BorderWrapper';
-import { QUERIES } from '../styles/constants';
+import { useState } from "react";
+import styled from "styled-components";
+import { Formik, Field } from "formik";
+import emailjs from "@emailjs/browser";
+import * as Yup from "yup";
+import { ThumbsUp, AlertTriangle } from "react-feather";
+import Button from "./Button";
+import FormAlert from "./FormAlert";
+import BorderWrapper from "./BorderWrapper";
+import { QUERIES } from "../styles/constants";
 
 export default function ContactForm() {
   const formSchema = Yup.object().shape({
     name: Yup.string()
-      .min(5, 'Must be 5 characters or more')
-      .required('A name is required'),
+      .min(5, "Must be 5 characters or more")
+      .required("A name is required"),
     email: Yup.string()
-      .email('Invalid email address')
-      .required('A valid email is required'),
+      .email("Invalid email address")
+      .required("A valid email is required"),
     subject: Yup.string()
-      .min(5, 'Must be 5 characters or more')
-      .required('A subject is required'),
+      .min(5, "Must be 5 characters or more")
+      .required("A subject is required"),
     message: Yup.string()
-      .min(20, 'Must be 20 characters or more')
-      .required('A message is required'),
+      .min(20, "Must be 20 characters or more")
+      .required("A message is required"),
   });
 
   const [isEmailSent, setIsEmailSent] = useState(null);
@@ -54,10 +54,10 @@ export default function ContactForm() {
   return (
     <Formik
       initialValues={{
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
       }}
       validationSchema={formSchema}
       onSubmit={(values, { setSubmitting, resetForm, initialValues }) => {
@@ -75,16 +75,16 @@ export default function ContactForm() {
               {isEmailSent && (
                 <p
                   style={{
-                    color: 'var(--color-logo-green)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
+                    color: "var(--color-logo-green)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   <ThumbsUp
                     color="var(--color-logo-green)"
                     size={18}
-                    style={{ marginRight: '8px', marginTop: '-2px' }}
+                    style={{ marginRight: "8px", marginTop: "-2px" }}
                   />
                   Email sent successfully
                 </p>
@@ -92,25 +92,25 @@ export default function ContactForm() {
               {isEmailSent === false && (
                 <p
                   style={{
-                    color: 'var(--color-logo-red)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
+                    color: "var(--color-logo-red)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   <AlertTriangle
                     color="var(--color-logo-red)"
                     size={18}
-                    style={{ marginRight: '8px', marginTop: '-2px' }}
+                    style={{ marginRight: "8px", marginTop: "-2px" }}
                   />
-                  Ooops....That's embarrassing an error occured.
+                  Ooops....That&apos;s embarrassing an error occured.
                 </p>
               )}
               {mailSendingErrors !== null && (
                 <p
                   style={{
-                    color: 'var(--color-logo-red)',
-                    textAlign: 'center',
+                    color: "var(--color-logo-red)",
+                    textAlign: "center",
                   }}
                 >
                   Error :{mailSendingErrors}

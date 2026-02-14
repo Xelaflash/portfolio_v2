@@ -1,8 +1,8 @@
-import styled, { css } from 'styled-components';
-import { ArrowUpCircle } from 'react-feather';
-import { useState, useEffect } from 'react';
-import VisuallyHidden from './VisuallyHidden';
-import { QUERIES } from '../styles/constants';
+import styled, { css } from "styled-components";
+import { ArrowUpCircle } from "react-feather";
+import { useState, useEffect } from "react";
+import VisuallyHidden from "./VisuallyHidden";
+import { QUERIES } from "../styles/constants";
 
 const ScrollToTop = () => {
   const [showTopBtn, setShowTopBtn] = useState(false);
@@ -18,14 +18,14 @@ const ScrollToTop = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const goToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 

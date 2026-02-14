@@ -1,12 +1,12 @@
-import Image from 'next/image';
-import { Fragment } from 'react';
-import propTypes from 'prop-types';
-import styled, { keyframes } from 'styled-components';
-import { QUERIES } from '../styles/constants';
-import Spacer from './Spacer';
-import MaxWidthWrapper from './MaxWidthWrapper';
-import Button from './Button';
-import SectionTitle from './SectionTitle';
+import Image from "next/image";
+import { Fragment } from "react";
+import propTypes from "prop-types";
+import styled, { keyframes } from "styled-components";
+import { QUERIES } from "../styles/constants";
+import Spacer from "./Spacer";
+import MaxWidthWrapper from "./MaxWidthWrapper";
+import Button from "./Button";
+import SectionTitle from "./SectionTitle";
 
 export default function About({ data }) {
   return (
@@ -17,10 +17,10 @@ export default function About({ data }) {
       <DescriptionTextWrapper>
         <Greetings>
           <p>
-            <span style={{ fontSize: '2rem', paddingRight: '4px' }}>
+            <span style={{ fontSize: "2rem", paddingRight: "4px" }}>
               &#x1F44B;
-            </span>{' '}
-            Hi, I'm
+            </span>{" "}
+            Hi, I&apos;m
           </p>
           <h3>Alex G,</h3>
         </Greetings>
@@ -34,16 +34,16 @@ export default function About({ data }) {
         </p>
         <p>
           My expertise lies in <span>Frontend development</span>, specializing
-          in <span>TypeScript</span>, <span>React</span>, and{' '}
-          <span>NextJs</span> .I started as a <span>Full Stack developer</span>{' '}
+          in <span>TypeScript</span>, <span>React</span>, and{" "}
+          <span>NextJs</span> .I started as a <span>Full Stack developer</span>{" "}
           with <span>Ruby on Rails</span> but have since honed my skills in
           these technologies.
         </p>
         <p>
-          In addition to my technical skills, I bring{' '}
-          <span>autonomy, proactivity and strong problem-solving</span>{' '}
-          abilities to the table. I'll be happy to jump on a call, discuss your
-          project and help your business grow.
+          In addition to my technical skills, I bring{" "}
+          <span>autonomy, proactivity and strong problem-solving</span>{" "}
+          abilities to the table. I&apos;ll be happy to jump on a call, discuss
+          your project and help your business grow.
         </p>
       </DescriptionTextWrapper>
       <MaxWidthWrapper>
@@ -56,7 +56,8 @@ export default function About({ data }) {
                     <Image
                       src={item.properties?.Logo?.url}
                       alt={`Logo of ${titleObject?.plain_text}`}
-                      layout="fill"
+                      fill
+                      sizes="90px"
                     />
                   </StackImageWrapper>
                   <p>{titleObject?.plain_text}</p>

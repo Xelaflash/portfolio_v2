@@ -1,10 +1,10 @@
-import classnames from 'classnames';
-import propTypes from 'prop-types';
-import styled, { css } from 'styled-components';
-import { ChevronLeft, ChevronRight } from 'react-feather';
-import { usePagination, DOTS, DOTS2 } from '../utils/usePagination';
-import { QUERIES } from '../styles/constants';
-import VisuallyHidden from './VisuallyHidden';
+import classnames from "classnames";
+import propTypes from "prop-types";
+import styled, { css } from "styled-components";
+import { ChevronLeft, ChevronRight } from "react-feather";
+import { usePagination, DOTS, DOTS2 } from "../utils/usePagination";
+import { QUERIES } from "../styles/constants";
+import VisuallyHidden from "./VisuallyHidden";
 
 function Pagination({
   onPageChange,
@@ -38,11 +38,11 @@ function Pagination({
 
   return (
     <PaginationWrapper
-      className={classnames('pagination-container', { [className]: className })}
+      className={classnames("pagination-container", { [className]: className })}
       theme={theme}
     >
       <button
-        className={classnames('pagination-item', {
+        className={classnames("pagination-item", {
           disabled: currentPage === 1,
         })}
         onClick={onPrevious}
@@ -70,7 +70,7 @@ function Pagination({
 
         return (
           <button
-            className={classnames('pagination-item', {
+            className={classnames("pagination-item", {
               selected: pageNumber === currentPage,
             })}
             onClick={() => onPageChange(pageNumber)}
@@ -82,7 +82,7 @@ function Pagination({
         );
       })}
       <button
-        className={classnames('pagination-item', {
+        className={classnames("pagination-item", {
           disabled: currentPage === lastPage,
         })}
         onClick={onNext}
@@ -124,12 +124,12 @@ const PaginationWrapper = styled.div`
 
     &.selected {
       ${(props) =>
-        props.theme === 'light' &&
+        props.theme === "light" &&
         css`
           color: var(--color-white);
         `};
       ${(props) =>
-        props.theme === 'dark' &&
+        props.theme === "dark" &&
         css`
           color: var(--color-background);
         `};

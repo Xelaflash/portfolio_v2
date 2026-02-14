@@ -1,5 +1,6 @@
-import styled from 'styled-components';
-import { QUERIES } from './constants';
+import styled from "styled-components";
+import Link from "next/link";
+import { QUERIES } from "./constants";
 
 const PageWrapper = styled.div`
   display: flex;
@@ -48,7 +49,7 @@ const LinkWrapper = styled.div`
   width: fit-content;
 `;
 
-const LinkToHome = styled.a`
+const LinkToHome = styled(Link)`
   margin: auto;
   padding: 12px 36px;
   font-weight: var(--regular);

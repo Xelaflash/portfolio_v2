@@ -1,11 +1,11 @@
-import Image from 'next/image';
-import styled from 'styled-components';
-import Link from 'next/link';
-import { QUERIES } from '../styles/constants';
-import VisuallyHidden from './VisuallyHidden';
-import { rgbDataURL } from '../utils/blur';
+import Image from "next/image";
+import styled from "styled-components";
+import Link from "next/link";
+import { QUERIES } from "../styles/constants";
+import VisuallyHidden from "./VisuallyHidden";
+import { rgbDataURL } from "../utils/blur";
 
-import buyMeCoffeeImg from '../public/bmc-button.png';
+import buyMeCoffeeImg from "../public/bmc-button.png";
 
 export default function Footer() {
   return (

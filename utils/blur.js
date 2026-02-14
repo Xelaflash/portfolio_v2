@@ -2,7 +2,7 @@
 // stuff taken from NextJs docs for placeHolder color on Image
 // Pixel GIF code adapted from https://stackoverflow.com/a/33919020/266535
 const keyStr =
-  'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
 const triplet = (e1, e2, e3) =>
   keyStr.charAt(e1 >> 2) +
   keyStr.charAt(((e1 & 3) << 4) | (e2 >> 4)) +

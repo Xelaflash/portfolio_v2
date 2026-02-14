@@ -1,5 +1,5 @@
-import propTypes from 'prop-types';
-import styled from 'styled-components';
+import propTypes from "prop-types";
+import styled from "styled-components";
 
 const Button = ({ text, background, color, className, type, disabled }) => (
   <ButtonStyles

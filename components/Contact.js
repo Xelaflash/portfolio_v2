@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { QUERIES } from '../styles/constants';
-import ContactForm from './ContactForm';
-import MaxWidthWrapper from './MaxWidthWrapper';
-import SectionTitle from './SectionTitle';
+import styled from "styled-components";
+import { QUERIES } from "../styles/constants";
+import ContactForm from "./ContactForm";
+import MaxWidthWrapper from "./MaxWidthWrapper";
+import SectionTitle from "./SectionTitle";
 
 export default function Contact() {
   return (
@@ -10,7 +10,9 @@ export default function Contact() {
       <SectionTitle title="Contact" margin="0 auto" />
       <MaxWidthWrapper>
         <SubTitleText>
-          <p>I'd love to hear from you and discuss your project together.</p>
+          <p>
+            I&apos;d love to hear from you and discuss your project together.
+          </p>
         </SubTitleText>
         <ContactForm />
       </MaxWidthWrapper>

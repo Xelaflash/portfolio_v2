@@ -1,5 +1,5 @@
-import { PropTypes } from 'prop-types';
-import { useState, useContext, createContext } from 'react';
+import { PropTypes } from "prop-types";
+import { useState, useContext, createContext } from "react";
 
 const LocalStateContext = createContext();
 const LocalStateProvider = LocalStateContext.Provider;

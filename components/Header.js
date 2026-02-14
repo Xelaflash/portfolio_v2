@@ -1,18 +1,18 @@
-import dynamic from 'next/dynamic';
-import styled from 'styled-components';
-import { useMobileMenu } from '../utils/MobileMenuState';
-import { QUERIES } from '../styles/constants';
-import UnstyledButton from './UnstyledButton';
-import Logo from './Logo';
-import Button from './Button';
-import VisuallyHidden from './VisuallyHidden';
-import MobileMenu from './MobileMenu';
-import NavLink from './NavLink';
+import dynamic from "next/dynamic";
+import styled from "styled-components";
+import { useMobileMenu } from "../utils/MobileMenuState";
+import { QUERIES } from "../styles/constants";
+import UnstyledButton from "./UnstyledButton";
+import Logo from "./Logo";
+import Button from "./Button";
+import VisuallyHidden from "./VisuallyHidden";
+import MobileMenu from "./MobileMenu";
+import NavLink from "./NavLink";
 
 export default function Header() {
   const { isMobileMenuOpen, toggleMobileMenu } = useMobileMenu();
 
-  const ThemeToggle = dynamic(() => import('./ThemeToggle'), {
+  const ThemeToggle = dynamic(() => import("./ThemeToggle"), {
     ssr: false,
   });
 
@@ -51,8 +51,8 @@ export default function Header() {
         <UnstyledButton
           className={
             isMobileMenuOpen
-              ? 'hamburger hamburger--collapse is-active'
-              : 'hamburger hamburger--collapse'
+              ? "hamburger hamburger--collapse is-active"
+              : "hamburger hamburger--collapse"
           }
           type="button"
           aria-label="Show Navigation Menu"
@@ -177,7 +177,7 @@ const MobileActions = styled.div`
   }
   .hamburger-inner::before,
   .hamburger-inner::after {
-    content: '';
+    content: "";
     display: block;
   }
   .hamburger-inner::before {
