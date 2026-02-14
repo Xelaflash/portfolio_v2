@@ -57,7 +57,7 @@ export default function About({ data }) {
                       src={item.properties?.Logo?.url}
                       alt={`Logo of ${titleObject?.plain_text}`}
                       fill
-                      sizes="90px"
+                      sizes="80px"
                     />
                   </StackImageWrapper>
                   <p>{titleObject?.plain_text}</p>
@@ -187,8 +187,8 @@ const SingleStack = styled.div`
 
 const StackImageWrapper = styled.div`
   position: relative;
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   img {
     object-fit: contain;
   }
