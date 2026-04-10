@@ -25,7 +25,7 @@ export default function About({ data }) {
           <h3>Alex G,</h3>
         </Greetings>
         <p>
-          A seasoned <span>Frontend Developer</span> with 5 years of experience
+          A seasoned <span>Frontend Developer</span> with 7+ years of experience
           in the tech industry.
         </p>
         <p>
