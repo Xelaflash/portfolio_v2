@@ -9,12 +9,12 @@ import VisuallyHidden from "./VisuallyHidden";
 import MobileMenu from "./MobileMenu";
 import NavLink from "./NavLink";
 
+const ThemeToggle = dynamic(() => import("./ThemeToggle"), {
+  ssr: false,
+});
+
 export default function Header() {
   const { isMobileMenuOpen, toggleMobileMenu } = useMobileMenu();
-
-  const ThemeToggle = dynamic(() => import("./ThemeToggle"), {
-    ssr: false,
-  });
 
   return (
     <HeaderStyles>

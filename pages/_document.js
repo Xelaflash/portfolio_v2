@@ -63,7 +63,6 @@ class MyDocument extends Document {
         </Head>
         <body>
           {/* used to avoid dreaded color flash */}
-          {/* eslint-disable-next-line react/no-danger */}
           <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
           <Main />
           <NextScript />

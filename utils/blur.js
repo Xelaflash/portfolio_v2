@@ -1,4 +1,3 @@
-/* eslint-disable no-bitwise */
 // stuff taken from NextJs docs for placeHolder color on Image
 // Pixel GIF code adapted from https://stackoverflow.com/a/33919020/266535
 const keyStr =
